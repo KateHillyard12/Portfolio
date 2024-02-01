@@ -1,34 +1,47 @@
 /* styles.css */
 
+
+/* color sheet 
+        med green: #CCD5AE
+        light green: #E9EDC9
+        egg white: #FEFAE0
+        tan: #FAEDCD
+        light brown: #D4A373
+        dark brown: #7f5539
+        dark green; #6b705c
+        */
+
 body {
-    background-color: #14147e; /* Light gray background */
+    background-color: #CCD5AE; /* Light gray background */
     color: #343a40; /* Dark gray text color */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #title h1 {
-    color: #007bff; /* Blue header text color */
+    color: #67704b; /* Blue header text color */
+    font-weight: bold;
+    font-size: 50px;
 }
 
 #title a {
-    color: #28a745; /* Green link color */
+    color: #2a7a3d; /* Green link color */
     text-decoration: none;
 }
 
 #about {
     background-color: #ffffff; /* White background */
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 h2 {
-    color: #007bff; /* Blue section title color */
+    color: #7f5539; /* Blue section title color */
 }
 
 hr {
-    border: 1px solid #007bff; /* Blue horizontal line */
+    border: 1px solid #b4b79c; /* Blue horizontal line */
 }
 
 #artifacts {
@@ -53,13 +66,13 @@ hr {
 
 /* Add this CSS to your existing styles.css */
 
-.navbar {
-    background-color: #007bff; /* Blue background color */
+nav.navbar {
+    background-color: #5f4b3f; /* Blue background color */
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-    color: #8eff51 !important; /* White text color */
+    color: #fef4eb !important; /* White text color */
 }
 
 .navbar-toggler-icon {
@@ -83,3 +96,18 @@ hr {
     text-decoration: underline;
 }
 
+footer {
+    background-color: #343a40; /* Dark gray background color */
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    color: #ffffff; /* White text color */
+}
+
+.footer-link {
+    color: #8eff51; /* Green link color */
+    text-decoration: none;
+    margin: 0 10px; /* Add some spacing between links */
+}
+
+.footer-link:hover {
+    color: #1b94bc; /* Blue text color on hover */
+}
