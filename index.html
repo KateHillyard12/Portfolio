@@ -7,11 +7,41 @@
     <title>Kate Hillyard Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
+
+    
     <div id="website" class="container text-center">
+
+        <div id="nav" class="row">
+            <div id="nav" class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">Kate Hillyard Portfolio</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About Me</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#skills">Skills</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#artifacts">Artifacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
         <div id="title" class="row">
             <div id="about" class="col-12">
                 <header>
@@ -31,11 +61,19 @@
                 <a href="https://www.boisestate.edu/gimm/">More about the program I'm in...</a>
             </div>
         </div>
+
+
+
+  <!-- Add this code inside the <body> tag, before the existing content -->
+
+
+
         <div id="artifacts" class="row">
             
-            <div id="project1" class="col-4">
+            <div id="project1" class="col-12">
                 <hr>
                 <h2>Scouts Adventure</h2>
+                <hr>
                 <p>Scouts Adventure is my first 2D platformer and video game. This project was my introduction to C#,
                     Unity, Photoshop, and graphic design. It gave me a delightful opportunity to be introduced to game
                     development.
@@ -43,9 +81,10 @@
                 <img src="images/Frog.jpg" alt="Fancy Frog" class="img-fluid">
             </div>
 
-            <div id="project2" class="col-4">
+            <div id="project2" class="col-12">
                 <hr>
                 <h2>Quantum Entangled</h2>
+                <hr>
                 <p>Quantum Entangled is a group project that tells the love story of shapes to simplify the complex
                     concept
                     of
@@ -56,9 +95,11 @@
                 <img src="images/Falling in love pt 1 - TDG.jpg" class="img-fluid" alt="class talk">
             </div>
 
-            <div id="project3" class="col-4">
+
+            <div id="project3" class="col-12">
                 <hr>
                 <h2>Building a Snake Enclosure</h2>
+                <hr>
                 <p>This 360 VR video is a simulation and educational video that teaches the user to build a snake
                     enclosure.
                     The most beneficial asset I learned from this artifact was VR development.

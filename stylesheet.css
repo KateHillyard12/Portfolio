@@ -1,50 +1,85 @@
-html{
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 80px;
-}
-
+/* styles.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 50px;
-    padding: 20px;
-    
+    background-color: #14147e; /* Light gray background */
+    color: #343a40; /* Dark gray text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+#title h1 {
+    color: #007bff; /* Blue header text color */
 }
 
-header a {
-    color: #fff;
+#title a {
+    color: #28a745; /* Green link color */
     text-decoration: none;
-    margin-left: 20px;
 }
 
-section {
-    margin: 20px;
+#about {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+h2 {
+    color: #007bff; /* Blue section title color */
 }
 
 hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 0;
-    border-top: 1px solid #ccc;
+    border: 1px solid #007bff; /* Blue horizontal line */
 }
 
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#artifacts {
+    margin-top: 30px;
 }
+
+#project1,
+#project2,
+#project3 {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#project1 img,
+#project2 img,
+#project3 img {
+    border-radius: 5px; /* Rounded corners for project images */
+}
+
+/* Add this CSS to your existing styles.css */
+
+.navbar {
+    background-color: #007bff; /* Blue background color */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #8eff51 !important; /* White text color */
+}
+
+.navbar-toggler-icon {
+    background-color: #930d74; /* White color for the toggle icon */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.navbar-toggler-icon:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+    color: #b52c2c !important; /* White text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #1b94bc !important; /* White text color on hover */
+    text-decoration: underline;
+}
+
