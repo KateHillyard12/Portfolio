@@ -75,9 +75,11 @@ nav.navbar {
     color: #fef4eb !important; /* White text color */
 }
 
-.navbar-toggler-icon {
-    background-color: #930d74; /* White color for the toggle icon */
+.navbar-toggler {
+    background-color: #E9EDC9; /* Your chosen color */
+    border-color: #E9EDC9; /* Match background color */
 }
+
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -88,11 +90,11 @@ nav.navbar {
 }
 
 .navbar-nav .nav-link {
-    color: #b52c2c !important; /* White text color */
+    color: #ffffff !important; /* White text color */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #1b94bc !important; /* White text color on hover */
+    color: #D4A373 !important; /* White text color on hover */
     text-decoration: underline;
 }
 
@@ -110,4 +112,23 @@ footer {
 
 .footer-link:hover {
     color: #1b94bc; /* Blue text color on hover */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    flex: 0 0 auto; /* This makes the photo not grow or shrink */
+    margin-right: 20px; /* Adjust spacing between photo and text */
+}
+
+.profile-photo img {
+    border-radius: 50%; /* Makes the image round (adjust as needed) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+
+.about-text {
+    flex: 1; /* This makes the text fill the available space */
 }
