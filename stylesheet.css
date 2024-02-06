@@ -34,7 +34,9 @@ body {
     margin-top: 70px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
 }
+
 
 h2 {
     color: #7f5539; /* Blue section title color */
@@ -117,18 +119,27 @@ footer {
 .about-content {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text within its container */
+    padding-right: 30px;;
 }
 
 .profile-photo {
     flex: 0 0 auto; /* This makes the photo not grow or shrink */
-    margin-right: 20px; /* Adjust spacing between photo and text */
+    margin-left: 30px;
 }
 
 .profile-photo img {
-    border-radius: 50%; /* Makes the image round (adjust as needed) */
+    border-radius: 30%; /* Makes the image round (adjust as needed) */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+     /* Set a maximum width for the image */
+    height: auto; /* Allows the image to scale proportionally */
+    
+    border: 5px solid #2e1c10;
 }
 
 .about-text {
     flex: 1; /* This makes the text fill the available space */
 }
+
+
