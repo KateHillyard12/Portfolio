@@ -11,7 +11,16 @@
         
 
     <link rel="stylesheet" href="stylesheet.css">
+
+    <script>
+        // Function to toggle dropdown menu
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById('dropdownMenuButton');
+            dropdownMenu.classList.toggle('show');
+        }
+    </script>
 </head>
+
 
 <body>
 
@@ -34,9 +43,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about">About Me</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#skills">Skills</a>
-                                </li>
+                               
                                 <li class="nav-item">
                                     <a class="nav-link" href="#artifacts">Artifacts</a>
                                 </li>
@@ -57,7 +64,7 @@
             
                 <h2>About Me</h2>
                 <hr>
-                <!-- Add your photo here -->
+                
                 <div class="about-content row">
                     <div class="profile-photo col-4">
                         <img src="images\profile pic.jpg" alt="Kate Hillyard" class="img-fluid">
@@ -80,9 +87,20 @@
 
         <div id="artifacts" class="row">
             
-            <div id="project1" class="col-12">
+            <div id="project1" class="col-lg-12">
                 <hr>
                 <h2>Scouts Adventure</h2>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Show Skills
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><span class="dropdown-item-text">Teamwork</span></li>
+                        <li><span class="dropdown-item-text">Concept Development</span></li>
+                        <!-- Add more skills as needed -->
+                    </ul>
+                </div>
+                
                 <hr>
                 <p>Scouts Adventure is my first 2D platformer and video game. This project was my introduction to C#,
                     Unity, Photoshop, and graphic design. It gave me a delightful opportunity to be introduced to game
@@ -90,10 +108,20 @@
                     The most enjoyable part of the project was brainstorming and organizing the game concept.</p>
                 <img src="images/Frog.jpg" alt="Fancy Frog" class="img-fluid">
             </div>
-
-            <div id="project2" class="col-12">
+            
+            <div id="project2" class="col-lg-12">
                 <hr>
-                <h2>Quantum Entangled</h2>
+                <h2>quantum</h2>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Show Skills
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><span class="dropdown-item-text">Teamwork</span></li>
+                        <li><span class="dropdown-item-text">Concept Development</span></li>
+                        <!-- Add more skills as needed -->
+                    </ul>
+                </div>
                 <hr>
                 <p>Quantum Entangled is a group project that tells the love story of shapes to simplify the complex
                     concept
@@ -105,10 +133,20 @@
                 <img src="images/Falling in love pt 1 - TDG.jpg" class="img-fluid" alt="class talk">
             </div>
 
-
-            <div id="project3" class="col-12">
+                      
+            <div id="project3" class="col-lg-12">
                 <hr>
-                <h2>Building a Snake Enclosure</h2>
+                <h2>360</h2>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Show Skills
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><span class="dropdown-item-text">Teamwork</span></li>
+                        <li><span class="dropdown-item-text">Concept Development</span></li>
+                        <!-- Add more skills as needed -->
+                    </ul>
+                </div>
                 <hr>
                 <p>This 360 VR video is a simulation and educational video that teaches the user to build a snake
                     enclosure.
@@ -119,6 +157,7 @@
                     holds.</p>
                 <img src="images/Falling in love pt 1 - TDG.jpg" class="img-fluid" alt="class talk">
             </div>
+            
         </div>
     </div>
 
@@ -127,21 +166,23 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="https://www.instagram.com/" target="_blank" class="footer-link">Instagram</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
                 </div>
                 <div class="col">
-                    <a href="https://www.linkedin.com/" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
                 </div>
                 <div class="col">
-                    <a href="https://discord.com/" target="_blank" class="footer-link">Discord</a>
+                    <a href="https://discord.com/" target="_blank" rel="noopener" class="footer-link">Discord</a>
                 </div>
                 <div class="col">
-                    <a href="https://github.com/" target="_blank" class="footer-link">GitHub</a>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="footer-link">GitHub</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Bootstrap JS script is not necessary for image responsiveness -->
 </body>
+
+
 
 </html>
