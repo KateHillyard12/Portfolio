@@ -15,6 +15,8 @@ body {
     background-color: #CCD5AE; /* Light gray background */
     color: #343a40; /* Dark gray text color */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #title h1 {
@@ -58,11 +60,12 @@ hr {
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
     padding: 20px;
     margin-top: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    position: relative; /* Ensure z-index works properly */
+    z-index: 1; /* Ensure projects are above parallax background */
 }
 
 #project1 img,
@@ -127,6 +130,10 @@ footer {
     justify-content: center; /* Center horizontally */
     text-align: center; /* Center text within its container */
     padding-right: 30px;
+}
+.content {
+    background-color: #CCD5AE; /* Light gray background */
+    padding-top: 25vh; /* Height of parallax image */
 }
 
 .profile-photo {
@@ -202,6 +209,13 @@ footer {
     position: relative;
 }
 
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+    background-color: #5f4b3f !important; /* Change to your desired color */
+    border-color: #4e3d33 !important; /* Change to your desired color */
+}
+
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -209,11 +223,22 @@ footer {
     transform: translateX(-50%);
 }
 .btn-primary {
-    background-color: #ff0000; /* Change to your desired color */
-    border-color: #ff0000; /* Change to your desired color */
+    background-color: #c78272; /* Change to your desired color */
+    border-color: #b57668; /* Change to your desired color */
 }
 
 .btn-primary:hover {
-    background-color: #cc0000; /* Change to your desired hover color */
-    border-color: #cc0000; /* Change to your desired hover color */
+    background-color: #d99383; /* Change to your desired hover color */
+    border-color: #c38577; /* Change to your desired hover color */
+}
+.parallax {
+    background-image: url("images/Frog.jpg");
+    /* Set a specific height */
+    height: 25vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
