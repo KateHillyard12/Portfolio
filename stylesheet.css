@@ -1,27 +1,78 @@
 /* styles.css */
 
-/* General Styles */
+
+/* color sheet 
+        med green: #CCD5AE
+        light green: #E9EDC9
+        egg white: #FEFAE0
+        tan: #FAEDCD
+        light brown: #D4A373
+        dark brown: #7f5539
+        dark green; #6b705c
+        */
+
 body {
     background-color: #CCD5AE; /* Light gray background */
     color: #343a40; /* Dark gray text color */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
+#title h1 {
     color: #67704b; /* Blue header text color */
     font-weight: bold;
     font-size: 50px;
 }
 
-h2, .footer-icons a {
-    color: #7f5539; /* Brown section title color */
+#title a {
+    color: #2a7a3d; /* Green link color */
+    text-decoration: none;
+}
+
+#about {
+    background-color: #ffffff; /* White background */
+  
+    margin-top: 70px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
+}
+
+
+h2 {
+    color: #7f5539; /* Blue section title color */
 }
 
 hr {
     border: 1px solid #b4b79c; /* Blue horizontal line */
 }
 
-/* Navbar Styles */
+#artifacts {
+    margin-top: 30px;
+}
+
+#project1,
+#project2,
+#project3 {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#project1 img,
+#project2 img,
+#project3 img {
+    border-radius: 5px; /* Rounded corners for project images */
+}
+
+/* Add this CSS to your existing styles.css */
+
 nav.navbar {
     background-color: #5f4b3f; /* Blue background color */
 }
@@ -35,6 +86,7 @@ nav.navbar {
     background-color: #E9EDC9; /* Your chosen color */
     border-color: #E9EDC9; /* Match background color */
 }
+
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -53,41 +105,78 @@ nav.navbar {
     text-decoration: underline;
 }
 
-.navbar-shadow {
-    box-shadow: 0 4px 10px -6px black;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Button Styles */
-.btn-primary {
-    background-color: #ff0000; /* Change to your desired color */
-    border-color: #ff0000; /* Change to your desired color */
-}
-
-.btn-primary:hover {
-    background-color: #cc0000; /* Change to your desired hover color */
-    border-color: #cc0000; /* Change to your desired hover color */
-}
-
-/* Footer Styles */
 footer {
     background-color: #343a40; /* Dark gray background color */
     padding: 30px 0; /* Add some padding to the top and bottom */
     color: #ffffff; /* White text color */
 }
 
+.footer-link {
+    color: #8eff51; /* Green link color */
+    text-decoration: none;
+    margin: 0 10px; /* Add some spacing between links */
+}
+
+.footer-link:hover {
+    color: #1b94bc; /* Blue text color on hover */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Center text within its container */
+    padding-right: 30px;
+}
+
+.profile-photo {
+    flex: 0 0 auto; /* This makes the photo not grow or shrink */
+    margin-left: 30px;
+}
+
+.profile-photo img {
+    border-radius: 30%; /* Makes the image round (adjust as needed) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+     /* Set a maximum width for the image */
+    height: auto; /* Allows the image to scale proportionally */
+    
+    border: 5px solid #2e1c10;
+}
+
+.about-text {
+    flex: 1; /* This makes the text fill the available space */
+}
+
+.skills {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#skills h2 {
+    color: #7f5539; /* Brown section title color */
+}
+
+#skills hr {
+    border: 1px solid #b4b79c; /* Brown horizontal line */
+}
+
+#skills ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default padding */
+}
+
+#skills ul li {
+    color: #343a40; /* Dark gray text color */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some spacing between skills */
+}
+.navbar-shadow {
+    box-shadow: 0 4px 10px -6px black;
+    transition: box-shadow 0.3s ease-in-out;
+}
 .footer-icons {
     margin: 0;
     padding: 0;
@@ -108,4 +197,23 @@ footer {
     color: #ffffff;
     font-size: 24px;
     text-decoration: none;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn-primary {
+    background-color: #ff0000; /* Change to your desired color */
+    border-color: #ff0000; /* Change to your desired color */
+}
+
+.btn-primary:hover {
+    background-color: #cc0000; /* Change to your desired hover color */
+    border-color: #cc0000; /* Change to your desired hover color */
 }
