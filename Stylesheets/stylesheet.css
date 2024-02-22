@@ -371,3 +371,15 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+
+
+
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap; /* Specify font-display property */
+    src: url('../path/to/font/fontawesome-webfont.woff2') format('woff2'),
+         url('../path/to/font/fontawesome-webfont.woff') format('woff');
+}
