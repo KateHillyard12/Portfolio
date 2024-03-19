@@ -71,11 +71,15 @@ p {
     z-index: 1; /* Ensure projects are above parallax background */
 }
 
+
+
 #project1 img,
 #project2 img,
 #project3 img {
     border-radius: 5px; /* Rounded corners for project images */
 }
+
+
 #about img {
     border: 5px solid var(--dark-brown); /* Add a solid border with the desired color */
     border-radius: 50%; /* Make the border circular */
@@ -243,18 +247,33 @@ footer {
     border-color: #c38577;
 }
 
+/* Parallax image */
 .parallax {
     background-image: url("../Extra/images/Screenshot\ .png");
-    /* Set a specific height */
     height: 25vh;
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     border-radius: 5px;
+   
 }
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .parallax {
+        height: 20vh; /* Adjust the height as needed for smaller screens */
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 576px) {
+    .parallax {
+        height: 15vh; /* Adjust the height as needed for even smaller screens */
+    }
+}
+
 
 #art-title {
     color: var(--dark-brown); /* Brown section title color */
@@ -267,6 +286,7 @@ footer {
 /* Slideshow container */
 .carousel {
     margin-top: 20px; /* Adjust margin as needed */
+   
 }
 
 /* Slides */
@@ -303,11 +323,13 @@ footer {
 }
 /* Smaller Carousel */
 #carouselExampleSlidesOnly {
-    max-width: 300px; /* Set a specific width for the carousel */
-    margin: 0, auto; /* Center the carousel horizontally */
+    max-width: 600px; /* Adjust as needed */
+    width: 100%; /* Ensure the carousel takes up the available width */
+    margin: 0 auto; /* Center the carousel */
 }
 
 /* Resize Carousel Images */
+/* Override Bootstrap's default image styles */
 #carouselExampleSlidesOnly img {
     max-width: 100%; /* Ensure images adjust within the carousel container */
     height: auto; /* Maintain aspect ratio */
@@ -343,6 +365,24 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
+/* Style for the 360 video container */
+#video-section .video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Aspect ratio (9:16) */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for the iframe */
+#video-section iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove border */
+}
+
 #project1 .col-6 {
     display: flex;
     flex-direction: column;
@@ -373,13 +413,52 @@ footer {
 
 
 
-
-
-@font-face {
-    font-family: 'Font Awesome 6 Brands';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap; /* Specify font-display property */
-    src: url('../path/to/font/fontawesome-webfont.woff2') format('woff2'),
-         url('../path/to/font/fontawesome-webfont.woff') format('woff');
+/* Widget section styles */
+.widget-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+    border-radius: 10px; /* Add rounded corners to images */
+    margin-left: 2px;
+    
 }
+
+.widget-section p {
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #a58686; /* Adjust text color */
+    font-weight: bolder;
+}
+
+.widget-section iframe {
+    border: none; /* Remove border from the iframe */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    border-radius: 10px; /* Add rounded corners to the iframe */
+    
+}
+
+/* Hover effect for widget section */
+.widget-section:hover {
+    background-color: #a58686;  /* Change background color on hover */
+}
+.widget-section:hover p {
+    color: #ffffff; /* Change text color on hover */
+}
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .widget-section {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .widget-section p {
+        margin-bottom: 10px; /* Add margin below the paragraph */
+    }
+
+    .widget-section iframe {
+        margin: 10px 0; /* Add margin above and below the iframe */
+     
+    }
+}
+

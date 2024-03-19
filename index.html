@@ -26,6 +26,7 @@
             dropdownMenu.classList.toggle('show');
         }
     </script>
+    
 </head>
 
 <body>
@@ -50,7 +51,7 @@
                                     <a class="nav-link" href="#artifacts">Artifacts</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="resume.html">Resume</a>
+                                    <a class="nav-link" href="#" id="downloadResume">Resume</a>
                                 </li>
                             </ul>
                         </div>
@@ -101,7 +102,7 @@
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Skills
+                        Show Skills
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><span class="dropdown-item-text">Unity 2D</span></li>
@@ -277,16 +278,21 @@
                 <hr>
                 <div class="row">
                     <div class="col-12">
-                        <p>This 360 VR video is a simulation and educational video that teaches the user to build a
-                            snake
-                            enclosure. The most beneficial asset I learned from this artifact was VR development. The
-                            most enjoyable
-                            part of the project was working with Unity to create a VR experience. It was something
-                            foreign to me,
-                            but despite the challenge, I really enjoyed learning the wonders that VR holds.</p>
+                        <p>I've been fortunate to be invited to participate in the Game Dev and Design club for Game Jams. 
+                            The premise is straightforward: we have a tight 5-day window to conceive and execute a video game or design aligned with a given theme. 
+                            It's been a valuable learning experience in managing deadlines without compromising on quality. 
+                            Moreover, collaborating with fellow developers has proven instrumental in refining our collective skill set. </p>
                     </div>
-                    <div class="col-12">
-                        
+                    <div class="widget-section row" >
+                        <div class="col-6">
+                            <p>RANKED #2 VIDEO GAME FOR FRONTIER THEME</p>
+                        </div>
+                        <div class="col-6">
+                            <iframe src="https://itch.io/embed/2551957?bg_color=c2a891&amp;fg_color=ffffff&amp;link_color=c78272&amp;border_color=ffffff"
+                                 title="Can The Cowboy Can? by KateHillyard12">
+                                <a href="https://katehillyard12.itch.io/can-the-cowboy-can">Can The Cowboy Can? by KateHillyard12</a>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -307,6 +313,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('downloadResume').addEventListener('click', function() {
+            downloadImage('Extra/images/resume pg1.jpg', 'resume_page_1.jpg');
+            downloadImage('Extra/images/reume pg2.jpg', 'resume_page_2.jpg');
+        });
+
+        function downloadImage(imageUrl, imageName) {
+            var link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = imageName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    
 </body>
 
 </html>
