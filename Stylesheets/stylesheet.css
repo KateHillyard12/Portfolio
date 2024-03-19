@@ -419,8 +419,6 @@ footer {
     align-items: center;
     margin-top: 20px; /* Adjust the margin as needed */
     border-radius: 10px; /* Add rounded corners to images */
-    margin-left: 2px;
-    
 }
 
 .widget-section p {
@@ -432,10 +430,8 @@ footer {
 
 .widget-section iframe {
     border: none; /* Remove border from the iframe */
-
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
     border-radius: 10px; /* Add rounded corners to the iframe */
-    
 }
 
 /* Hover effect for widget section */
