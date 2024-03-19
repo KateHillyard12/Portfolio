@@ -462,3 +462,25 @@ footer {
     }
 }
 
+
+/* Custom styling for the custom popup modal */
+.modal-content {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-title {
+    color: #333;
+}
+
+.modal-body p {
+    color: #555;
+}
