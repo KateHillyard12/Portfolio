@@ -437,6 +437,7 @@ footer {
 /* Hover effect for widget section */
 .widget-section:hover {
     background-color: #a58686;  /* Change background color on hover */
+    margin-left: 1px;
 }
 .widget-section:hover p {
     color: #ffffff; /* Change text color on hover */
