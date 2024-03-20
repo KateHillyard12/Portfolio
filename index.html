@@ -19,31 +19,59 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
 
-        <script>
-            // Function to handle resume download
-            function handleResumeDownload() {
-                $('#customPopupModal').modal('show'); // Show the custom popup modal
+    <script>
+        $(document).ready(function () {
+            // Call typeSentence function when document is ready
+            setTimeout(function () {
+                typeSentence("KATE HILLYARD", ".navbar-brand", ".input-cursor");
+            }, 3000);
+        });
+
+        // Function to handle resume download
+        function handleResumeDownload() {
+            $('#customPopupModal').modal('show'); // Show the custom popup modal
+        }
+
+        // Function to proceed with resume download
+        function proceedWithResumeDownload() {
+            downloadImage('Extra/images/resume pg1.jpg', 'resume_page_1.jpg');
+            downloadImage('Extra/images/resume pg2.jpg', 'resume_page_2.jpg');
+            $('#customPopupModal').modal('hide'); // Hide the custom popup modal after proceeding
+        }
+
+        // Function to download image
+        function downloadImage(imageUrl, imageName) {
+            var link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = imageName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        async function typeSentence(sentence, eleRef, cursorRef, delay = 100) {
+            const letters = sentence.split("");
+            let i = 0;
+            while (i < letters.length) {
+                await waitForMs(delay);
+                $(eleRef).append(letters[i]);
+                i++;
             }
-        
-            // Function to proceed with resume download
-            function proceedWithResumeDownload() {
-                downloadImage('Extra/images/resume pg1.jpg', 'resume_page_1.jpg');
-                downloadImage('Extra/images/resume pg2.jpg', 'resume_page_2.jpg');
-                $('#customPopupModal').modal('hide'); // Hide the custom popup modal after proceeding
-            }
-        
-            // Function to download image
-            function downloadImage(imageUrl, imageName) {
-                var link = document.createElement('a');
-                link.href = imageUrl;
-                link.download = imageName;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-        </script>
-        
-    
+            setTimeout(() => {
+                $(cursorRef).css('visibility', 'hidden'); // Hide the cursor after 3 seconds
+            }, 3000);
+            return;
+        }
+
+
+        function waitForMs(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+
+    </script>
+
+
 </head>
 
 <body>
@@ -53,7 +81,10 @@
             <div id="nav" class="col-12">
                 <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
                     <div class="container">
-                        <a class="navbar-brand" href="#">KATE HILLYARD</a>
+                        <div class="typing-container">
+                            <a class="navbar-brand" href="#"></a>
+                            <span class="input-cursor"></span>
+                        </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -177,7 +208,7 @@
                     <div class="col-lg-4 order-lg-1"> <!-- Reversed order for large screens -->
                         <!-- Slideshow Section -->
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner" >
+                            <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="Extra/images/Falling in love pt 1 - TDG.jpg" class="d-block w-100"
                                         alt="...">
@@ -258,14 +289,20 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="video-container">
-                                    <iframe src="Extra/videos/revised 360 video - Made with Clipchamp (1).mp4" title="360 Video" frameborder="0" width="100%" height="350px" allowfullscreen></iframe>
+                                    <iframe src="Extra/videos/revised 360 video - Made with Clipchamp (1).mp4"
+                                        title="360 Video" frameborder="0" width="100%" height="350px"
+                                        allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <p>This 360 VR video is a simulation and educational video that teaches the user to build a
-                                    snake enclosure. The most beneficial asset I learned from this artifact was VR development.
-                                    The most enjoyable part of the project was working with Unity to create a VR experience. It
-                                    was something foreign to me, but despite the challenge, I really enjoyed learning the wonders
+                                <p>This 360 VR video is a simulation and educational video that teaches the user to
+                                    build a
+                                    snake enclosure. The most beneficial asset I learned from this artifact was VR
+                                    development.
+                                    The most enjoyable part of the project was working with Unity to create a VR
+                                    experience. It
+                                    was something foreign to me, but despite the challenge, I really enjoyed learning
+                                    the wonders
                                     that VR holds.</p>
                             </div>
                         </div>
@@ -295,19 +332,25 @@
                 <hr>
                 <div class="row">
                     <div class="col-12">
-                        <p>I've been fortunate to be invited to participate in the Game Dev and Design club for Game Jams. 
-                            The premise is straightforward: we have a tight 5-day window to conceive and execute a video game or design aligned with a given theme. 
-                            It's been a valuable learning experience in managing deadlines without compromising on quality. 
-                            Moreover, collaborating with fellow developers has proven instrumental in refining our collective skill set. </p>
+                        <p>I've been fortunate to be invited to participate in the Game Dev and Design club for Game
+                            Jams.
+                            The premise is straightforward: we have a tight 5-day window to conceive and execute a video
+                            game or design aligned with a given theme.
+                            It's been a valuable learning experience in managing deadlines without compromising on
+                            quality.
+                            Moreover, collaborating with fellow developers has proven instrumental in refining our
+                            collective skill set. </p>
                     </div>
-                    <div class="widget-section row" >
+                    <div class="widget-section row">
                         <div class="col-4">
                             <p>RANKED #2 VIDEO GAME FOR FRONTIER THEME</p>
                         </div>
                         <div class="col-8">
-                            <iframe src="https://itch.io/embed/2551957?bg_color=c2a891&amp;fg_color=ffffff&amp;link_color=c78272&amp;border_color=fc2a891f"
-                                 title="Can The Cowboy Can? by KateHillyard12">
-                                <a href="https://katehillyard12.itch.io/can-the-cowboy-can">Can The Cowboy Can? by KateHillyard12</a>
+                            <iframe
+                                src="https://itch.io/embed/2551957?bg_color=c2a891&amp;fg_color=ffffff&amp;link_color=c78272&amp;border_color=fc2a891f"
+                                title="Can The Cowboy Can? by KateHillyard12">
+                                <a href="https://katehillyard12.itch.io/can-the-cowboy-can">Can The Cowboy Can? by
+                                    KateHillyard12</a>
                             </iframe>
                         </div>
                     </div>
@@ -330,8 +373,8 @@
             </div>
         </div>
     </footer>
-    
-    
+
+
     <!-- Custom Popup Modal -->
     <div id="customPopupModal" class="modal">
         <div class="modal-dialog">

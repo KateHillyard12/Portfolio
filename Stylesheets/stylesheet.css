@@ -9,6 +9,30 @@
     --dark-green: #6b705c;
 }
 
+/* For webkit-based browsers like Chrome and Safari */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    border-radius: 8px; /* Curvature of the scrollbar */
+    height: 500px; /* Height of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--med-green); /* Color of the track */
+    border-radius: 8px; /* Curvature of the track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c78272; /* Color of the scrollbar handle */
+    border-radius: 8px; /* Curvature of the handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b47468; /* Color of the scrollbar handle on hover */
+  }
+  
 /* Global styles */
 body {
     background-color: var(--med-green);
@@ -117,6 +141,31 @@ nav.navbar {
 .navbar-nav .nav-link:hover {
     color: var(--light-brown) !important; /* White text color on hover */
     text-decoration: underline;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 35px;
+    background-color: white;
+    animation: blink .6s linear infinite alternate;
 }
 
 /* Footer styles */
@@ -479,4 +528,14 @@ footer {
 
 .modal-body p {
     color: #555;
+}
+
+/*typing animation for title*/
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing-animation {
+    animation: typing 1s steps(30, end) forwards;
 }
