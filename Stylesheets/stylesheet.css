@@ -9,30 +9,7 @@
     --dark-green: #6b705c;
 }
 
-/* For webkit-based browsers like Chrome and Safari */
-::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-    border-radius: 8px; /* Curvature of the scrollbar */
-    height: 500px; /* Height of the scrollbar */
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--med-green); /* Color of the track */
-    border-radius: 8px; /* Curvature of the track */
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #c78272; /* Color of the scrollbar handle */
-    border-radius: 8px; /* Curvature of the handle */
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #b47468; /* Color of the scrollbar handle on hover */
-  }
-  
+
 /* Global styles */
 body {
     background-color: var(--med-green);
@@ -460,8 +437,6 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-
-
 /* Widget section styles */
 .widget-section {
     display: flex;
@@ -483,14 +458,33 @@ footer {
     border-radius: 10px; /* Add rounded corners to the iframe */
 }
 
-/* Hover effect for widget section */
-.widget-section:hover {
+/* Hover effect for widget section row */
+.widget-section:hover .widget-row::before {
     background-color: #a58686;  /* Change background color on hover */
     margin-left: 1px;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
+
 .widget-section:hover p {
     color: #ffffff; /* Change text color on hover */
 }
+
+.widget-section::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+.widget-section::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #a58686;
+    z-index: -1;
+    transition: transform 2s ease;
+}
+
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .widget-section {
