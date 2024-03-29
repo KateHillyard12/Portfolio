@@ -437,53 +437,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-/* Widget section styles */
-.widget-section {
-    display: flex;
-    align-items: center;
-    margin-top: 20px; /* Adjust the margin as needed */
-    border-radius: 10px; /* Add rounded corners to images */
-}
 
-.widget-section p {
-    margin: 0; /* Remove default margin for the paragraph */
-    font-size: 20px; /* Adjust the font size as needed */
-    color: #a58686; /* Adjust text color */
-    font-weight: bolder;
-}
-
-.widget-section iframe {
-    border: none; /* Remove border from the iframe */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
-    border-radius: 10px; /* Add rounded corners to the iframe */
-}
-
-/* Hover effect for widget section row */
-.widget-section:hover .widget-row::before {
-    background-color: #a58686;  /* Change background color on hover */
-    margin-left: 1px;
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.widget-section:hover p {
-    color: #ffffff; /* Change text color on hover */
-}
-
-.widget-section::before{
-    transform: scaleX(0);
-    transform-origin: bottom right;
-}
-.widget-section::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: #a58686;
-    z-index: -1;
-    transition: transform 2s ease;
-}
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
@@ -533,3 +487,123 @@ footer {
 .typing-animation {
     animation: typing 1s steps(30, end) forwards;
 }
+
+/*effect for About Gimm button in header*/
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: white; 
+    text-transform: capitalize;
+    background-color: #c78272;
+
+    font-size: 18px;
+    padding: 20px 0px;
+    width: 150px;
+    border-radius: #ba796a; 
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.effect.effect-5 {
+    transition: all 0.2s linear 0s;
+}
+
+.effect.effect-5:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba(#d99383,0.3); 
+    border-radius: 0 50% 50% 0;
+    transform: scale(0,1);
+    transform-origin: left center;
+    transition: all 0.2s linear 0s;
+}
+
+.effect.effect-5:hover {
+    text-indent: 30px;
+}
+
+.effect.effect-5:hover:before {
+    transform: scale(1,1);
+    text-indent: 0;
+}
+
+
+
+/*game jam box css*/
+  .gamejam {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 60vh;
+  }
+  
+  .gamejam .box {
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(240, 236, 231);
+    margin: 10px;
+    position: relative;
+    box-shadow: 0px 0px 15px gray;
+    transition: .5s all ease-in-out;
+  }
+  
+  .gamejam .box .boxContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .gamejam .box .boxContent .icon {
+    color: #93756f;
+    font-size: 48px;
+    padding: 15px;
+  }
+  
+  .gamejam .box .boxContent .title {
+    font-size: 24px;
+    color: #93756f;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .gamejam .box .boxContent .desc {
+    color: #d78d7d;
+    font-size: 15px;
+    height: 20%;
+  }
+  
+  .gamejam .box a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .gamejam .box:hover {
+    background: linear-gradient(130deg, #d78d7d 0%, #ab8881 100%);
+    box-shadow: none;
+  }
+  
+  .gamejam .box:hover .icon,
+  .gamejam .box:hover .title,
+  .gamejam .box:hover .desc {
+    color: white;
+    transition: .5s all ease-in-out;
+  }
+  
