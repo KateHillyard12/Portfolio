@@ -21,7 +21,7 @@ body {
 
 /* Title section */
 #title h1 {
-    color: #67704b; /* Blue header text color */
+    color: #4d6343; /* Blue header text color */
     font-weight: bold;
     font-size: 50px;
 }
@@ -82,9 +82,8 @@ p {
 
 
 #about img {
-    border: 5px solid var(--dark-brown); /* Add a solid border with the desired color */
-    border-radius: 50%; /* Make the border circular */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    background-color: #FAEDCD;
 }
 
 
@@ -607,3 +606,19 @@ footer {
     transition: .5s all ease-in-out;
   }
   
+
+
+  @keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInFromBottom 0.5s ease-out;
+}
