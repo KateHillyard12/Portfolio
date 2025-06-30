@@ -1,0 +1,59 @@
+/* custom-theme.css */
+
+:root {
+  /* PRIMARY: Sage Green Theme */
+  --bs-primary: #84ad8f; /* soft sage */
+  --bs-primary-rgb: 90, 125, 99;
+
+  /* Secondary: Olive-gray complement */
+  --bs-secondary: #abcbb9;
+  --bs-secondary-rgb: 138, 154, 145;
+
+  /* Accent Colors */
+  --bs-success: #6c9773;
+  --bs-info: #9bb8a4;
+  --bs-warning: #e2e0b1;
+  --bs-danger: #a16a5e;
+
+  /* Neutral Grays to green-tinted grays */
+  --bs-gray: #88968d;
+  --bs-gray-dark: #5e6f66;
+  --bs-gray-100: #f0f4f1;
+  --bs-gray-200: #e0e8e3;
+  --bs-gray-300: #cbd7cf;
+  --bs-gray-400: #aabbb1;
+  --bs-gray-500: #8a9a91;
+  --bs-gray-600: #6c7c74;
+  --bs-gray-700: #5a6a61;
+  --bs-gray-800: #49574f;
+  --bs-gray-900: #37453d;
+
+  /* Link colors */
+  --bs-link-color: #5a7d63;
+  --bs-link-hover-color: #44604c;
+
+  /* Form focus & shadow colors */
+  --bs-focus-ring-color: rgba(90, 125, 99, 0.25);
+  --bs-border-color: #cbd7cf;
+
+  /* Optional body/bg tweaks */
+  --bs-body-color: #2e3b34;
+  --bs-body-bg: #f6f9f6;
+}
+
+/* Optionally, override navbar specifically */
+.navbar.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+a {
+  color: var(--bs-link-color);
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+}
