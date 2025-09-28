@@ -57,3 +57,59 @@ a {
 a:hover {
   color: var(--bs-link-hover-color);
 }
+
+
+/* ===== Project section uses burnt orange accent, banner stays sage ===== */
+#projects {
+  --accent-project: #bd5d38; /* Start Bootstrap Resume burnt orange */
+}
+
+/* Outline buttons in Projects (filter bar) */
+#projects .btn-outline-primary {
+  --bs-btn-color: var(--accent-project);
+  --bs-btn-border-color: var(--accent-project);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--accent-project);
+  --bs-btn-hover-border-color: var(--accent-project);
+  --bs-btn-active-bg: #a85230;
+  --bs-btn-active-border-color: #a85230;
+}
+
+/* Solid primary buttons in Projects (e.g., Watch Gameplay) */
+#projects .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--accent-project);
+  --bs-btn-border-color: var(--accent-project);
+  --bs-btn-hover-bg: #a85230;
+  --bs-btn-hover-border-color: #a85230;
+  --bs-btn-active-bg: #944827;
+  --bs-btn-active-border-color: #944827;
+}
+
+/* Active filter state */
+#projects .filter-btn.active,
+#projects .btn-outline-primary.filter-btn.active {
+  background-color: var(--accent-project) !important;
+  border-color: var(--accent-project) !important;
+  color: #fff !important;
+}
+
+/* Tabs accent inside Projects (e.g., Brews & Bloodshed) */
+#projects .nav-tabs .nav-link.active {
+  color: var(--accent-project) !important;
+  border-color: var(--accent-project) var(--accent-project) transparent !important;
+}
+#projects .nav-tabs .nav-link:hover {
+  border-color: var(--accent-project) !important;
+}
+
+/* Optional: primary-colored text/icons inside Projects turn orange */
+#projects .text-primary { color: var(--accent-project) !important; }
+
+/* Force the side banner (nav) to sage green only */
+#sideNav.navbar.bg-primary{
+  /* set local primary just for the banner */
+  --bs-primary: #84ad8f;
+  --bs-primary-rgb: 132, 173, 143;
+  background-color: var(--bs-primary) !important;
+}

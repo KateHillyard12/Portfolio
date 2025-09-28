@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Portfolio - Kate Hillyard</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/Logo.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -22,17 +22,17 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Kate Hillyard</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Headshot of Kate Hillyard" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Projects</a></li>
-                </ul>
+                <div class="navbar-nav">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                    <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+                </div>
             </div>
         </nav>
         <!-- Page Content-->
@@ -63,13 +63,21 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
+                                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Video Editor and 3D Background Artist </h3>
+                            <div class="subheading mb-3">GIMM Works</div>
+                            <p>I cut and edit various animation styles and social-ready clips while building stylized, real-time environments in Blender/Unity. Balancing the role with school, I’m leveling up on team pipelines, asset optimization, and the day-to-day workflow of game production.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2025 - Present</span></div>
+                    </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Web Accessibility Analyst</h3>
                             <div class="subheading mb-3">Boise State University</div>
                             <p>While continuing academic studies at Boise State University, currently employed part-time as a Web Accessibility Analyst. Work closely with teammates and supervisors to evaluate and enhance the accessibility of university websites. Key tasks include implementing alt text for images, adjusting HTML headers, editing content in WordPress, and reviewing PDFs, all in collaboration with various campus departments to promote inclusive and user-friendly web experiences.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Novemeber 2024 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">Novemeber 2024 - October 2025</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -79,14 +87,7 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">October 2022 - Present</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Cashier and Salesman</h3>
-                            <div class="subheading mb-3">Big 5 Sporting Goods</div>
-                            <p>Employed full-time over the course of two consecutive summers, initially tasked as a cashier, subsequently assuming responsibilities encompassing salesmanship, perfectly catering to customer needs by retrieving footwear merchandise. </p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2022 - August 2023</span></div>
-                    </div>
+
                 </div>
             </section>
             <hr class="m-0" />
@@ -99,7 +100,7 @@
                             <h3 class="mb-0">Boise State University</h3>
                             <div class="subheading mb-3">Bachelor of Arts and Sciences</div>
                             <div>GIMM (Gaming, Interactive, Mobile Media)</div>
-                            <p>GPA: 3.8</p>
+                            <p>GPA: 4.0</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2022 - May 2026</span></div>
                     </div>
@@ -126,6 +127,8 @@
                         <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
                         <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
                         <li class="list-inline-item"><i class="fa-brands fa-unity"></i></li>
+                        <li class="list-inline-item"><i class="fa-brands fa-meta"></i></li>
+                        
                     </ul>
                     <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
@@ -151,17 +154,322 @@
             <hr class="m-0" />
 
             <!-- Awards-->
-            <section class="resume-section" id="awards">
+                        <!-- Projects-->
+            <section class="resume-section" id="projects">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Projects</h2>
-                    <h3> currently being updated</h3>
+                    <!-- Filter toolbar -->
+                    <div class="btn-group mb-4" role="group" aria-label="Filter projects">
+                        <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="websites">Websites</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="ui">UI Design</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="games">Video Games</button>
+                    </div>
+
+
+                    <div class="proj-group" data-category="websites">
+<h3 class="mb-3">Websites</h3>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h4 class="card-title">CRUD API Demo</h4>
+                                    <p class="card-text">A full CRUD web app showcasing RESTful API design, auth, and a clean UI.</p>
+                                    <ul class="small mb-3">
+                                        <li>Stack: HTML, CSS, JavaScript, Node/Express</li>
+                                        <li>Features: Create/Read/Update/Delete items, validation, responsive UI</li>
+                                    </ul>
+                                    <a class="btn btn-sm btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modalCrudDemo">Watch Demo</a>
+                                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/KateHillyard12/DogForm-API-CRUD-Mobile-Website/tree/main/server" aria-label="Open CRUD API source code on GitHub">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow-sm h-100">
+                                <div class="card-body">
+                                    <h4 class="card-title">Alexa Skill: Plant Care Helper</h4>
+                                    <p class="card-text">A voice-first skill that answers plant care questions, reminders, and tips.</p>
+                                    <ul class="small mb-3">
+                                        <li>Platform: Alexa Developer Console</li>
+                                        <li>Tech: Voice intents, slots, Lambda backend</li>
+                                    </ul>
+                                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/KateHillyard12/Alexa-Plant-Skill" aria-label="Open Alexa skill code repository">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UI Design -->
+                    
+                    </div>
+
+                    <div class="proj-group" data-category="ui">
+<h3 class="mb-3">UI Design</h3>
+                    <div class="row g-4 mb-5">
+                        <!-- Replace # with actual image paths -->
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\Menusystem_UI.png" class="card-img-top" alt="UI concept 1: dashboard layout">
+                                <div class="card-body">
+                                    <h5 class="card-title">Menu System UI</h5>
+                                    <p class="card-text small">A clean, playful, and minimalist UI for Brews & Bloodshed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\App_UI_Design.png" class="card-img-top" alt="UI concept 2: mobile settings screen">
+                                <div class="card-body">
+                                    <h5 class="card-title">Quantum Entagnlement Icon</h5>
+                                    <p class="card-text small">App icon for a collaborative game blending quantum entanglement with a cute love story.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\interactive_UI_Icon.png" class="card-img-top" alt="UI concept 3: e-commerce product page">
+                                <div class="card-body">
+                                    <h5 class="card-title">Stylized Touch Screen UI</h5>
+                                    <p class="card-text small">UI indicator for Quantum Entanglement—an interactive comic—prompting users to touch the screen.</p>
+                                </div>
+                            </div>
+                         </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="assets\img\FancyFrogLogo copy.png" class="card-img-top" alt="UI concept 3: e-commerce product page">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fancy Frog Studio Logo</h5>
+                                        <p class="card-text small">Logo/brand concept developed for the game studio Fancy Frog Studios.</p>
+                                    </div>
+                                </div>
+                         </div>
+                    </div>
+                    <div class="row g-4 mb-5">
+                        <!-- Replace # with actual image paths -->
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\Screenshot 2025-09-28 155016.png" class="card-img-top" alt="UI concept 1: dashboard layout">
+                                <div class="card-body">
+                                    <h5 class="card-title">Title Screen</h5>
+                                    <p class="card-text small">Title screen for Brews & Bloodshed, showcasing the game’s style and premise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\Phone_UI.jpg" class="card-img-top" alt="UI concept 2: mobile settings screen">
+                                <div class="card-body">
+                                    <h5 class="card-title">App UI Re-design</h5>
+                                    <p class="card-text small">UX/UI concept focused on usability, clarity, and workflow for a digital art app.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="card h-100 shadow-sm">
+                                <img src="assets\img\Class talk - TDG copy.png" class="card-img-top" alt="UI concept 3: e-commerce product page">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dialogue Comic Panel</h5>
+                                    <p class="card-text small">Comic panel from Quantum Entanglement visualizing entangled communication between characters.</p>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="proj-group" data-category="games">
+
+
+                    <!-- Websites -->
+                    <h3 class="mb-3">Video Games</h3>
+
+                    <!-- Brews & Bloodshed -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="card-title mb-1">Brews & Bloodshed</h4>
+                                    <p class="mb-2">A 3D first‑person barista/murder‑mystery simulator. Serve drinks, read suspects, and solve the case.</p>
+                                    <ul class="small mb-3">
+                                        <li>Engine: Unity</li>
+                                        <li>Role: Game design, systems programming, 3D art</li>
+                                    </ul>
+                                </div>
+                                <div class="ms-3">
+                                    <img src="assets\img\BBLogo.png" alt="Brews & Bloodshed key art" style="width:140px;height:auto;border-radius:8px;">
+                                </div>
+                            </div>
+                             <a class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalBrewsVideo">Watch Gameplay</a>
+
+
+                            <!-- Tabs for Assets/Programming -->
+                            <ul class="nav nav-tabs mt-3" id="brewsTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab" data-bs-toggle="tab" data-bs-target="#assets" type="button" role="tab" aria-controls="assets" aria-selected="true">Assets</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="programming-tab" data-bs-toggle="tab" data-bs-target="#programming" type="button" role="tab" aria-controls="programming" aria-selected="false">Programming</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent">
+                                <div class="tab-pane fade show active" id="assets" role="tabpanel" aria-labelledby="assets-tab">
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-5">
+                                            <img src="assets\img\BB_Level.png" class="img-fluid rounded" alt="Cafe interior props">
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <img src="assets\img\BB_MachineModels.png" class="img-fluid rounded" alt="Espresso machine model">
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <img src="assets\img\BB_Models.png" class="img-fluid rounded" alt="Character concept art">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="programming" role="tabpanel" aria-labelledby="programming-tab">
+                                    <ul class="mb-0 small">
+                                        <li>Dialogue & suspicion system driving branching outcomes</li>
+                                        <li>Drink crafting with temperature, grind, and timing variables</li>
+                                        <li>Interactables with raycast prompts and accessibility toggles</li>
+                                    </ul>
+                                </br>
+                                    <a class="btn btn-sm btn-outline-primary" href="https://github.com/KateHillyard12/Brews-and-Bloodshed/tree/main/Assets/Scripts" aria-label="View source code for BB">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Jam: Can the Cowboy Can -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">Can the Cowboy Can (Game Jam) <i class="fa-solid fa-hat-cowboy text-primary" aria-hidden="true"></i></h4>
+                            <p class="mb-2">A fast, cheeky jam game built under time pressure (5 days while in school) with playful physics and a can‑tossing core loop. Won second place in the game jam "Beyond the Frontier".</p>
+                            <ul class="small mb-3">
+                                <li>Engine: Unity</li>
+                                <li>Role: Gameplay prototyping, art polish</li>
+                            </ul>
+                            <a class="btn btn-sm btn-primary me-2" href="https://katehillyard12.itch.io/can-the-cowboy-can" aria-label="Play the jam build">Play</a> 
+                        </div>
+                    </div>
+
+                    <!-- WIP: Multiplayer Beach Volleyball (Accessible) -->
+                    <div class="card mb-4 shadow-sm border-dashed">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">Multiplayer Beach Volleyball — Accessible (WIP)</h4>
+                            <p class="mb-2">Networked volleyball prototype with accessible controller options and painting‑grid visibility mechanics.</p>
+                            <p class="small text-muted mb-0">Details coming soon — gameplay clip & repo link will appear here.</p>
+                        </div>
+                    </div>
+
+                    <!-- WIP: VR Level Design Experience -->
+                    <div class="card mb-2 shadow-sm border-dashed">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">VR Level Design Experience (WIP)</h4>
+                            <p class="mb-2">A room‑scale exploration of locomotion comfort, spatial cues, and environmental storytelling.</p>
+                            <p class="small text-muted mb-0">Playable demo and design notes to be added.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2 shadow-sm border-dashed">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">VR/AR Scent Diagnostic Test System (WIP)</h4>
+                            <p class="mb-2">Developed in Unity, this project combines atomizer-based scent release with interactive 3D objects to create a diagnostic tool for identifying and associating scents in immersive environments. Designed as an innovative aid for Alzheimer’s research and testing.</p>
+                            <p class="small text-muted mb-0">Playable demo and design notes to be added.</p>
+                        </div>
+                    </div>
 
                 </div>
             </section>
+                    </div>
+
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+    
+        <script>
+        (function(){
+            const buttons = document.querySelectorAll('.filter-btn');
+            const groups = document.querySelectorAll('.proj-group');
+            function apply(filter){
+                groups.forEach(g => {
+                    const show = (filter === 'all') || (g.dataset.category === filter);
+                    if(show){ g.removeAttribute('hidden'); }
+                    else { g.setAttribute('hidden',''); }
+                });
+            }
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    apply(btn.dataset.filter);
+                });
+            });
+        })();
+        </script>
+
+                <!-- Code highlighting + copy -->
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script>
+        (function() {
+            const blocks = document.querySelectorAll('pre > code');
+            blocks.forEach(code => {
+                const pre = code.parentElement;
+                const wrap = document.createElement('div');
+                wrap.className = 'code-wrap';
+                pre.replaceWith(wrap);
+                wrap.appendChild(pre);
+                const btn = document.createElement('button');
+                btn.className = 'btn btn-sm btn-outline-secondary copy-btn';
+                btn.type = 'button';
+                btn.textContent = 'Copy';
+                btn.addEventListener('click', async () => {
+                    try {
+                        await navigator.clipboard.writeText(code.innerText);
+                        btn.textContent = 'Copied!';
+                        setTimeout(()=> btn.textContent = 'Copy', 1500);
+                    } catch(e) { btn.textContent = 'Error'; }
+                });
+                wrap.appendChild(btn);
+            });
+        })();
+        </script>
+
+    <!-- Demo Modals -->
+    <div class="modal fade" id="modalCrudDemo" tabindex="-1" aria-labelledby="modalCrudDemoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCrudDemoLabel">CRUD API — Demo Video</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Replace src with your file path or YouTube embed -->
+            <video class="w-100" controls preload="metadata">
+              <source src="assets\img\API Web demo - Made with Clipchamp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalBrewsVideo" tabindex="-1" aria-labelledby="modalBrewsVideoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalBrewsVideoLabel">Brews & Bloodshed — Gameplay</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Replace src with your file path or YouTube embed -->
+            <video class="w-100" controls preload="metadata">
+              <source src="assets\img\BB_Showreel.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
     </body>
 </html>
