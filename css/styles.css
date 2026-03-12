@@ -3780,6 +3780,12 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-hover-color);
 }
 
+.mobile-nav-logo {
+    width: 3rem;
+    height: 3rem;
+    ;
+}
+
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
@@ -8034,15 +8040,16 @@ textarea.form-control-lg {
   word-break: break-word !important;
 }
 
+
 /* rtl:end:remove */
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-primary), var(--bs-text-opacity)) !important;
 }
 
 .text-secondary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-accordion-active-color), var(--bs-text-opacity)) !important;
 }
 
 .text-success {

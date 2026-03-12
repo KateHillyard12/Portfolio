@@ -24,9 +24,26 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Kate Hillyard</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                    src="assets/img/profile.jpg" alt="..." /></span>
+            <span class="d-block d-lg-none">
+                <img class="mobile-nav-logo" src="assets/img/kh_LogoWhite.png" alt="Kate Hillyard logo" />
+            </span>
+            <span class="d-none d-lg-block">
+
+                <div class="profile-flip" id="profileFlip">
+
+                    <div class="profile-flip-inner">
+
+                        <img class="profile-flip-face profile-flip-front img-fluid img-profile rounded-circle mx-auto mb-2"
+                            src="assets/img/profile.jpg" alt="Profile Photo">
+
+                        <img class="profile-flip-face profile-flip-back img-fluid img-profile rounded-circle mx-auto mb-2"
+                            src="assets/img/kh_LogoWhite.png" alt="Logo">
+
+                    </div>
+
+                </div>
+
+            </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
@@ -59,12 +76,24 @@
                     merge creativity with technology to craft immersive experiences. This portfolio
                     showcases my journey and projects, reflecting my dedication and skills in the field.</p>
                 <div class="social-icons">
-                    <a class="social-icon" href="https://www.linkedin.com/in/katehillyard/"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://github.com/KateHillyard12"><i class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://www.linkedin.com/in/katehillyard/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                    <a class="social-icon" href="https://github.com/KateHillyard12" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a class="social-icon social-download-trigger" href="#" data-bs-toggle="modal"
+                        data-bs-target="#downloadChoiceModal" aria-label="Open download options">
+                        <i class="fas fa-folder-open"></i>
+                    </a>
                 </div>
             </div>
         </section>
+
         <hr class="m-0" />
         <!-- Experience-->
         <section class="resume-section" id="experience">
@@ -236,10 +265,8 @@
                         <!-- Replace # with actual image paths -->
                         <div class="col-sm-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\Menusystem_UI.png"
-                                    alt="Menu System UI"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets\img\Menusystem_UI.png" alt="Menu System UI"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Menu System UI</h5>
@@ -250,10 +277,8 @@
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\App_UI_Design.png"
-                                    alt="App icon for Quantum Entanglement"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets\img\App_UI_Design.png" alt="App icon for Quantum Entanglement"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Quantum Entagnlement Icon</h5>
@@ -264,25 +289,22 @@
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\Screenshot 2025-06-17 190757.png"
-                                    alt="Triathlon Logos"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets\img\Screenshot 2025-06-17 190757.png" alt="Triathlon Logos"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Triathlon Logos</h5>
                                     <p class="card-text small">Logos for a
-triathlon event, designed to convey energy and motion for the teams Meghan Lee Stallions and The Rigorus Rats. </p>
+                                        triathlon event, designed to convey energy and motion for the teams Meghan Lee
+                                        Stallions and The Rigorus Rats. </p>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-3">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\FancyFrogLogo copy.png" 
-                                    alt="Fancy Frog Studio Logo"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets\img\FancyFrogLogo copy.png" alt="Fancy Frog Studio Logo"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Fancy Frog Studio Logo</h5>
@@ -297,23 +319,21 @@ triathlon event, designed to convey energy and motion for the teams Meghan Lee S
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 shadow-sm">
                                 <img src="assets\img\Screenshot 2025-09-28 155016.png"
-                                    alt="Brews & Bloodshed Title Screen"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#assetImageModal">
+                                    alt="Brews & Bloodshed Title Screen" class="img-fluid rounded asset-pop"
+                                    data-bs-toggle="modal" data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Title Screen</h5>
                                     <p class="card-text small">Title screen for Brews & Bloodshed, showcasing the game’s
                                         style and premise.</p>
                                 </div>
+                                <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalIntroVideo">Watch Animation</a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\logo.png"
-                                    alt="Kindness Kids Daycare Logo"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets\img\logo.png" alt="Kindness Kids Daycare Logo"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Daycare Logo</h5>
@@ -325,14 +345,13 @@ triathlon event, designed to convey energy and motion for the teams Meghan Lee S
                         </div>
                         <div class="col-sm-6 col-lg-4">
                             <div class="card h-100 shadow-sm">
-                                <img src="assets\img\BH LOGO.png"
-                                    alt="Brain Health Logo"
-                                    class="img-fluid rounded asset-pop"
-                                    data-bs-toggle="modal"
+                                <img src="assets/img/BrainHealth Showcase Poster.png" alt="Brain Health Logo"
+                                    class="img-fluid rounded asset-pop" data-bs-toggle="modal"
                                     data-bs-target="#assetImageModal">
                                 <div class="card-body">
                                     <h5 class="card-title">Brain Health Logo</h5>
-                                    <p class="card-text small">Logo devloped for a VR application that diagnoses alzheimer's disease through scent association tests. </p>
+                                    <p class="card-text small">Logo devloped for a VR application that diagnoses
+                                        alzheimer's disease through scent association tests. </p>
                                     </p>
                                 </div>
                             </div>
@@ -340,244 +359,385 @@ triathlon event, designed to convey energy and motion for the teams Meghan Lee S
                     </div>
                 </div>
 
-                    <div class="proj-group" data-category="games">
-                        <h3 class="mb-3">Video Games</h3>
+                <div class="proj-group" data-category="games">
+                    <h3 class="mb-3">Video Games</h3>
 
-                        <!-- Brews & Bloodshed -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h4 class="card-title mb-1">Brews & Bloodshed</h4>
-                                        <p class="mb-2">A 3D first-person barista/murder-mystery simulator. Serve
-                                            drinks, read suspects, and solve the case.</p>
-                                        <ul class="small mb-3">
-                                            <li>Engine: Unity</li>
-                                            <li>Role: Game design, systems programming, 3D art</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ms-3">
-                                        <img src="assets\img\BBLogo.png" alt="Brews & Bloodshed key art"
-                                            style="width:140px;height:auto;border-radius:8px;">
-                                    </div>
+                    <!-- Brews & Bloodshed -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="card-title mb-1">Brews & Bloodshed</h4>
+                                    <p class="mb-2">A 3D first-person barista/murder-mystery simulator. Serve
+                                        drinks, read suspects, and solve the case.</p>
+                                    <ul class="small mb-3">
+                                        <li>Engine: Unity</li>
+                                        <li>Role: Game design, systems programming, 3D art</li>
+                                    </ul>
                                 </div>
-                                <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modalBrewsVideo">Watch Gameplay</a>
+                                <div class="ms-3">
+                                    <img src="assets\img\BBLogo.png" alt="Brews & Bloodshed key art"
+                                        style="width:140px;height:auto;border-radius:8px;">
+                                </div>
+                            </div>
+                            <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalBrewsVideo">Watch Gameplay</a>
 
-                                <!-- Tabs for Assets/Programming -->
-                                <ul class="nav nav-tabs mt-3" id="brewsTabs-bb" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="assets-tab-bb" data-bs-toggle="tab"
-                                            data-bs-target="#assets-bb" type="button" role="tab" aria-controls="assets-bb"
-                                            aria-selected="true">Assets</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="programming-tab-bb" data-bs-toggle="tab"
-                                            data-bs-target="#programming-bb" type="button" role="tab"
-                                            aria-controls="programming-bb" aria-selected="false">Programming</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-bb">
-                                    <div class="tab-pane fade show active" id="assets-bb" role="tabpanel"
-                                        aria-labelledby="assets-tab-bb">
-                                        <div class="row g-3">
-                                            <div class="col-6 col-md-5">
-                                                <img src="assets\img\BB_Level.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Cafe interior props"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
-                                            <div class="col-6 col-md-3">
-                                                <img src="assets\img\BB_MachineModels.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Espresso machine model"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
-                                            <div class="col-6 col-md-4">
-                                                <img src="assets\img\BB_Models.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Character concept art"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
+                            <!-- Tabs for Assets/Programming -->
+                            <ul class="nav nav-tabs mt-3" id="brewsTabs-bb" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab-bb" data-bs-toggle="tab"
+                                        data-bs-target="#assets-bb" type="button" role="tab" aria-controls="assets-bb"
+                                        aria-selected="true">Assets</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="programming-tab-bb" data-bs-toggle="tab"
+                                        data-bs-target="#programming-bb" type="button" role="tab"
+                                        aria-controls="programming-bb" aria-selected="false">Programming</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-bb">
+                                <div class="tab-pane fade show active" id="assets-bb" role="tabpanel"
+                                    aria-labelledby="assets-tab-bb">
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-5">
+                                            <img src="assets\img\BB_Level.png" class="img-fluid rounded asset-pop"
+                                                alt="Cafe interior props" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <img src="assets\img\BB_MachineModels.png"
+                                                class="img-fluid rounded asset-pop" alt="Espresso machine model"
+                                                data-bs-toggle="modal" data-bs-target="#assetImageModal">
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <img src="assets\img\BB_Models.png" class="img-fluid rounded asset-pop"
+                                                alt="Character concept art" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="programming-bb" role="tabpanel"
-                                        aria-labelledby="programming-tab-bb">
-                                        <ul class="mb-0 small">
-                                            <li>Dialogue & suspicion system driving branching outcomes</li>
-                                            <li>Drink crafting with sauces, esspresso shots, and milk variables</li>
-                                            <li>Interactables with raycast prompts and accessibility toggles</li>
-                                        </ul>
-                                        </br>
-                                        <a class="btn btn-sm btn-outline-primary"
-                                            href="https://github.com/KateHillyard12/Brews-and-Bloodshed/tree/main/Assets/Scripts"
-                                            aria-label="View source code for BB">Code</a>
-                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="programming-bb" role="tabpanel"
+                                    aria-labelledby="programming-tab-bb">
+                                    <ul class="mb-0 small">
+                                        <li>Dialogue & suspicion system driving branching outcomes</li>
+                                        <li>Drink crafting with sauces, esspresso shots, and milk variables</li>
+                                        <li>Interactables with raycast prompts and accessibility toggles</li>
+                                    </ul>
+                                    </br>
+                                    <a class="btn btn-sm btn-outline-primary"
+                                        href="https://github.com/KateHillyard12/Brews-and-Bloodshed/tree/main/Assets/Scripts"
+                                        aria-label="View source code for BB">Code</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Game Jam: Can the Cowboy Can -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <h4 class="card-title mb-1">Can the Cowboy Can (Game Jam) <i
-                                        class="fa-solid fa-hat-cowboy text-primary" aria-hidden="true"></i></h4>
-                                <p class="mb-2">A fast, cheeky jam game built under time pressure (5 days while in
-                                    school) with playful physics and a can-tossing core loop. Won second place in the
-                                    game jam "Beyond the Frontier".</p>
-                                <ul class="small mb-3">
-                                    <li>Engine: Unity</li>
-                                    <li>Role: Gameplay prototyping, art polish</li>
-                                </ul>
-                                <a class="btn btn-sm btn-primary me-2"
-                                    href="https://katehillyard12.itch.io/can-the-cowboy-can"
-                                    aria-label="Play the jam build">Play</a>
-                            </div>
+                    <!-- Game Jam: Can the Cowboy Can -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">Can the Cowboy Can (Game Jam) <i
+                                    class="fa-solid fa-hat-cowboy text-primary" aria-hidden="true"></i></h4>
+                            <p class="mb-2">A fast, cheeky jam game built under time pressure (5 days while in
+                                school) with playful physics and a can-tossing core loop. Won second place in the
+                                game jam "Beyond the Frontier".</p>
+                            <ul class="small mb-3">
+                                <li>Engine: Unity</li>
+                                <li>Role: Gameplay prototyping, art polish</li>
+                            </ul>
+                            <a class="btn btn-sm btn-primary me-2"
+                                href="https://katehillyard12.itch.io/can-the-cowboy-can"
+                                aria-label="Play the jam build">Play</a>
                         </div>
+                    </div>
 
 
-                        <!-- Set & Spike -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h4 class="card-title mb-1">Set Spike!</h4>
-                                        <p class="mb-2">Multiplayer volleyball prototype with accessible controller options and
-                                         AI obsticals.</p>
-                                        <ul class="small mb-3">
-                                            <li>Engine: Unity</li>
-                                            <li>Role: Game design, systems programming, 3D art</li>
-                                        </ul>
-                                    </div>
-                                    <div class="ms-3">
-                                        <img src="assets\img\VolleyballSetSpike.png" alt="Set & Spike key art"
-                                            style="width:140px;height:auto;border-radius:8px;">
-                                    </div>
+                    <!-- Set & Spike -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="card-title mb-1">Set Spike!</h4>
+                                    <p class="mb-2">Multiplayer volleyball prototype with accessible controller options
+                                        and
+                                        AI obsticals.</p>
+                                    <ul class="small mb-3">
+                                        <li>Engine: Unity</li>
+                                        <li>Role: Game design, systems programming, 3D art</li>
+                                    </ul>
                                 </div>
-                                <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
-                                    data-bs-target="#modalSSVideo">Watch Gameplay</a>
+                                <div class="ms-3">
+                                    <img src="assets\img\VolleyballSetSpike.png" alt="Set & Spike key art"
+                                        style="width:140px;height:auto;border-radius:8px;">
+                                </div>
+                            </div>
+                            <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalSSVideo">Watch Gameplay</a>
 
-                                <!-- Tabs for Assets/Programming -->
-                                <ul class="nav nav-tabs mt-3" id="brewsTabs-ss" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="assets-tab-ss" data-bs-toggle="tab"
-                                            data-bs-target="#assets-ss" type="button" role="tab" aria-controls="assets-ss"
-                                            aria-selected="true">Assets</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="programming-tab-ss" data-bs-toggle="tab"
-                                            data-bs-target="#programming-ss" type="button" role="tab"
-                                            aria-controls="programming-ss" aria-selected="false">Programming</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-ss">
-                                    <div class="tab-pane fade show active" id="assets-ss" role="tabpanel"
-                                        aria-labelledby="assets-tab-ss">
-                                        <div class="row g-3">
-                                            <div class="col-6 col-md-4">
-                                                <img src="assets\img\SSAssets.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Set and Spike Volleyball assets"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
-                                            <div class="col-6 col-md-4">
-                                                <img src="assets\img\SSLevel.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Set and spike Level Layout"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
-                                            <div class="col-6 col-md-3">
-                                                <img src="assets\img\acsPedal.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Accessibility pedal"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
+                            <!-- Tabs for Assets/Programming -->
+                            <ul class="nav nav-tabs mt-3" id="brewsTabs-ss" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab-ss" data-bs-toggle="tab"
+                                        data-bs-target="#assets-ss" type="button" role="tab" aria-controls="assets-ss"
+                                        aria-selected="true">Assets</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="programming-tab-ss" data-bs-toggle="tab"
+                                        data-bs-target="#programming-ss" type="button" role="tab"
+                                        aria-controls="programming-ss" aria-selected="false">Programming</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-ss">
+                                <div class="tab-pane fade show active" id="assets-ss" role="tabpanel"
+                                    aria-labelledby="assets-tab-ss">
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-4">
+                                            <img src="assets\img\SSAssets.png" class="img-fluid rounded asset-pop"
+                                                alt="Set and Spike Volleyball assets" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
+                                        </div>
+                                        <div class="col-6 col-md-4">
+                                            <img src="assets\img\SSLevel.png" class="img-fluid rounded asset-pop"
+                                                alt="Set and spike Level Layout" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <img src="assets\img\acsPedal.png" class="img-fluid rounded asset-pop"
+                                                alt="Accessibility pedal" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="programming-ss" role="tabpanel"
-                                        aria-labelledby="programming-tab-ss">
-                                        <ul class="mb-0 small">
-                                            <li>AI seagull that explodes on impact and disrupts game flow.</li>
-                                            <li>Volleyball rules and serve mechanics.</li>
-                                            <li>Fine tuned physics and collision detection.</li>
-                                            <li>Dynamic camera system for optimal viewing angles.</li>
-                                            <li>Accessibility features for inclusive gameplay.</li>
-                                        </ul>
-                                        </br>
-                                        <a class="btn btn-sm btn-outline-primary"
-                                            href="https://github.com/KateHillyard12/Set-Spike"
-                                            aria-label="View source code for SS">Code</a>
-                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="programming-ss" role="tabpanel"
+                                    aria-labelledby="programming-tab-ss">
+                                    <ul class="mb-0 small">
+                                        <li>AI seagull that explodes on impact and disrupts game flow.</li>
+                                        <li>Volleyball rules and serve mechanics.</li>
+                                        <li>Fine tuned physics and collision detection.</li>
+                                        <li>Dynamic camera system for optimal viewing angles.</li>
+                                        <li>Accessibility features for inclusive gameplay.</li>
+                                    </ul>
+                                    </br>
+                                    <a class="btn btn-sm btn-outline-primary"
+                                        href="https://github.com/KateHillyard12/Set-Spike"
+                                        aria-label="View source code for SS">Code</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- WIP: VR Level Design Experience -->
-                        <div class="card mb-2 shadow-sm border-dashed">
-                            <div class="card-body">
-                                <h4 class="card-title mb-1">VR Level Design Experience (WIP)</h4>
-                                <p class="mb-2">A room-scale exploration of locomotion comfort, spatial cues, and
-                                    environmental storytelling.</p>
-                                <p class="small text-muted mb-0">Playable demo and design notes to be added.</p>
+                    <!-- R.E.A.L.M.S. -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                                <div class="flex-grow-1">
+                                    <h4 class="card-title mb-1">R.E.A.L.M.S. (WIP)</h4>
+                                    <p class="mb-2">
+                                        This project is a VR exploration experience built in Unity and inspired by a
+                                        Dungeons & Dragons
+                                        campaign I am currently playing in. I collaborated with my Dungeon Master, who
+                                        is an illustrator,
+                                        to recreate the dorm room my character lives in within the Strixhaven setting.
+                                    </p>
+                                    <p class="small text-muted mb-3">
+                                        The project challenged me to step outside of my comfort zone. Whatever my DM
+                                        drew or described, I
+                                        pushed myself to recreate in 3D regardless of limitations. This meant
+                                        translating illustrated
+                                        concepts into optimized real-time assets while preserving the style and
+                                        personality of the original
+                                        artwork. I also researched VR comfort and locomotion design to build an
+                                        experience that minimizes
+                                        motion sickness and supports natural exploration. The level was designed around
+                                        those findings,
+                                        using teleportation movement and carefully placed spatial cues to guide the
+                                        player through the
+                                        environment.
+                                    </p>
+
+                                    <ul class="small mb-3">
+                                        <li>Engine: Unity VR</li>
+                                        <li>Role: Level design, 3D modeling, gameplay systems, VR comfort research</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- WIP: VR/AR Scent Diagnostic Test System -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start">
-                                    <div>
-                                        <h4 class="card-title mb-1">Brain Health (WIP)</h4>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalRealmVideo">
+                                    Watch Gameplay
+                                </a>
 
-                                        <p class="mb-2">Developed in Unity, this project combines atomizer-based scent release
-                                            with interactive 2D images to create a diagnostic tool for identifying and
-                                            associating scents in immersive environments. Designed as an innovative aid for
-                                            Alzheimer’s research and testing.</p>
-                                        <p class="small text-muted mb-0">My primary role in this project was developing and designing the Node interface to
-                                            give the client smoother access to the VR application and a more efficient setup process.
-                                            The system also lets the client add new scents and images, as well as download both the game
-                                            and the Node package for streamlined reuse. Throughout the project I worked closely with the client to create prototypes
-                                            that aligned with how students will use the application, ensuring the interface delivered the right information
-                                            and accurately reflected data coming from the VR experience.</p>
+                                <a class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+                                    data-bs-target="#modalRealmResearch">
+                                    View Research
+                                </a>
+                            </div>
+
+                            <!-- Tabs for Assets / Programming -->
+                            <ul class="nav nav-tabs mt-3" id="realmTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab-realm" data-bs-toggle="tab"
+                                        data-bs-target="#assets-realm" type="button" role="tab"
+                                        aria-controls="assets-realm" aria-selected="true">
+                                        Assets
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="programming-tab-realm" data-bs-toggle="tab"
+                                        data-bs-target="#programming-realm" type="button" role="tab"
+                                        aria-controls="programming-realm" aria-selected="false">
+                                        Programming
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="realmTabsContent">
+                                <!-- Assets tab -->
+                                <div class="tab-pane fade show active" id="assets-realm" role="tabpanel"
+                                    aria-labelledby="assets-tab-realm">
+                                    <p class="small text-muted mb-3">
+                                        Click an image to compare the original illustration with my 3D recreation side
+                                        by side.
+                                        Use the refresh icon on the card to preview the back/reference image before
+                                        opening it.
+                                    </p>
+
+                                    <div class="row g-3">
+
+                                        <!-- Asset 1 -->
+                                        <div class="col-12 col-sm-6 col-lg-4 asset-card">
+                                            <div class="asset-wrapper realm-compare-card">
+                                                <img src="assets/img/Bed_Render.png"
+                                                    class="img-fluid rounded asset-pop asset-front"
+                                                    alt="Bed model recreation" data-bs-toggle="modal"
+                                                    data-bs-target="#realmCompareModal"
+                                                    data-front="assets/img/Bed_Render.png"
+                                                    data-back="assets/img/Bed  Full Render.JPG"
+                                                    data-front-label="3D Model Recreation"
+                                                    data-back-label="Illustration Reference"
+                                                    data-title="Bed Asset Comparison">
+
+                                                <img src="assets/img/Bed  Full Render.JPG"
+                                                    class="img-fluid rounded asset-back"
+                                                    alt="Bed illustration reference">
+
+                                                <button class="flip-btn" type="button"
+                                                    aria-label="Show reference image">
+                                                    <i class="fa-solid fa-repeat"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Asset 2 -->
+                                        <div class="col-12 col-sm-6 col-lg-4 asset-card">
+                                            <div class="asset-wrapper realm-compare-card">
+                                                <img src="assets/img/KitchenRenderImage.png"
+                                                    class="img-fluid rounded asset-pop asset-front"
+                                                    alt="Kitchen model recreation" data-bs-toggle="modal"
+                                                    data-bs-target="#realmCompareModal"
+                                                    data-front="assets/img/KitchenRenderImage.png"
+                                                    data-back="assets/img/Copy of Kitchen Render.jpg"
+                                                    data-front-label="3D Model Recreation"
+                                                    data-back-label="Illustration Reference"
+                                                    data-title="Kitchen Asset Comparison">
+
+                                                <img src="assets/img/Copy of Kitchen Render.jpg"
+                                                    class="img-fluid rounded asset-back"
+                                                    alt="Kitchen illustration reference">
+
+                                                <button class="flip-btn" type="button"
+                                                    aria-label="Show reference image">
+                                                    <i class="fa-solid fa-repeat"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Asset 3 -->
+                                        <div class="col-6 col-md-4">
+                                            <img src="assets/img/Realms.png" class="img-fluid rounded asset-pop"
+                                                alt="Set and Spike Volleyball assets" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
+                                        </div>
+
+
                                     </div>
                                 </div>
-                                <ul class="nav nav-tabs mt-3" id="brewsTabs-ss" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="assets-tab-ss" data-bs-toggle="tab"
-                                            data-bs-target="#assets-ss" type="button" role="tab" aria-controls="assets-ss"
-                                            aria-selected="true">Assets</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-ss">
-                                    <div class="tab-pane fade show active" id="assets-ss" role="tabpanel"
-                                        aria-labelledby="assets-tab-ss">
-                                        <div class="row g-3">
-                                            <div class="col-6 col-md-6">
-                                                <img src="assets\img\BHFigma.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Brain Health Figma"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
-                                            <div class="col-6 col-md-6">
-                                                <img src="assets\img\BH Website.png"
-                                                    class="img-fluid rounded asset-pop"
-                                                    alt="Brain Health Website"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#assetImageModal">
-                                            </div>
+
+                                <!-- Programming tab -->
+                                <div class="tab-pane fade" id="programming-realm" role="tabpanel"
+                                    aria-labelledby="programming-tab-realm">
+                                    <ul class="mb-0 small">
+                                        <li>Teleportation locomotion system designed to reduce VR motion sickness.</li>
+                                        <li>Object collection mechanic where players gather items to fill a backpack.
+                                        </li>
+                                        <li>Inventory trigger that spawns a key after collecting required objects.</li>
+                                        <li>Key unlock system that opens a new room of the level.</li>
+                                        <li>Progression-based exploration leading players to discover the final object.
+                                        </li>
+                                        <li>Environmental cues guiding the player through the space naturally.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WIP: VR/AR Scent Diagnostic Test System -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="card-title mb-1">Brain Health (WIP)</h4>
+
+                                    <p class="mb-2">Developed in Unity, this project combines atomizer-based scent
+                                        release
+                                        with interactive 2D images to create a diagnostic tool for identifying and
+                                        associating scents in immersive environments. Designed as an innovative aid for
+                                        Alzheimer’s research and testing.</p>
+                                    <p class="small text-muted mb-0">My primary role in this project was developing and
+                                        designing the Node interface (using Figma) to
+                                        give the client smoother access to the VR application and a more efficient setup
+                                        process.
+                                        The system also lets the client add new scents and images, as well as download
+                                        both the game
+                                        and the Node package for streamlined reuse. Throughout the project I worked
+                                        closely with the client to create prototypes
+                                        that aligned with how students will use the application, ensuring the interface
+                                        delivered the right information
+                                        and accurately reflected data coming from the VR experience.</p>
+                                </div>
+                            </div>
+                            <br>
+                            <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalBHVideo">Watch Demo Reel</a>
+
+                            <ul class="nav nav-tabs mt-3" id="brewsTabs-ss" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab-ss" data-bs-toggle="tab"
+                                        data-bs-target="#assets-ss" type="button" role="tab" aria-controls="assets-ss"
+                                        aria-selected="true">Assets</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-ss">
+                                <div class="tab-pane fade show active" id="assets-ss" role="tabpanel"
+                                    aria-labelledby="assets-tab-ss">
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-6">
+                                            <img src="assets/img/var node m,ain.png" class="img-fluid rounded asset-pop"
+                                                alt="Brain Health Figma" data-bs-toggle="modal"
+                                                data-bs-target="#assetImageModal">
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <img src="assets/img/var node settins.png"
+                                                class="img-fluid rounded asset-pop" alt="Brain Health Website"
+                                                data-bs-toggle="modal" data-bs-target="#assetImageModal">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
         </section>
 
     </div>
@@ -635,102 +795,383 @@ triathlon event, designed to convey energy and motion for the teams Meghan Lee S
     </script>
 
     <!-- Demo Modals -->
-    <div class="modal fade" id="modalCrudDemo" tabindex="-1" aria-labelledby="modalCrudDemoLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCrudDemoLabel">CRUD API — Demo Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <video class="w-100" controls preload="metadata">
-                        <source src="assets\img\API Web demo - Made with Clipchamp.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+<div class="modal fade" id="modalCrudDemo" tabindex="-1" aria-labelledby="modalCrudDemoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCrudDemoLabel">CRUD API — Demo Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/API Web demo - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBrewsVideo" tabindex="-1" aria-labelledby="modalBrewsVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBrewsVideoLabel">Brews & Bloodshed — Gameplay</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/BB_Showreel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalSSVideo" tabindex="-1" aria-labelledby="modalSSVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSSVideoLabel">Set Spike! — Gameplay</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/SetSpikeDemo - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalBHVideo" tabindex="-1" aria-labelledby="modalBHVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalBHVideoLabel">Brain Health — Testing</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/BrainHealthDemoReel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalIntroVideo" tabindex="-1" aria-labelledby="modalIntroVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalIntroVideoLabel">Brews & Bloodshed — Intro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/BBIntro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRealmVideo" tabindex="-1" aria-labelledby="modalRealmVideoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRealmVideoLabel">R.E.A.L.M.S. — Gameplay</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video class="w-100" controls preload="metadata">
+                    <source src="assets/img/RealmsStageOne.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- R.E.A.L.M.S. Research Modal -->
+<div class="modal fade" id="modalRealmResearch" tabindex="-1" aria-labelledby="modalRealmResearchLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalRealmResearchLabel">R.E.A.L.M.S. — VR Comfort Research</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="small text-muted">
+                    This presentation covers the VR comfort and locomotion research that informed the design of this level.
+                </p>
+
+                <!-- Option A: embedded PDF -->
+                <iframe
+                    src="assets/img/REALMS By Kate Hillyard.pdf"
+                    width="100%"
+                    height="400"
+                    style="border:0; border-radius:10px;"
+                    title="R.E.A.L.M.S. research presentation">
+                </iframe>
+
+                <!-- Optional download link -->
+                <div class="mt-3 text-center">
+                    <a class="btn btn-sm btn-outline-primary" href="assets/img/REALMS By Kate Hillyard.pdf" target="_blank" rel="noopener noreferrer">
+                        Open Presentation in New Tab
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade" id="modalBrewsVideo" tabindex="-1" aria-labelledby="modalBrewsVideoLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalBrewsVideoLabel">Brews & Bloodshed — Gameplay</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Reusable Asset Image Modal -->
+<div class="modal fade" id="assetImageModal" tabindex="-1" aria-labelledby="assetImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered asset-modal-dialog">
+        <div class="modal-content asset-modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="assetImageModalLabel">Full Size Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body asset-modal-body text-center">
+                <button class="asset-nav asset-nav-left" type="button" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="asset-image-frame">
+                    <img id="assetModalImage" src="" alt="" />
                 </div>
-                <div class="modal-body">
-                    <video class="w-100" controls preload="metadata">
-                        <source src="assets\img\BB_Showreel.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+
+                <button class="asset-nav asset-nav-right" type="button" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- R.E.A.L.M.S. side-by-side comparison modal -->
+<div class="modal fade" id="realmCompareModal" tabindex="-1" aria-labelledby="realmCompareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content asset-modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="realmCompareModalLabel">Asset Comparison</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-6 text-center">
+                        <p class="small text-muted mb-2" id="realmCompareBackLabel">Illustration Reference</p>
+                        <img id="realmCompareBackImage" src="" alt="" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        <p class="small text-muted mb-2" id="realmCompareFrontLabel">3D Model Recreation</p>
+                        <img id="realmCompareFrontImage" src="" alt="" class="img-fluid rounded shadow-sm">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade" id="modalSSVideo" tabindex="-1" aria-labelledby="modalSSVideoLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalSSVideoLabel">Set Spike! — Gameplay</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Download Choice Modal -->
+<div class="modal fade" id="downloadChoiceModal" tabindex="-1" aria-labelledby="downloadChoiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content download-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadChoiceModalLabel">Download Files</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body text-center">
+                <p class="mb-4">Would you like to download my demo reel or resume?</p>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a class="btn btn-primary" href="assets/img/DemoReel.mp4" download>
+                        Download Demo Reel
+                    </a>
+
+                    <a class="btn btn-outline-primary" href="assets/img/Resume .pdf" download>
+                        Download Resume
+                    </a>
                 </div>
-                <div class="modal-body">
-                    <video class="w-100" controls preload="metadata">
-                        <source src="assets\img\SetSpikeDemo - Made with Clipchamp.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Reusable Asset Image Modal -->
-    <div class="modal fade" id="assetImageModal" tabindex="-1" aria-labelledby="assetImageModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const assetModal = document.getElementById("assetImageModal");
+    const realmCompareModal = document.getElementById("realmCompareModal");
 
-                <div class="modal-header">
-                    <h5 class="modal-title" id="assetImageModalLabel">Full Size Image</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+    const modalImg = document.getElementById("assetModalImage");
+    const modalTitle = assetModal ? assetModal.querySelector(".modal-title") : null;
+    const prevBtn = assetModal ? assetModal.querySelector(".asset-nav-left") : null;
+    const nextBtn = assetModal ? assetModal.querySelector(".asset-nav-right") : null;
 
-                <div class="modal-body text-center">
-                    <img src="" class="img-fluid rounded" alt="" />
-                </div>
+    let currentGallery = [];
+    let currentIndex = 0;
 
-            </div>
-        </div>
-    </div>
+    function getGalleryImages(clickedImg) {
+        const uiSection = clickedImg.closest('.proj-group[data-category="ui"]');
+        if (uiSection) {
+            return Array.from(uiSection.querySelectorAll("img.asset-pop"))
+                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+        }
 
-    <!-- Asset image click handler (updates the reusable modal) -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const modal = document.getElementById("assetImageModal");
-            if (!modal) return;
+        const tabPane = clickedImg.closest(".tab-pane");
+        if (tabPane) {
+            const tabImages = Array.from(tabPane.querySelectorAll("img.asset-pop"))
+                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+            if (tabImages.length) return tabImages;
+        }
 
-            const modalImg = modal.querySelector("img");
-            const modalTitle = modal.querySelector(".modal-title");
+        const card = clickedImg.closest(".card");
+        if (card) {
+            const cardImages = Array.from(card.querySelectorAll("img.asset-pop"))
+                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+            if (cardImages.length) return cardImages;
+        }
 
-            document.addEventListener("click", (e) => {
-                const img = e.target.closest("img.asset-pop");
-                if (!img) return;
+        return [clickedImg];
+    }
 
-                modalImg.src = img.src;
-                modalImg.alt = img.alt || "Full Size Image";
-                modalTitle.textContent = img.alt || "Full Size Image";
-            });
+    function updateModalImage() {
+        const activeImg = currentGallery[currentIndex];
+        if (!activeImg || !modalImg || !modalTitle || !prevBtn || !nextBtn) return;
 
-            modal.addEventListener("hidden.bs.modal", () => {
+        modalImg.src = activeImg.src;
+        modalImg.alt = activeImg.alt || "Full Size Image";
+        modalTitle.textContent = activeImg.alt || "Full Size Image";
+
+        prevBtn.disabled = currentGallery.length <= 1 || currentIndex === 0;
+        nextBtn.disabled = currentGallery.length <= 1 || currentIndex === currentGallery.length - 1;
+    }
+
+    document.addEventListener("click", (e) => {
+        const flipBtn = e.target.closest(".flip-btn");
+        if (flipBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const wrapper = flipBtn.closest(".asset-wrapper");
+            const front = wrapper.querySelector(".asset-front");
+            const back = wrapper.querySelector(".asset-back");
+
+            const frontVisible = window.getComputedStyle(front).display !== "none";
+
+            if (frontVisible) {
+                front.style.display = "none";
+                back.style.display = "block";
+            } else {
+                back.style.display = "none";
+                front.style.display = "block";
+            }
+            return;
+        }
+
+        const compareImg = e.target.closest('img.asset-pop[data-bs-target="#realmCompareModal"]');
+        if (compareImg && realmCompareModal) {
+            const compareTitle = document.getElementById("realmCompareModalLabel");
+            const frontImg = document.getElementById("realmCompareFrontImage");
+            const backImg = document.getElementById("realmCompareBackImage");
+            const frontLabel = document.getElementById("realmCompareFrontLabel");
+            const backLabel = document.getElementById("realmCompareBackLabel");
+
+            compareTitle.textContent = compareImg.dataset.title || compareImg.alt || "Asset Comparison";
+            frontImg.src = compareImg.dataset.front || compareImg.src;
+            backImg.src = compareImg.dataset.back || "";
+            frontImg.alt = compareImg.dataset.frontLabel || "3D Model Recreation";
+            backImg.alt = compareImg.dataset.backLabel || "Illustration Reference";
+            frontLabel.textContent = compareImg.dataset.frontLabel || "3D Model Recreation";
+            backLabel.textContent = compareImg.dataset.backLabel || "Illustration Reference";
+            return;
+        }
+
+        const img = e.target.closest('img.asset-pop:not([data-bs-target="#realmCompareModal"])');
+        if (!img || !assetModal) return;
+
+        currentGallery = getGalleryImages(img);
+        currentIndex = currentGallery.indexOf(img);
+
+        if (currentIndex < 0) currentIndex = 0;
+        updateModalImage();
+    });
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateModalImage();
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+            if (currentIndex < currentGallery.length - 1) {
+                currentIndex++;
+                updateModalImage();
+            }
+        });
+    }
+
+    document.addEventListener("keydown", (e) => {
+        if (assetModal && assetModal.classList.contains("show")) {
+            if (e.key === "ArrowLeft" && currentIndex > 0) {
+                currentIndex--;
+                updateModalImage();
+            }
+
+            if (e.key === "ArrowRight" && currentIndex < currentGallery.length - 1) {
+                currentIndex++;
+                updateModalImage();
+            }
+        }
+    });
+
+    if (assetModal) {
+        assetModal.addEventListener("hidden.bs.modal", () => {
+            if (modalImg) {
                 modalImg.src = "";
                 modalImg.alt = "";
-            });
+            }
+            currentGallery = [];
+            currentIndex = 0;
         });
-    </script>
+    }
+
+    if (realmCompareModal) {
+        realmCompareModal.addEventListener("hidden.bs.modal", () => {
+            const frontImg = document.getElementById("realmCompareFrontImage");
+            const backImg = document.getElementById("realmCompareBackImage");
+
+            if (frontImg) {
+                frontImg.src = "";
+                frontImg.alt = "";
+            }
+
+            if (backImg) {
+                backImg.src = "";
+                backImg.alt = "";
+            }
+        });
+    }
+});
+</script>
 
 </body>
 

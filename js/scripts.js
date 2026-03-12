@@ -8,6 +8,7 @@
 // 
 
 window.addEventListener('DOMContentLoaded', event => {
+    
 
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
@@ -33,4 +34,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+
+const profileFlip = document.getElementById("profileFlip");
+
+if (profileFlip) {
+    profileFlip.addEventListener("click", () => {
+        profileFlip.classList.toggle("is-flipped");
+    });
+}
 
