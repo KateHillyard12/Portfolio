@@ -213,6 +213,7 @@
                     <button type="button" class="btn btn-outline-primary filter-btn" data-filter="ui">UI Design</button>
                     <button type="button" class="btn btn-outline-primary filter-btn" data-filter="games">Video
                         Games</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn" data-filter="other">Other</button>
                 </div>
 
 
@@ -721,18 +722,97 @@
                             <div class="tab-content p-3 border border-top-0 rounded-bottom" id="brewsTabsContent-ss">
                                 <div class="tab-pane fade show active" id="assets-ss" role="tabpanel"
                                     aria-labelledby="assets-tab-ss">
-                                    <div class="row g-3">
-                                        <div class="col-6 col-md-6">
+                                    <div class=" row mb-1">
+                                        <div class="col-6 col-md-4">
                                             <img src="assets/img/var node m,ain.png" class="img-fluid rounded asset-pop"
                                                 alt="Brain Health Figma" data-bs-toggle="modal"
                                                 data-bs-target="#assetImageModal">
                                         </div>
-                                        <div class="col-6 col-md-6">
+                                        <div class="col-6 col-md-4">
                                             <img src="assets/img/var node settins.png"
                                                 class="img-fluid rounded asset-pop" alt="Brain Health Website"
                                                 data-bs-toggle="modal" data-bs-target="#assetImageModal">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-group" data-category="other">
+                    <h3 class="mb-3">Other</h3>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h4 class="card-title mb-1">Silicon Sam</h4>
+
+                                    <p class="mb-2">
+                                        <em>Silicon Sam</em> is an animated educational video created to help younger
+                                        audiences understand the
+                                        internal parts of a computer and how those pieces work together. On this
+                                        project, I worked as a background
+                                        artist, developing 3D visual assets and scene elements that supported the
+                                        video’s fun, clear, and engaging style.
+                                    </p>
+
+                                    <p class="small text-muted mb-0">
+                                        Beyond asset creation, I also gained experience organizing production materials
+                                        and assisting with video
+                                        editing in Adobe programs. This project helped me grow not only as a visual
+                                        artist, but also as a more
+                                        well-rounded creative collaborator who could contribute to both production
+                                        workflow and final polish.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <ul class="nav nav-tabs mt-3" id="siliconTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="assets-tab-silicon" data-bs-toggle="tab"
+                                        data-bs-target="#assets-silicon" type="button" role="tab"
+                                        aria-controls="assets-silicon" aria-selected="true">Assets</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="experience-tab-silicon" data-bs-toggle="tab"
+                                        data-bs-target="#experience-silicon" type="button" role="tab"
+                                        aria-controls="experience-silicon" aria-selected="false">Experience</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content p-3 border border-top-0 rounded-bottom" id="siliconTabsContent">
+                                <div class="tab-pane fade show active" id="assets-silicon" role="tabpanel"
+                                    aria-labelledby="assets-tab-silicon">
+                                    <div class="row g-3">
+                                        <div class="col-6 col-md-6">
+                                            <img src="assets/img/SSOffice.png"
+                                                class="img-fluid rounded asset-pop" alt="Silicon Sam background model 1"
+                                                data-bs-toggle="modal" data-bs-target="#assetImageModal">
+                                        </div>
+
+                                        <div class="col-6 col-md-6">
+                                            <img src="assets/img/HouseRendering - Copy.png"
+                                                class="img-fluid rounded asset-pop" alt="Silicon Sam background model 2"
+                                                data-bs-toggle="modal" data-bs-target="#assetImageModal">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="experience-silicon" role="tabpanel"
+                                    aria-labelledby="experience-tab-silicon">
+                                    <ul class="mb-0 small">
+                                        <li>Created background models and environment visuals to support the educational
+                                            story.</li>
+                                        <li>Helped maintain project organization and keep visual assets structured for
+                                            production.</li>
+                                        <li>Contributed to editing and polishing the final video using Adobe creative
+                                            tools.</li>
+                                        <li>Worked across art, organization, and post-production to help bring the
+                                            project together.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -795,383 +875,507 @@
     </script>
 
     <!-- Demo Modals -->
-<div class="modal fade" id="modalCrudDemo" tabindex="-1" aria-labelledby="modalCrudDemoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalCrudDemoLabel">CRUD API — Demo Video</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/API Web demo - Made with Clipchamp.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalBrewsVideo" tabindex="-1" aria-labelledby="modalBrewsVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalBrewsVideoLabel">Brews & Bloodshed — Gameplay</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/BB_Showreel.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalSSVideo" tabindex="-1" aria-labelledby="modalSSVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalSSVideoLabel">Set Spike! — Gameplay</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/SetSpikeDemo - Made with Clipchamp.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalBHVideo" tabindex="-1" aria-labelledby="modalBHVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalBHVideoLabel">Brain Health — Testing</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/BrainHealthDemoReel.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalIntroVideo" tabindex="-1" aria-labelledby="modalIntroVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalIntroVideoLabel">Brews & Bloodshed — Intro</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/BBIntro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modalRealmVideo" tabindex="-1" aria-labelledby="modalRealmVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalRealmVideoLabel">R.E.A.L.M.S. — Gameplay</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <video class="w-100" controls preload="metadata">
-                    <source src="assets/img/RealmsStageOne.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- R.E.A.L.M.S. Research Modal -->
-<div class="modal fade" id="modalRealmResearch" tabindex="-1" aria-labelledby="modalRealmResearchLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalRealmResearchLabel">R.E.A.L.M.S. — VR Comfort Research</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="small text-muted">
-                    This presentation covers the VR comfort and locomotion research that informed the design of this level.
-                </p>
-
-                <!-- Option A: embedded PDF -->
-                <iframe
-                    src="assets/img/REALMS By Kate Hillyard.pdf"
-                    width="100%"
-                    height="400"
-                    style="border:0; border-radius:10px;"
-                    title="R.E.A.L.M.S. research presentation">
-                </iframe>
-
-                <!-- Optional download link -->
-                <div class="mt-3 text-center">
-                    <a class="btn btn-sm btn-outline-primary" href="assets/img/REALMS By Kate Hillyard.pdf" target="_blank" rel="noopener noreferrer">
-                        Open Presentation in New Tab
-                    </a>
+    <div class="modal fade" id="modalCrudDemo" tabindex="-1" aria-labelledby="modalCrudDemoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCrudDemoLabel">CRUD API — Demo Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/API Web demo - Made with Clipchamp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Reusable Asset Image Modal -->
-<div class="modal fade" id="assetImageModal" tabindex="-1" aria-labelledby="assetImageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered asset-modal-dialog">
-        <div class="modal-content asset-modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="assetImageModalLabel">Full Size Image</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body asset-modal-body text-center">
-                <button class="asset-nav asset-nav-left" type="button" aria-label="Previous image">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-
-                <div class="asset-image-frame">
-                    <img id="assetModalImage" src="" alt="" />
+    <div class="modal fade" id="modalSiliconSamVideo" tabindex="-1" aria-labelledby="modalSiliconSamVideoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSiliconSamVideoLabel">Silicon Sam — Demo Reel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <button class="asset-nav asset-nav-right" type="button" aria-label="Next image">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/SiliconSamDemoReel.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- R.E.A.L.M.S. side-by-side comparison modal -->
-<div class="modal fade" id="realmCompareModal" tabindex="-1" aria-labelledby="realmCompareModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content asset-modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="realmCompareModalLabel">Asset Comparison</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal fade" id="modalBrewsVideo" tabindex="-1" aria-labelledby="modalBrewsVideoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBrewsVideoLabel">Brews & Bloodshed — Gameplay</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/BB_Showreel.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="modal-body">
-                <div class="row g-4 align-items-start">
-                    <div class="col-md-6 text-center">
-                        <p class="small text-muted mb-2" id="realmCompareBackLabel">Illustration Reference</p>
-                        <img id="realmCompareBackImage" src="" alt="" class="img-fluid rounded shadow-sm">
-                    </div>
+    <div class="modal fade" id="modalSSVideo" tabindex="-1" aria-labelledby="modalSSVideoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSSVideoLabel">Set Spike! — Gameplay</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/SetSpikeDemo - Made with Clipchamp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <div class="col-md-6 text-center">
-                        <p class="small text-muted mb-2" id="realmCompareFrontLabel">3D Model Recreation</p>
-                        <img id="realmCompareFrontImage" src="" alt="" class="img-fluid rounded shadow-sm">
+    <div class="modal fade" id="modalBHVideo" tabindex="-1" aria-labelledby="modalBHVideoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBHVideoLabel">Brain Health — Testing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/BrainHealthDemoReel.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalIntroVideo" tabindex="-1" aria-labelledby="modalIntroVideoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalIntroVideoLabel">Brews & Bloodshed — Intro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/BBIntro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRealmVideo" tabindex="-1" aria-labelledby="modalRealmVideoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRealmVideoLabel">R.E.A.L.M.S. — Gameplay</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="assets/img/RealmsStageOne.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- R.E.A.L.M.S. Research Modal -->
+    <div class="modal fade" id="modalRealmResearch" tabindex="-1" aria-labelledby="modalRealmResearchLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRealmResearchLabel">R.E.A.L.M.S. — VR Comfort Research</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="small text-muted">
+                        This presentation covers the VR comfort and locomotion research that informed the design of this
+                        level.
+                    </p>
+
+                    <!-- Option A: embedded PDF -->
+                    <iframe src="assets/img/REALMS By Kate Hillyard.pdf" width="100%" height="400"
+                        style="border:0; border-radius:10px;" title="R.E.A.L.M.S. research presentation">
+                    </iframe>
+
+                    <!-- Optional download link -->
+                    <div class="mt-3 text-center">
+                        <a class="btn btn-sm btn-outline-primary" href="assets/img/REALMS By Kate Hillyard.pdf"
+                            target="_blank" rel="noopener noreferrer">
+                            Open Presentation in New Tab
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Download Choice Modal -->
-<div class="modal fade" id="downloadChoiceModal" tabindex="-1" aria-labelledby="downloadChoiceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content download-modal">
-            <div class="modal-header">
-                <h5 class="modal-title" id="downloadChoiceModalLabel">Download Files</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body text-center">
-                <p class="mb-4">Would you like to download my demo reel or resume?</p>
-
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                    <a class="btn btn-primary" href="assets/img/DemoReel.mp4" download>
-                        Download Demo Reel
-                    </a>
-
-                    <a class="btn btn-outline-primary" href="assets/img/Resume .pdf" download>
-                        Download Resume
-                    </a>
+    <!-- Reusable Asset Image Modal -->
+    <div class="modal fade" id="assetImageModal" tabindex="-1" aria-labelledby="assetImageModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered asset-modal-dialog">
+            <div class="modal-content asset-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="assetImageModalLabel">Full Size Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
 
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <div class="modal-body asset-modal-body text-center">
+                    <button class="asset-nav asset-nav-left" type="button" aria-label="Previous image">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="asset-image-frame">
+                        <img id="assetModalImage" src="" alt="" />
+                    </div>
+
+                    <button class="asset-nav asset-nav-right" type="button" aria-label="Next image">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const assetModal = document.getElementById("assetImageModal");
-    const realmCompareModal = document.getElementById("realmCompareModal");
+    <!-- R.E.A.L.M.S. side-by-side comparison modal -->
+    <div class="modal fade" id="realmCompareModal" tabindex="-1" aria-labelledby="realmCompareModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered asset-modal-dialog">
+            <div class="modal-content asset-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="realmCompareModalLabel">Asset Comparison</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-    const modalImg = document.getElementById("assetModalImage");
-    const modalTitle = assetModal ? assetModal.querySelector(".modal-title") : null;
-    const prevBtn = assetModal ? assetModal.querySelector(".asset-nav-left") : null;
-    const nextBtn = assetModal ? assetModal.querySelector(".asset-nav-right") : null;
+                <div class="modal-body asset-modal-body text-center">
+                    <button class="asset-nav realm-nav-left" type="button" aria-label="Previous comparison">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
 
-    let currentGallery = [];
-    let currentIndex = 0;
+                    <div class="container-fluid">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-md-6 text-center">
+                                <p class="small text-muted mb-2" id="realmCompareBackLabel">Illustration Reference</p>
+                                <img id="realmCompareBackImage" src="" alt="" class="img-fluid rounded shadow-sm">
+                            </div>
 
-    function getGalleryImages(clickedImg) {
-        const uiSection = clickedImg.closest('.proj-group[data-category="ui"]');
-        if (uiSection) {
-            return Array.from(uiSection.querySelectorAll("img.asset-pop"))
-                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-        }
+                            <div class="col-md-6 text-center">
+                                <p class="small text-muted mb-2" id="realmCompareFrontLabel">3D Model Recreation</p>
+                                <img id="realmCompareFrontImage" src="" alt="" class="img-fluid rounded shadow-sm">
+                            </div>
+                        </div>
+                    </div>
 
-        const tabPane = clickedImg.closest(".tab-pane");
-        if (tabPane) {
-            const tabImages = Array.from(tabPane.querySelectorAll("img.asset-pop"))
-                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-            if (tabImages.length) return tabImages;
-        }
+                    <button class="asset-nav realm-nav-right" type="button" aria-label="Next comparison">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        const card = clickedImg.closest(".card");
-        if (card) {
-            const cardImages = Array.from(card.querySelectorAll("img.asset-pop"))
-                .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-            if (cardImages.length) return cardImages;
-        }
+    <!-- Download Choice Modal -->
+    <div class="modal fade" id="downloadChoiceModal" tabindex="-1" aria-labelledby="downloadChoiceModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content download-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadChoiceModalLabel">Download Files</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-        return [clickedImg];
-    }
+                <div class="modal-body text-center">
+                    <p class="mb-4">Would you like to download my demo reel or resume?</p>
 
-    function updateModalImage() {
-        const activeImg = currentGallery[currentIndex];
-        if (!activeImg || !modalImg || !modalTitle || !prevBtn || !nextBtn) return;
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a class="btn btn-primary" href="assets/img/DemoReel.mp4" download>
+                            Download Demo Reel
+                        </a>
 
-        modalImg.src = activeImg.src;
-        modalImg.alt = activeImg.alt || "Full Size Image";
-        modalTitle.textContent = activeImg.alt || "Full Size Image";
+                        <a class="btn btn-outline-primary" href="assets/img/Resume .pdf" download>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
 
-        prevBtn.disabled = currentGallery.length <= 1 || currentIndex === 0;
-        nextBtn.disabled = currentGallery.length <= 1 || currentIndex === currentGallery.length - 1;
-    }
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    document.addEventListener("click", (e) => {
-        const flipBtn = e.target.closest(".flip-btn");
-        if (flipBtn) {
-            e.preventDefault();
-            e.stopPropagation();
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const assetModal = document.getElementById("assetImageModal");
+            const realmCompareModal = document.getElementById("realmCompareModal");
 
-            const wrapper = flipBtn.closest(".asset-wrapper");
-            const front = wrapper.querySelector(".asset-front");
-            const back = wrapper.querySelector(".asset-back");
+            const modalImg = document.getElementById("assetModalImage");
+            const modalTitle = assetModal ? assetModal.querySelector(".modal-title") : null;
+            const prevBtn = assetModal ? assetModal.querySelector(".asset-nav-left") : null;
+            const nextBtn = assetModal ? assetModal.querySelector(".asset-nav-right") : null;
 
-            const frontVisible = window.getComputedStyle(front).display !== "none";
-
-            if (frontVisible) {
-                front.style.display = "none";
-                back.style.display = "block";
-            } else {
-                back.style.display = "none";
-                front.style.display = "block";
-            }
-            return;
-        }
-
-        const compareImg = e.target.closest('img.asset-pop[data-bs-target="#realmCompareModal"]');
-        if (compareImg && realmCompareModal) {
             const compareTitle = document.getElementById("realmCompareModalLabel");
-            const frontImg = document.getElementById("realmCompareFrontImage");
-            const backImg = document.getElementById("realmCompareBackImage");
-            const frontLabel = document.getElementById("realmCompareFrontLabel");
-            const backLabel = document.getElementById("realmCompareBackLabel");
+            const compareFrontImg = document.getElementById("realmCompareFrontImage");
+            const compareBackImg = document.getElementById("realmCompareBackImage");
+            const compareFrontLabel = document.getElementById("realmCompareFrontLabel");
+            const compareBackLabel = document.getElementById("realmCompareBackLabel");
+            const comparePrevBtn = realmCompareModal ? realmCompareModal.querySelector(".realm-nav-left") : null;
+            const compareNextBtn = realmCompareModal ? realmCompareModal.querySelector(".realm-nav-right") : null;
 
-            compareTitle.textContent = compareImg.dataset.title || compareImg.alt || "Asset Comparison";
-            frontImg.src = compareImg.dataset.front || compareImg.src;
-            backImg.src = compareImg.dataset.back || "";
-            frontImg.alt = compareImg.dataset.frontLabel || "3D Model Recreation";
-            backImg.alt = compareImg.dataset.backLabel || "Illustration Reference";
-            frontLabel.textContent = compareImg.dataset.frontLabel || "3D Model Recreation";
-            backLabel.textContent = compareImg.dataset.backLabel || "Illustration Reference";
-            return;
-        }
+            let currentGallery = [];
+            let currentIndex = 0;
 
-        const img = e.target.closest('img.asset-pop:not([data-bs-target="#realmCompareModal"])');
-        if (!img || !assetModal) return;
+            let currentCompareGallery = [];
+            let currentCompareIndex = 0;
 
-        currentGallery = getGalleryImages(img);
-        currentIndex = currentGallery.indexOf(img);
+            function getGalleryImages(clickedImg) {
+                const uiSection = clickedImg.closest('.proj-group[data-category="ui"]');
+                if (uiSection) {
+                    return Array.from(uiSection.querySelectorAll("img.asset-pop"))
+                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+                }
 
-        if (currentIndex < 0) currentIndex = 0;
-        updateModalImage();
-    });
+                const tabPane = clickedImg.closest(".tab-pane");
+                if (tabPane) {
+                    const tabImages = Array.from(tabPane.querySelectorAll("img.asset-pop"))
+                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+                    if (tabImages.length) return tabImages;
+                }
 
-    if (prevBtn) {
-        prevBtn.addEventListener("click", () => {
-            if (currentIndex > 0) {
-                currentIndex--;
+                const card = clickedImg.closest(".card");
+                if (card) {
+                    const cardImages = Array.from(card.querySelectorAll("img.asset-pop"))
+                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
+                    if (cardImages.length) return cardImages;
+                }
+
+                return [clickedImg];
+            }
+
+            function getCompareGallery(clickedImg) {
+                const tabPane = clickedImg.closest(".tab-pane");
+                if (tabPane) {
+                    const compareImages = Array.from(
+                        tabPane.querySelectorAll('img.asset-pop[data-bs-target="#realmCompareModal"]')
+                    ).filter(img => img.offsetParent !== null);
+
+                    if (compareImages.length) return compareImages;
+                }
+
+                const card = clickedImg.closest(".card");
+                if (card) {
+                    const compareImages = Array.from(
+                        card.querySelectorAll('img.asset-pop[data-bs-target="#realmCompareModal"]')
+                    ).filter(img => img.offsetParent !== null);
+
+                    if (compareImages.length) return compareImages;
+                }
+
+                return [clickedImg];
+            }
+
+            function updateModalImage() {
+                const activeImg = currentGallery[currentIndex];
+                if (!activeImg || !modalImg || !modalTitle || !prevBtn || !nextBtn) return;
+
+                modalImg.src = activeImg.src;
+                modalImg.alt = activeImg.alt || "Full Size Image";
+                modalTitle.textContent = activeImg.alt || "Full Size Image";
+
+                prevBtn.disabled = currentGallery.length <= 1 || currentIndex === 0;
+                nextBtn.disabled = currentGallery.length <= 1 || currentIndex === currentGallery.length - 1;
+            }
+
+            function updateCompareModal() {
+                const activeCompare = currentCompareGallery[currentCompareIndex];
+                if (
+                    !activeCompare ||
+                    !compareTitle ||
+                    !compareFrontImg ||
+                    !compareBackImg ||
+                    !compareFrontLabel ||
+                    !compareBackLabel ||
+                    !comparePrevBtn ||
+                    !compareNextBtn
+                ) return;
+
+                compareTitle.textContent = activeCompare.dataset.title || activeCompare.alt || "Asset Comparison";
+                compareFrontImg.src = activeCompare.dataset.front || activeCompare.src;
+                compareBackImg.src = activeCompare.dataset.back || "";
+                compareFrontImg.alt = activeCompare.dataset.frontLabel || "3D Model Recreation";
+                compareBackImg.alt = activeCompare.dataset.backLabel || "Illustration Reference";
+                compareFrontLabel.textContent = activeCompare.dataset.frontLabel || "3D Model Recreation";
+                compareBackLabel.textContent = activeCompare.dataset.backLabel || "Illustration Reference";
+
+                comparePrevBtn.disabled = currentCompareGallery.length <= 1 || currentCompareIndex === 0;
+                compareNextBtn.disabled = currentCompareGallery.length <= 1 || currentCompareIndex === currentCompareGallery.length - 1;
+            }
+
+            document.addEventListener("click", (e) => {
+                const flipBtn = e.target.closest(".flip-btn");
+                if (flipBtn) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const wrapper = flipBtn.closest(".asset-wrapper");
+                    const front = wrapper.querySelector(".asset-front");
+                    const back = wrapper.querySelector(".asset-back");
+
+                    const frontVisible = window.getComputedStyle(front).display !== "none";
+
+                    if (frontVisible) {
+                        front.style.display = "none";
+                        back.style.display = "block";
+                    } else {
+                        back.style.display = "none";
+                        front.style.display = "block";
+                    }
+                    return;
+                }
+
+                const compareImg = e.target.closest('img.asset-pop[data-bs-target="#realmCompareModal"]');
+                if (compareImg && realmCompareModal) {
+                    currentCompareGallery = getCompareGallery(compareImg);
+                    currentCompareIndex = currentCompareGallery.indexOf(compareImg);
+
+                    if (currentCompareIndex < 0) currentCompareIndex = 0;
+                    updateCompareModal();
+                    return;
+                }
+
+                const img = e.target.closest('img.asset-pop:not([data-bs-target="#realmCompareModal"])');
+                if (!img || !assetModal) return;
+
+                currentGallery = getGalleryImages(img);
+                currentIndex = currentGallery.indexOf(img);
+
+                if (currentIndex < 0) currentIndex = 0;
                 updateModalImage();
+            });
+
+            if (prevBtn) {
+                prevBtn.addEventListener("click", () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateModalImage();
+                    }
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener("click", () => {
+                    if (currentIndex < currentGallery.length - 1) {
+                        currentIndex++;
+                        updateModalImage();
+                    }
+                });
+            }
+
+            if (comparePrevBtn) {
+                comparePrevBtn.addEventListener("click", () => {
+                    if (currentCompareIndex > 0) {
+                        currentCompareIndex--;
+                        updateCompareModal();
+                    }
+                });
+            }
+
+            if (compareNextBtn) {
+                compareNextBtn.addEventListener("click", () => {
+                    if (currentCompareIndex < currentCompareGallery.length - 1) {
+                        currentCompareIndex++;
+                        updateCompareModal();
+                    }
+                });
+            }
+
+            document.addEventListener("keydown", (e) => {
+                if (assetModal && assetModal.classList.contains("show")) {
+                    if (e.key === "ArrowLeft" && currentIndex > 0) {
+                        currentIndex--;
+                        updateModalImage();
+                    }
+
+                    if (e.key === "ArrowRight" && currentIndex < currentGallery.length - 1) {
+                        currentIndex++;
+                        updateModalImage();
+                    }
+                }
+
+                if (realmCompareModal && realmCompareModal.classList.contains("show")) {
+                    if (e.key === "ArrowLeft" && currentCompareIndex > 0) {
+                        currentCompareIndex--;
+                        updateCompareModal();
+                    }
+
+                    if (e.key === "ArrowRight" && currentCompareIndex < currentCompareGallery.length - 1) {
+                        currentCompareIndex++;
+                        updateCompareModal();
+                    }
+                }
+            });
+
+            if (assetModal) {
+                assetModal.addEventListener("hidden.bs.modal", () => {
+                    if (modalImg) {
+                        modalImg.src = "";
+                        modalImg.alt = "";
+                    }
+                    currentGallery = [];
+                    currentIndex = 0;
+                });
+            }
+
+            if (realmCompareModal) {
+                realmCompareModal.addEventListener("hidden.bs.modal", () => {
+                    if (compareFrontImg) {
+                        compareFrontImg.src = "";
+                        compareFrontImg.alt = "";
+                    }
+
+                    if (compareBackImg) {
+                        compareBackImg.src = "";
+                        compareBackImg.alt = "";
+                    }
+
+                    currentCompareGallery = [];
+                    currentCompareIndex = 0;
+                });
             }
         });
-    }
 
-    if (nextBtn) {
-        nextBtn.addEventListener("click", () => {
-            if (currentIndex < currentGallery.length - 1) {
-                currentIndex++;
-                updateModalImage();
-            }
+
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('hidden.bs.modal', () => {
+                const videos = modal.querySelectorAll('video');
+
+                videos.forEach(video => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            });
         });
-    }
-
-    document.addEventListener("keydown", (e) => {
-        if (assetModal && assetModal.classList.contains("show")) {
-            if (e.key === "ArrowLeft" && currentIndex > 0) {
-                currentIndex--;
-                updateModalImage();
-            }
-
-            if (e.key === "ArrowRight" && currentIndex < currentGallery.length - 1) {
-                currentIndex++;
-                updateModalImage();
-            }
-        }
-    });
-
-    if (assetModal) {
-        assetModal.addEventListener("hidden.bs.modal", () => {
-            if (modalImg) {
-                modalImg.src = "";
-                modalImg.alt = "";
-            }
-            currentGallery = [];
-            currentIndex = 0;
-        });
-    }
-
-    if (realmCompareModal) {
-        realmCompareModal.addEventListener("hidden.bs.modal", () => {
-            const frontImg = document.getElementById("realmCompareFrontImage");
-            const backImg = document.getElementById("realmCompareBackImage");
-
-            if (frontImg) {
-                frontImg.src = "";
-                frontImg.alt = "";
-            }
-
-            if (backImg) {
-                backImg.src = "";
-                backImg.alt = "";
-            }
-        });
-    }
-});
-</script>
+    </script>
 
 </body>
 
