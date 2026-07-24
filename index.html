@@ -52,14 +52,13 @@
             <div class="navbar-nav">
                 <a class="nav-link js-scroll-trigger" href="#about">About</a>
                 <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                <a class="nav-link js-scroll-trigger" href="#education">Education</a>
                 <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
                 <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
             </div>
         </div>
     </nav>
     <!-- Page Content-->
-    <div class="container-fluid p-0">
+
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
@@ -137,30 +136,8 @@
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Boise State University</h3>
-                        <div class="subheading mb-3">Bachelor of Arts and Sciences<p>Magna Cum Laude</p></div>
-                        <div>GIMM (Gaming, Interactive, Mobile Media)</div>
-                        <p>GPA: 4.0</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2022 - May 2026</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Thunder Ridge Highschool</h3>
-                        <div class="subheading mb-3">Summa Cum Laude</div>
-                        <p>GPA: 4.3</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2018 - June 2022</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
+
+
         <!-- Skills-->
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
@@ -841,8 +818,15 @@
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://threejs.org/build/three.module.js"
+            }
+        }
+    </script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    <script type="module" src="js/scripts.js"></script>
 
     <script>
         (function () {
@@ -1165,6 +1149,8 @@
 
             let currentCompareGallery = [];
             let currentCompareIndex = 0;
+
+
 
             function getGalleryImages(clickedImg) {
                 const uiSection = clickedImg.closest('.proj-group[data-category="ui"]');

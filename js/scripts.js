@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+
+
 window.addEventListener('DOMContentLoaded', event => {
     
 
@@ -42,4 +44,5 @@ if (profileFlip) {
         profileFlip.classList.toggle("is-flipped");
     });
 }
+
 
