@@ -21,42 +21,17 @@
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">
-                <img class="mobile-nav-logo" src="assets/img/kh_LogoWhite.png" alt="Kate Hillyard logo" />
-            </span>
-            <span class="d-none d-lg-block">
+<!-- 3D Portfolio Hero -->
+<section id="hero-3d">
 
-                <div class="profile-flip" id="profileFlip">
+    <canvas id="portfolio-scene"></canvas>
 
-                    <div class="profile-flip-inner">
+    <div id="scene-loading">
+        Loading scene...
+    </div>
 
-                        <img class="profile-flip-face profile-flip-front img-fluid img-profile rounded-circle mx-auto mb-2"
-                            src="assets/img/profile.jpg" alt="Profile Photo">
+</section>
 
-                        <img class="profile-flip-face profile-flip-back img-fluid img-profile rounded-circle mx-auto mb-2"
-                            src="assets/img/kh_LogoWhite.png" alt="Logo">
-
-                    </div>
-
-                </div>
-
-            </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <div class="navbar-nav">
-                <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-            </div>
-        </div>
-    </nav>
     <!-- Page Content-->
 
         <!-- About-->
@@ -816,6 +791,7 @@
         </section>
 
     </div>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="importmap">
@@ -1126,261 +1102,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const assetModal = document.getElementById("assetImageModal");
-            const realmCompareModal = document.getElementById("realmCompareModal");
-
-            const modalImg = document.getElementById("assetModalImage");
-            const modalTitle = assetModal ? assetModal.querySelector(".modal-title") : null;
-            const prevBtn = assetModal ? assetModal.querySelector(".asset-nav-left") : null;
-            const nextBtn = assetModal ? assetModal.querySelector(".asset-nav-right") : null;
-
-            const compareTitle = document.getElementById("realmCompareModalLabel");
-            const compareFrontImg = document.getElementById("realmCompareFrontImage");
-            const compareBackImg = document.getElementById("realmCompareBackImage");
-            const compareFrontLabel = document.getElementById("realmCompareFrontLabel");
-            const compareBackLabel = document.getElementById("realmCompareBackLabel");
-            const comparePrevBtn = realmCompareModal ? realmCompareModal.querySelector(".realm-nav-left") : null;
-            const compareNextBtn = realmCompareModal ? realmCompareModal.querySelector(".realm-nav-right") : null;
-
-            let currentGallery = [];
-            let currentIndex = 0;
-
-            let currentCompareGallery = [];
-            let currentCompareIndex = 0;
-
-
-
-            function getGalleryImages(clickedImg) {
-                const uiSection = clickedImg.closest('.proj-group[data-category="ui"]');
-                if (uiSection) {
-                    return Array.from(uiSection.querySelectorAll("img.asset-pop"))
-                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-                }
-
-                const tabPane = clickedImg.closest(".tab-pane");
-                if (tabPane) {
-                    const tabImages = Array.from(tabPane.querySelectorAll("img.asset-pop"))
-                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-                    if (tabImages.length) return tabImages;
-                }
-
-                const card = clickedImg.closest(".card");
-                if (card) {
-                    const cardImages = Array.from(card.querySelectorAll("img.asset-pop"))
-                        .filter(img => img.offsetParent !== null && img.dataset.bsTarget !== "#realmCompareModal");
-                    if (cardImages.length) return cardImages;
-                }
-
-                return [clickedImg];
-            }
-
-            function getCompareGallery(clickedImg) {
-                const tabPane = clickedImg.closest(".tab-pane");
-                if (tabPane) {
-                    const compareImages = Array.from(
-                        tabPane.querySelectorAll('img.asset-pop[data-bs-target="#realmCompareModal"]')
-                    ).filter(img => img.offsetParent !== null);
-
-                    if (compareImages.length) return compareImages;
-                }
-
-                const card = clickedImg.closest(".card");
-                if (card) {
-                    const compareImages = Array.from(
-                        card.querySelectorAll('img.asset-pop[data-bs-target="#realmCompareModal"]')
-                    ).filter(img => img.offsetParent !== null);
-
-                    if (compareImages.length) return compareImages;
-                }
-
-                return [clickedImg];
-            }
-
-            function updateModalImage() {
-                const activeImg = currentGallery[currentIndex];
-                if (!activeImg || !modalImg || !modalTitle || !prevBtn || !nextBtn) return;
-
-                modalImg.src = activeImg.src;
-                modalImg.alt = activeImg.alt || "Full Size Image";
-                modalTitle.textContent = activeImg.alt || "Full Size Image";
-
-                prevBtn.disabled = currentGallery.length <= 1 || currentIndex === 0;
-                nextBtn.disabled = currentGallery.length <= 1 || currentIndex === currentGallery.length - 1;
-            }
-
-            function updateCompareModal() {
-                const activeCompare = currentCompareGallery[currentCompareIndex];
-                if (
-                    !activeCompare ||
-                    !compareTitle ||
-                    !compareFrontImg ||
-                    !compareBackImg ||
-                    !compareFrontLabel ||
-                    !compareBackLabel ||
-                    !comparePrevBtn ||
-                    !compareNextBtn
-                ) return;
-
-                compareTitle.textContent = activeCompare.dataset.title || activeCompare.alt || "Asset Comparison";
-                compareFrontImg.src = activeCompare.dataset.front || activeCompare.src;
-                compareBackImg.src = activeCompare.dataset.back || "";
-                compareFrontImg.alt = activeCompare.dataset.frontLabel || "3D Model Recreation";
-                compareBackImg.alt = activeCompare.dataset.backLabel || "Illustration Reference";
-                compareFrontLabel.textContent = activeCompare.dataset.frontLabel || "3D Model Recreation";
-                compareBackLabel.textContent = activeCompare.dataset.backLabel || "Illustration Reference";
-
-                comparePrevBtn.disabled = currentCompareGallery.length <= 1 || currentCompareIndex === 0;
-                compareNextBtn.disabled = currentCompareGallery.length <= 1 || currentCompareIndex === currentCompareGallery.length - 1;
-            }
-
-            document.addEventListener("click", (e) => {
-                const flipBtn = e.target.closest(".flip-btn");
-                if (flipBtn) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    const wrapper = flipBtn.closest(".asset-wrapper");
-                    const front = wrapper.querySelector(".asset-front");
-                    const back = wrapper.querySelector(".asset-back");
-
-                    const frontVisible = window.getComputedStyle(front).display !== "none";
-
-                    if (frontVisible) {
-                        front.style.display = "none";
-                        back.style.display = "block";
-                    } else {
-                        back.style.display = "none";
-                        front.style.display = "block";
-                    }
-                    return;
-                }
-
-                const compareImg = e.target.closest('img.asset-pop[data-bs-target="#realmCompareModal"]');
-                if (compareImg && realmCompareModal) {
-                    currentCompareGallery = getCompareGallery(compareImg);
-                    currentCompareIndex = currentCompareGallery.indexOf(compareImg);
-
-                    if (currentCompareIndex < 0) currentCompareIndex = 0;
-                    updateCompareModal();
-                    return;
-                }
-
-                const img = e.target.closest('img.asset-pop:not([data-bs-target="#realmCompareModal"])');
-                if (!img || !assetModal) return;
-
-                currentGallery = getGalleryImages(img);
-                currentIndex = currentGallery.indexOf(img);
-
-                if (currentIndex < 0) currentIndex = 0;
-                updateModalImage();
-            });
-
-            if (prevBtn) {
-                prevBtn.addEventListener("click", () => {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        updateModalImage();
-                    }
-                });
-            }
-
-            if (nextBtn) {
-                nextBtn.addEventListener("click", () => {
-                    if (currentIndex < currentGallery.length - 1) {
-                        currentIndex++;
-                        updateModalImage();
-                    }
-                });
-            }
-
-            if (comparePrevBtn) {
-                comparePrevBtn.addEventListener("click", () => {
-                    if (currentCompareIndex > 0) {
-                        currentCompareIndex--;
-                        updateCompareModal();
-                    }
-                });
-            }
-
-            if (compareNextBtn) {
-                compareNextBtn.addEventListener("click", () => {
-                    if (currentCompareIndex < currentCompareGallery.length - 1) {
-                        currentCompareIndex++;
-                        updateCompareModal();
-                    }
-                });
-            }
-
-            document.addEventListener("keydown", (e) => {
-                if (assetModal && assetModal.classList.contains("show")) {
-                    if (e.key === "ArrowLeft" && currentIndex > 0) {
-                        currentIndex--;
-                        updateModalImage();
-                    }
-
-                    if (e.key === "ArrowRight" && currentIndex < currentGallery.length - 1) {
-                        currentIndex++;
-                        updateModalImage();
-                    }
-                }
-
-                if (realmCompareModal && realmCompareModal.classList.contains("show")) {
-                    if (e.key === "ArrowLeft" && currentCompareIndex > 0) {
-                        currentCompareIndex--;
-                        updateCompareModal();
-                    }
-
-                    if (e.key === "ArrowRight" && currentCompareIndex < currentCompareGallery.length - 1) {
-                        currentCompareIndex++;
-                        updateCompareModal();
-                    }
-                }
-            });
-
-            if (assetModal) {
-                assetModal.addEventListener("hidden.bs.modal", () => {
-                    if (modalImg) {
-                        modalImg.src = "";
-                        modalImg.alt = "";
-                    }
-                    currentGallery = [];
-                    currentIndex = 0;
-                });
-            }
-
-            if (realmCompareModal) {
-                realmCompareModal.addEventListener("hidden.bs.modal", () => {
-                    if (compareFrontImg) {
-                        compareFrontImg.src = "";
-                        compareFrontImg.alt = "";
-                    }
-
-                    if (compareBackImg) {
-                        compareBackImg.src = "";
-                        compareBackImg.alt = "";
-                    }
-
-                    currentCompareGallery = [];
-                    currentCompareIndex = 0;
-                });
-            }
-        });
-
-
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('hidden.bs.modal', () => {
-                const videos = modal.querySelectorAll('video');
-
-                videos.forEach(video => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-            });
-        });
-    </script>
-
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
