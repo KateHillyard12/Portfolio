@@ -9,6 +9,11 @@
 
 
 
+
+
+
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
 
@@ -332,6 +337,9 @@ import { HDRLoader } from
 // CANVAS
 // ======================================================
 
+const hero3D =
+    document.querySelector("#hero-3d");
+
 const canvas =
     document.querySelector("#portfolio-scene");
 
@@ -347,12 +355,85 @@ const scene = new THREE.Scene();
 // CAMERA
 // ======================================================
 
-const camera = new THREE.PerspectiveCamera(
-    40,
-    window.innerWidth / window.innerHeight,
-    0.1,
-    1000
-);
+const BASE_FOV = 40;
+
+const BASE_ASPECT =
+    16 / 9;
+
+
+const camera =
+    new THREE.PerspectiveCamera(
+        BASE_FOV,
+        1,
+        0.1,
+        1000
+    );
+
+function updateResponsiveCamera(
+    aspect
+) {
+
+    // Normal desktop/wide screen
+
+    if (
+        aspect >= BASE_ASPECT
+    ) {
+
+        camera.fov =
+            BASE_FOV;
+
+        return;
+
+    }
+
+
+    // -------------------------------------
+    // NARROW WINDOW
+    // -------------------------------------
+
+    // Convert our normal vertical FOV
+    // into its equivalent horizontal FOV.
+
+    const baseVerticalFov =
+        THREE.MathUtils.degToRad(
+            BASE_FOV
+        );
+
+
+    const horizontalFov =
+        2 *
+        Math.atan(
+            Math.tan(
+                baseVerticalFov / 2
+            ) *
+            BASE_ASPECT
+        );
+
+
+    // Calculate the vertical FOV needed
+    // to preserve that horizontal view
+    // at this narrower aspect ratio.
+
+    const responsiveVerticalFov =
+        2 *
+        Math.atan(
+            Math.tan(
+                horizontalFov / 2
+            ) /
+            aspect
+        );
+
+
+    camera.fov =
+        Math.min(
+            THREE.MathUtils.radToDeg(
+                responsiveVerticalFov
+            ),
+
+            70
+        );
+
+}
 
 
 // Camera framing found manually earlier.
@@ -382,17 +463,74 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true
 });
 
-renderer.setSize(
-    window.innerWidth,
-    window.innerHeight
-);
-
 renderer.setPixelRatio(
     Math.min(
         window.devicePixelRatio,
         2
     )
 );
+
+//=====================================================
+// RESIZE SCENE
+//=====================================================
+
+function resizeScene() {
+
+    const width =
+        hero3D.clientWidth;
+
+    const height =
+        hero3D.clientHeight;
+
+
+    if (
+        width === 0 ||
+        height === 0
+    ) {
+
+        console.warn(
+            "3D hero currently has no size."
+        );
+
+        return;
+
+    }
+
+    // -------------------------------------
+    // RENDERER
+    // -------------------------------------
+
+    renderer.setSize(
+        width,
+        height,
+        false
+    );
+
+
+    renderer.setPixelRatio(
+        Math.min(
+            window.devicePixelRatio,
+            2
+        )
+    );
+
+
+    // -------------------------------------
+    // CAMERA
+    // -------------------------------------
+
+    camera.aspect =
+        width / height;
+
+
+    updateResponsiveCamera(
+        camera.aspect
+    );
+
+
+    camera.updateProjectionMatrix();
+
+}
 
 
 // Color / tone mapping
@@ -446,13 +584,13 @@ hdrLoader.load(
 
 
         scene.environmentIntensity =
-            0.8;
+            1;
 
 
         // Position visible HDR.
 
         scene.backgroundRotation.y =
-            THREE.MathUtils.degToRad(1);
+            THREE.MathUtils.degToRad(-2);
 
         scene.backgroundRotation.z =
             THREE.MathUtils.degToRad(-7.5);
@@ -467,7 +605,7 @@ hdrLoader.load(
         // Slight background softness.
 
         scene.backgroundBlurriness =
-            0.02;
+            0.06;
 
 
         console.log(
@@ -512,17 +650,43 @@ window.addEventListener(
     "pointermove",
     (event) => {
 
+        const rect =
+            canvas.getBoundingClientRect();
+
+
+        const x =
+            (
+                event.clientX -
+                rect.left
+            ) / rect.width;
+
+
+        const y =
+            (
+                event.clientY -
+                rect.top
+            ) / rect.height;
+
+
+        // Used for raycasting
+
+        pointer.x =
+            x * 2 - 1;
+
+        pointer.y =
+            -(y * 2 - 1);
+
+
+        // Used for camera parallax
+
         mouse.x =
-            (event.clientX / window.innerWidth)
-            * 2 - 1;
+            pointer.x;
 
         mouse.y =
-            -(event.clientY / window.innerHeight)
-            * 2 + 1;
+            pointer.y;
 
     }
 );
-
 
 // ======================================================
 // LIGHTING
@@ -702,8 +866,10 @@ if (SHOW_LIGHT_HELPERS) {
 // ANIMATION SETTINGS
 // ======================================================
 
-const clock =
+const timer =
     new THREE.Timer();
+
+timer.connect(document);
 
 
 let mixer = null;
@@ -711,6 +877,27 @@ let mixer = null;
 let animationClips = [];
 
 const actions = {};
+
+// =========================================
+// RECORD INTERACTION 
+// =========================================
+
+const raycaster =
+    new THREE.Raycaster();
+
+const pointer =
+    new THREE.Vector2();
+
+
+const interactiveRecords = [];
+
+
+let hoveredRecord = null;
+
+let selectedRecord = null;
+
+let recordAnimationPlaying =
+    false;
 
 
 // Keep your Blender animation names here.
@@ -728,6 +915,9 @@ const ANIMATIONS = {
         "leaf.006Action",
         "leaf.007Action"
     ],
+
+    characterIdle:
+        "Idle",
 
     recordPlayer:
         "RecordPlayer",
@@ -753,6 +943,28 @@ const ANIMATIONS = {
 };
 
 
+const recordConfig = {
+
+    Record_Projects: {
+        hover: ANIMATIONS.projects.hover,
+        play: ANIMATIONS.projects.play,
+        section: "projects"
+    },
+
+    Record_Skills: {
+        hover: ANIMATIONS.skills.hover,
+        play: ANIMATIONS.skills.play,
+        section: "skills"
+    },
+
+    Record_Experience: {
+        hover: ANIMATIONS.experience.hover,
+        play: ANIMATIONS.experience.play,
+        section: "experience"
+    }
+
+};
+
 // ======================================================
 // ANIMATION FUNCTIONS
 // ======================================================
@@ -764,13 +976,11 @@ function setupAnimations(gltf) {
             portfolioModel
         );
 
-
     animationClips =
         gltf.animations;
 
 
-    // Turn every Blender clip into an
-    // AnimationAction and save it.
+    // Create actions for every clip
 
     animationClips.forEach(
         (clip) => {
@@ -780,6 +990,27 @@ function setupAnimations(gltf) {
 
         }
     );
+
+
+    // -------------------------------------
+    // PLANT IDLE
+    // -------------------------------------
+
+    playAnimationGroup(
+        ANIMATIONS.plantIdle,
+        THREE.LoopRepeat
+    );
+
+
+    // -------------------------------------
+    // CHARACTER IDLE
+    // -------------------------------------
+
+    playAnimation(
+        ANIMATIONS.characterIdle,
+        THREE.LoopRepeat
+    );
+
 
 
     // Helpful while developing.
@@ -798,11 +1029,14 @@ function setupAnimations(gltf) {
         )
     );
 
-    playAnimation(
-    ANIMATIONS.skills.play,
-    THREE.LoopRepeat
-);
+    mixer.addEventListener(
+        "finished",
+        handleAnimationFinished
+    );
+
 }
+
+
 
 
 function playAnimation(
@@ -862,6 +1096,315 @@ function playAnimationGroup(
     });
 
 }
+
+function debugAnimation(name) {
+
+    console.group(`DEBUG ANIMATION: ${name}`);
+
+
+    const clip =
+        animationClips.find(
+            clip => clip.name === name
+        );
+
+    const action =
+        actions[name];
+
+
+    console.log(
+        "Clip found:",
+        clip
+    );
+
+    console.log(
+        "Action found:",
+        action
+    );
+
+
+    if (clip) {
+
+        console.log(
+            "Duration:",
+            clip.duration
+        );
+
+
+        console.log(
+            "Tracks:",
+            clip.tracks.map(
+                track => track.name
+            )
+        );
+
+    }
+
+
+    if (action) {
+
+        console.log(
+            "Action enabled:",
+            action.enabled
+        );
+
+        console.log(
+            "Action paused:",
+            action.paused
+        );
+
+        console.log(
+            "Action weight:",
+            action.getEffectiveWeight()
+        );
+
+        console.log(
+            "Action time scale:",
+            action.getEffectiveTimeScale()
+        );
+
+        console.log(
+            "Action time:",
+            action.time
+        );
+
+        console.log(
+            "Action running:",
+            action.isRunning()
+        );
+
+    }
+
+
+    console.groupEnd();
+
+}
+
+
+// ======================================================
+// COFFEE STEAM
+// ======================================================
+
+const steamParticles = [];
+
+let steamAnchor = null;
+
+
+function createSteamTexture() {
+
+    const size = 128;
+
+    const canvas =
+        document.createElement("canvas");
+
+    canvas.width = size;
+    canvas.height = size;
+
+
+    const context =
+        canvas.getContext("2d");
+
+
+    const gradient =
+        context.createRadialGradient(
+            size / 2,
+            size / 2,
+            0,
+
+            size / 2,
+            size / 2,
+            size / 2
+        );
+
+
+    gradient.addColorStop(
+        0,
+        "rgba(255,255,255,0.55)"
+    );
+
+    gradient.addColorStop(
+        0.4,
+        "rgba(255,255,255,0.25)"
+    );
+
+    gradient.addColorStop(
+        1,
+        "rgba(255,255,255,0)"
+    );
+
+
+    context.fillStyle =
+        gradient;
+
+    context.fillRect(
+        0,
+        0,
+        size,
+        size
+    );
+
+
+    return new THREE.CanvasTexture(
+        canvas
+    );
+
+}
+
+const steamTexture =
+    createSteamTexture();
+
+function createSteam() {
+
+    if (!steamAnchor) {
+        return;
+    }
+
+
+    for (
+        let i = 0;
+        i < 8;
+        i++
+    ) {
+
+        const material =
+            new THREE.SpriteMaterial({
+
+                map:
+                    steamTexture,
+
+                transparent:
+                    true,
+
+                opacity:
+                    0.22,
+
+                depthWrite:
+                    false
+
+            });
+
+
+        const particle =
+            new THREE.Sprite(
+                material
+            );
+
+
+        particle.scale.set(
+            0.10,
+            0.10,
+            0.10
+        );
+
+
+        particle.userData = {
+
+            speed:
+                0.08 +
+                Math.random() * 0.04,
+
+            offset:
+                Math.random(),
+
+            drift:
+                (
+                    Math.random() -
+                    0.5
+                ) * 0.05
+
+        };
+
+
+        steamAnchor.add(
+            particle
+        );
+
+
+        steamParticles.push(
+            particle
+        );
+
+    }
+
+}
+
+function updateSteam(delta) {
+
+    if (!steamParticles.length) {
+        return;
+    }
+
+
+    const time =
+        timer.getElapsed();
+
+
+    steamParticles.forEach(
+        (particle, index) => {
+
+            const data =
+                particle.userData;
+
+
+            data.offset +=
+                delta *
+                data.speed;
+
+
+            if (data.offset > 1) {
+
+                data.offset = 0;
+
+            }
+
+
+            const progress =
+                data.offset;
+
+
+            // Rise upward
+
+            particle.position.y =
+                progress * 0.55;
+
+
+            // Slight sideways wandering
+
+            particle.position.x =
+                Math.sin(
+                    time * 1.5 +
+                    index
+                ) *
+                0.025 +
+                data.drift *
+                progress;
+
+
+            // Grow as it rises
+
+            const size =
+                0.07 +
+                progress * 0.17;
+
+
+            particle.scale.set(
+                size,
+                size,
+                size
+            );
+
+
+            // Fade out toward the top
+
+            particle.material.opacity =
+                0.22 *
+                (1 - progress);
+
+        }
+
+    );
+
+}
+
 
 // ======================================================
 // LOAD BLENDER SCENE
@@ -973,6 +1516,61 @@ loader.load(
 
         }
 
+        // =========================================
+        // FIND INTERACTIVE RECORDS
+        // =========================================
+
+        Object.keys(recordConfig).forEach(
+            (recordName) => {
+
+                const record =
+                    portfolioModel.getObjectByName(
+                        recordName
+                    );
+
+
+                if (record) {
+
+                    interactiveRecords.push(
+                        record
+                    );
+
+                    console.log(
+                        `Record ready: ${recordName}`
+                    );
+
+                }
+
+                else {
+
+                    console.warn(
+                        `Record not found: ${recordName}`
+                    );
+
+                }
+
+            }
+        );
+
+        steamAnchor =
+            portfolioModel.getObjectByName(
+                "CoffeeSteamAnchor"
+            );
+
+
+        if (steamAnchor) {
+
+            createSteam();
+
+        }
+        else {
+
+            console.warn(
+                "CoffeeSteamAnchor not found"
+            );
+
+        }
+
     },
 
 
@@ -1018,39 +1616,373 @@ loader.load(
 
 );
 
-
 // ======================================================
-// WINDOW RESIZE
+// RECORD INTERACTION FUNCTIONS
 // ======================================================
 
-window.addEventListener(
-    "resize",
+
+// Find the root record object from a child object.
+function findRecordRoot(object) {
+
+    let current =
+        object;
+
+
+    while (current) {
+
+        if (
+            interactiveRecords.includes(
+                current
+            )
+        ) {
+
+            return current;
+
+        }
+
+
+        current =
+            current.parent;
+
+    }
+
+
+    return null;
+
+}
+
+// Start the hover animation for a record.
+function startRecordHover(record) {
+
+    const config =
+        recordConfig[
+        record.name
+        ];
+
+
+    if (!config) {
+        return;
+    }
+
+
+    const action =
+        actions[
+        config.hover
+        ];
+
+
+    if (!action) {
+        return;
+    }
+
+
+    action.enabled =
+        true;
+
+    action.paused =
+        false;
+
+    action.timeScale =
+        1;
+
+
+    action.setLoop(
+        THREE.LoopOnce,
+        1
+    );
+
+    action.clampWhenFinished =
+        true;
+
+
+    action.reset();
+
+    action.play();
+
+}
+
+// End the hover animation for a record.
+function endRecordHover(record) {
+
+    const config =
+        recordConfig[
+        record.name
+        ];
+
+
+    if (!config) {
+        return;
+    }
+
+
+    const action =
+        actions[
+        config.hover
+        ];
+
+
+    if (!action) {
+        return;
+    }
+
+
+    action.enabled =
+        true;
+
+    action.paused =
+        false;
+
+
+    // Reverse the Blender hover animation.
+
+    action.timeScale =
+        -1;
+
+
+    // If it already finished,
+    // begin reversing from the end.
+
+    if (action.time === 0) {
+
+        action.time =
+            action.getClip().duration;
+
+    }
+
+
+    action.play();
+
+}
+
+
+canvas.addEventListener(
+    "click",
     () => {
 
-        camera.aspect =
-            window.innerWidth /
-            window.innerHeight;
+        if (
+            !hoveredRecord ||
+            recordAnimationPlaying
+        ) {
+
+            return;
+
+        }
 
 
-        camera.updateProjectionMatrix();
-
-
-        renderer.setSize(
-            window.innerWidth,
-            window.innerHeight
-        );
-
-
-        renderer.setPixelRatio(
-            Math.min(
-                window.devicePixelRatio,
-                2
-            )
+        selectRecord(
+            hoveredRecord
         );
 
     }
 );
 
+
+function selectRecord(record) {
+
+    const config =
+        recordConfig[
+        record.name
+        ];
+
+
+    if (!config) {
+        return;
+    }
+
+
+    recordAnimationPlaying =
+        true;
+
+    selectedRecord =
+        record;
+
+    hoveredRecord = null;
+
+
+    canvas.style.cursor =
+        "default";
+
+
+    // -------------------------------------
+    // STOP HOVER ANIMATION
+    // -------------------------------------
+
+    const hoverAction =
+        actions[
+        config.hover
+        ];
+
+
+    if (hoverAction) {
+
+        hoverAction.stop();
+
+    }
+
+
+    // -------------------------------------
+    // GET RECORD PLAY ANIMATION
+    // -------------------------------------
+
+    const playAction =
+        actions[
+        config.play
+        ];
+
+
+    // -------------------------------------
+    // GET RECORD PLAYER ANIMATION
+    // -------------------------------------
+
+    const recordPlayerAction =
+        actions[
+        ANIMATIONS.recordPlayer
+        ];
+
+
+    if (
+        !playAction ||
+        !recordPlayerAction
+    ) {
+
+        console.warn(
+            "Missing record or record-player animation"
+        );
+
+        recordAnimationPlaying =
+            false;
+
+        return;
+
+    }
+
+
+    // -------------------------------------
+    // PREPARE BOTH ANIMATIONS
+    // -------------------------------------
+
+    playAction.reset();
+
+    playAction.setLoop(
+        THREE.LoopOnce,
+        1
+    );
+
+    playAction.clampWhenFinished =
+        true;
+
+
+    recordPlayerAction.reset();
+
+    recordPlayerAction.setLoop(
+        THREE.LoopOnce,
+        1
+    );
+
+    recordPlayerAction.clampWhenFinished =
+        true;
+
+
+    // -------------------------------------
+    // PLAY BOTH AT THE SAME TIME
+    // -------------------------------------
+
+    playAction.play();
+
+    recordPlayerAction.play();
+
+
+    console.log(
+        `Selected: ${record.name}`
+    );
+
+}
+
+function handleAnimationFinished(event) {
+
+    if (!selectedRecord) {
+        return;
+    }
+
+
+    const config =
+        recordConfig[
+        selectedRecord.name
+        ];
+
+
+    if (!config) {
+        return;
+    }
+
+
+    // Wait for the selected record's
+    // Play animation to finish.
+
+    if (
+        event.action ===
+        actions[config.play]
+    ) {
+
+        console.log(
+            `${config.section} animation finished`
+        );
+
+
+        // Allow hovering/clicking again
+        recordAnimationPlaying =
+            false;
+
+
+        // Reset hover state
+        hoveredRecord =
+            null;
+
+
+        // Reset the hover animation back
+        // to its starting pose
+        const hoverAction =
+            actions[config.hover];
+
+        if (hoverAction) {
+
+            hoverAction.stop();
+            hoverAction.reset();
+
+        }
+
+
+        // This record is no longer locked
+        // out of raycasting
+        selectedRecord =
+            null;
+
+
+        return;
+
+    }
+}
+
+
+
+
+
+// ======================================================
+// WINDOW RESIZE
+// ======================================================
+
+const resizeObserver =
+    new ResizeObserver(
+        resizeScene
+    );
+
+
+resizeObserver.observe(
+    hero3D
+);
+
+
+resizeScene();
 
 // ======================================================
 // RENDER LOOP
@@ -1067,8 +1999,10 @@ function animate() {
     // TIME / BLENDER ANIMATIONS
     // --------------------------------------------------
 
+    timer.update();
+
     const delta =
-        clock.getDelta();
+        timer.getDelta();
 
 
     if (mixer) {
@@ -1078,6 +2012,85 @@ function animate() {
         );
 
     }
+
+    // Update steam particles
+    updateSteam(delta);
+
+    // =========================================
+    // RECORD HOVER
+    // =========================================
+
+    if (
+        interactiveRecords.length > 0 &&
+        !recordAnimationPlaying
+    ) {
+
+        raycaster.setFromCamera(
+            pointer,
+            camera
+        );
+
+
+        const intersections =
+            raycaster.intersectObjects(
+                interactiveRecords,
+                true
+            );
+
+
+        const newHoveredRecord =
+            intersections.length > 0
+                ? findRecordRoot(
+                    intersections[0].object
+                )
+                : null;
+
+
+        if (
+            newHoveredRecord !==
+            hoveredRecord
+        ) {
+
+            // Leave old record
+
+            if (hoveredRecord) {
+
+                endRecordHover(
+                    hoveredRecord
+                );
+
+            }
+
+
+            hoveredRecord =
+                newHoveredRecord;
+
+
+            // Enter new record
+
+            if (hoveredRecord) {
+
+                startRecordHover(
+                    hoveredRecord
+                );
+
+
+                canvas.style.cursor =
+                    "pointer";
+
+            }
+
+            else {
+
+                canvas.style.cursor =
+                    "default";
+
+            }
+
+        }
+
+    }
+
 
 
     // --------------------------------------------------

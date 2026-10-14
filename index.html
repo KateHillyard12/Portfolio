@@ -1102,7 +1102,22 @@
         </div>
     </div>
 
-<script type="module" src="./js/main.js"></script>
+    
+<script type="module">
+
+    const disable3D =
+        window.matchMedia(
+            "(max-width: 700px) and (pointer: coarse)"
+        ).matches;
+
+
+    if (!disable3D) {
+
+        import("./js/main.js");
+
+    }
+
+</script>
 </body>
 
 </html>

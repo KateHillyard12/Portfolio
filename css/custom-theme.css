@@ -332,6 +332,43 @@ a:hover {
    3D PORTFOLIO
 ========================================= */
 
+#hero-3d {
+    position: relative;
+
+    width: 100%;
+
+    /* Responsive height */
+    height: 85vh;
+    height: 85svh;
+
+    min-height: 500px;
+    max-height: 900px;
+
+    overflow: hidden;
+
+    background: #e8e2d8;
+}
+
+
+#portfolio-scene {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+
+/* Hide the 3D experience on small touch devices */
+@media (max-width: 700px) and (pointer: coarse) {
+
+    #hero-3d {
+        display: none;
+    }
+
+}
+
+
+
 #sideNav {
     display: none !important;
 }
