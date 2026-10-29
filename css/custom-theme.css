@@ -1,330 +1,241 @@
 /* custom-theme.css */
 #c {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
 }
 
-#3D
-{
-  position: relative;
-  width: 100%;
-  height: 100%;
+#3D {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 :root {
-  /* PRIMARY: Sage Green Theme */
-  --bs-primary: #84ad8f; /* soft sage */
-  --bs-primary-rgb: 90, 125, 99;
+    --site-bg: #e8e2d8;
+    --site-text: #2b211d;
 
-  /* Secondary: Olive-gray complement */
-  --bs-secondary: #abcbb9;
-  --bs-secondary-rgb: 138, 154, 145;
+    --site-accent: #bd5d38;
+    --site-accent-soft: #d89a7b;
 
-  /* Accent Colors */
-  --bs-success: #6c9773;
-  --bs-info: #9bb8a4;
-  --bs-warning: #e2e0b1;
-  --bs-danger: #a16a5e;
+    --coin-color: #bd5d38;
+}
 
-  /* Neutral Grays to green-tinted grays */
-  --bs-gray: #88968d;
-  --bs-gray-dark: #5e6f66;
-  --bs-gray-100: #f0f4f1;
-  --bs-gray-200: #e0e8e3;
-  --bs-gray-300: #cbd7cf;
-  --bs-gray-400: #aabbb1;
-  --bs-gray-500: #8a9a91;
-  --bs-gray-600: #6c7c74;
-  --bs-gray-700: #5a6a61;
-  --bs-gray-800: #49574f;
-  --bs-gray-900: #37453d;
 
-  /* Link colors */
-  --bs-link-color: #bd5d38;
-  --bs-link-hover-color: #974a2d;
+/* Alternate side of the coin */
 
-  /* Form focus & shadow colors */
-  --bs-focus-ring-color: rgba(90, 125, 99, 0.25);
-  --bs-border-color: #cbd7cf;
+:root[data-theme="alternate"] {
+    --site-bg: #252933;
+    --site-text: #f6eee8;
 
-  /* Optional body/bg tweaks */
-  --bs-body-color: #2e3b34;
-  --bs-body-bg: #f6f9f6;
+    --site-accent: #d5a73f;
+    --site-accent-soft: #ead28b;
+
+    --coin-color: #d5a73f;
 }
 
 /* Optionally, override navbar specifically */
 .navbar.bg-primary {
-  background-color: var(--bs-primary) !important;
+    background-color: var(--bs-primary) !important;
 }
 
 .text-primary {
-  color: var(--bs-primary) !important;
+    color: var(--bs-primary) !important;
 }
 
 a {
-  color: var(--bs-link-color);
+    color: var(--bs-link-color);
 }
 
 a:hover {
-  color: var(--bs-link-hover-color);
-}
-
-.download-modal .modal-body p {
-  font-size: 1.1rem;
-}
-
-.download-modal .btn {
-  min-width: 12rem;
-}
-
-.social-download-trigger i {
-  transform: translateY(1px);
-}
-/* ===== Project section uses burnt orange accent, banner stays sage ===== */
-#projects {
-  --accent-project: #bd5d38; /* Start Bootstrap Resume burnt orange */
-}
-
-/* Outline buttons in Projects (filter bar) */
-#projects .btn-outline-primary {
-  --bs-btn-color: var(--accent-project);
-  --bs-btn-border-color: var(--accent-project);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: var(--accent-project);
-  --bs-btn-hover-border-color: var(--accent-project);
-  --bs-btn-active-bg: #a85230;
-  --bs-btn-active-border-color: #a85230;
-}
-
-/* Solid primary buttons in Projects (e.g., Watch Gameplay) */
-#projects .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: var(--accent-project);
-  --bs-btn-border-color: var(--accent-project);
-  --bs-btn-hover-bg: #a85230;
-  --bs-btn-hover-border-color: #a85230;
-  --bs-btn-active-bg: #944827;
-  --bs-btn-active-border-color: #944827;
-}
-
-/* Active filter state */
-#projects .filter-btn.active,
-#projects .btn-outline-primary.filter-btn.active {
-  background-color: var(--accent-project) !important;
-  border-color: var(--accent-project) !important;
-  color: #fff !important;
-}
-
-/* Tabs accent inside Projects (e.g., Brews & Bloodshed) */
-#projects .nav-tabs .nav-link.active {
-  color: var(--accent-project) !important;
-  border-color: var(--accent-project) var(--accent-project) transparent !important;
-}
-#projects .nav-tabs .nav-link:hover {
-  border-color: var(--accent-project) !important;
-}
-
-#projects .text-primary { color: var(--accent-project) !important; }
-
-/* Force the side banner (nav) to sage green only */
-#sideNav.navbar.bg-primary{
-  /* set local primary just for the banner */
-  --bs-primary: #84ad8f;
-  --bs-primary-rgb: 132, 173, 143;
-  background-color: var(--bs-primary) !important;
-}
-.realm-compare-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-.realm-compare-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-.realm-compare-card .asset-back {
-  display: none;
-}
-
-.flip-btn {
-  position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-  width: 2.2rem;
-  height: 2.2rem;
-  border: none;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.flip-btn:hover {
-  transform: scale(1.06);
-  background: rgba(0, 0, 0, 0.85);
-}
-
-#realmCompareModal img {
-  max-height: 65vh;
-  width: 100%;
-  object-fit: contain;
-  background: #f8f8f8;
-  padding: 0.5rem;
-}
-
-#modalRealmResearch iframe {
-  background: #fff;
-}
-.asset-modal-dialog {
-  max-width: min(95vw, 1200px);
-}
-
-.asset-modal-content {
-  overflow: hidden;
-}
-
-.asset-modal-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  min-height: 70vh;
-  padding: 1rem 1.5rem 1.5rem;
-}
-
-.asset-image-frame {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  max-height: 70vh;
-  overflow: hidden;
-}
-
-#assetModalImage {
-  max-width: 100%;
-  max-height: 70vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 0.5rem;
-}
-
-.asset-nav {
-  border: none;
-  background: rgba(0, 0, 0, 0.08);
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #2e3b34;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  flex-shrink: 0;
-}
-
-.asset-nav:hover {
-  background: rgba(0, 0, 0, 0.14);
-  transform: scale(1.05);
-}
-
-.asset-nav:disabled {
-  opacity: 0.35;
-  cursor: default;
-  transform: none;
-}
-
-@media (max-width: 768px) {
-  .asset-modal-body {
-    gap: 0.5rem;
-    padding: 0.75rem;
-    min-height: 60vh;
-  }
-
-  .asset-image-frame {
-    min-height: 50vh;
-    max-height: 60vh;
-  }
-
-  #assetModalImage {
-    max-height: 60vh;
-  }
-
-  .asset-nav {
-    width: 2.25rem;
-    height: 2.25rem;
-  }
+    color: var(--bs-link-hover-color);
 }
 
 
-/*Profile coin flip animation*/
+
+
+/* =========================================
+   PROFILE / LOGO COIN
+========================================= */
+
 .profile-flip {
-  position: relative;
-  width: 10rem;
-  height: 10rem;
-  perspective: 1400px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 0.5rem auto;
+    position: relative;
+
+    width: 10rem;
+    height: 10rem;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    perspective: 1400px;
+
+    cursor: pointer;
 }
+
 
 .profile-flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+
+    will-change: transform;
 }
+
 
 .profile-flip:hover .profile-flip-inner {
-  transform: rotateX(4deg) rotateY(-8deg) scale(1.02);
+
+    transform:
+        rotateX(4deg) rotateY(-8deg) scale(1.02);
 }
+
 
 .profile-flip.is-flipped .profile-flip-inner {
-  transform: rotateY(180deg);
+
+    transform:
+        rotateY(180deg);
 }
+
 
 .profile-flip.is-flipped:hover .profile-flip-inner {
-  transform: rotateY(180deg) rotateX(4deg) scale(1.02);
+
+    transform:
+        rotateY(180deg) rotateX(4deg) scale(1.02);
 }
+
 
 .profile-flip-face {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  overflow: hidden;
-  display: block;
-  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    border:
+        0.5rem solid rgba(255, 255, 255, 0.2);
+
+    background:
+        var(--coin-color);
 }
 
-.profile-flip-front,
-.profile-flip-back {
-  object-fit: cover;
+
+.profile-flip-face img {
+    width: 80%;
+    height: 80%;
+
+    object-fit: contain;
 }
 
+
 .profile-flip-back {
-  transform: rotateY(180deg);
-  padding-top: 20px;
-  object-fit: contain;
-  background: #bd5d38;
+    transform:
+        rotateY(180deg);
+}
+
+.profile-flip:focus-visible {
+    outline:
+        3px solid var(--site-accent);
+
+    outline-offset:
+        0.5rem;
+}
+
+/* =========================================
+   SITE LOADER
+========================================= */
+
+.site-loader {
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        var(--site-bg);
+
+    color:
+        var(--site-text);
+
+    opacity: 1;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+}
+
+
+.site-loader-content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.25rem;
+}
+
+
+.loading-message {
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+
+/* Loader leaving */
+
+.site-loader.is-finished {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+.site-shell {
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease;
+}
+
+
+body.site-ready .site-shell {
+    opacity: 1;
+
+    pointer-events: auto;
 }
 
 
@@ -346,7 +257,7 @@ a:hover {
 
     overflow: hidden;
 
-    background: #e8e2d8;
+    background: var(--site-bg);
 }
 
 
@@ -365,8 +276,146 @@ a:hover {
         display: none;
     }
 
+    .portfolio-nav {
+        padding: 0 0.75rem;
+    }
+
+    .portfolio-brand {
+        font-size: 1.25rem;
+    }
+
+    .portfolio-nav-records {
+        gap: 0.5rem;
+    }
+
+    .record-disc {
+        width: 40px;
+        height: 40px;
+    }
+
+    .record-name {
+        font-size: 0.5rem;
+    }
+
 }
 
+/*=========================================
+     SPEECH BUBBLE
+=========================================*/
+.about-bubble {
+    position: fixed;
+
+    width: 18rem;
+    min-height: 11rem;
+
+    padding: 1.25rem;
+
+    box-sizing: border-box;
+
+    transform-origin: top left;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: #2b211d;
+
+    border-radius: 1.25rem;
+
+    z-index: 2000;
+}
+
+.about-bubble {
+    transform:
+        scale(var(--bubble-scale, 1));
+}
+
+.about-bubble::after {
+    content: "";
+
+    position: absolute;
+
+    right: 2.5rem;
+    bottom: -1rem;
+
+    border-width:
+        1rem 1rem 0 0;
+
+    border-style: solid;
+
+    border-color:
+        rgba(255, 255, 255, 0.94) transparent transparent transparent;
+
+    transform: scaleX(-1);
+}
+
+
+.about-bubble-close {
+    position: absolute;
+
+    top: 0.5rem;
+    right: 0.75rem;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   CUSTOM CHARACTER QUESTION MARK CURSOR
+========================================= */
+
+.character-cursor {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #2b211d;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    pointer-events: none;
+
+    z-index: 3000;
+
+    transform: translate(10px, 10px);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =========================================
+   SHOW CURSOR ON CHARACTER HOVER
+========================================= */
+
+body.character-hovering .character-cursor {
+
+    display: flex;
+
+}
+
+
+/*=========================================
+     LAYOUT
+=========================================*/
 
 
 #sideNav {
@@ -379,23 +428,7 @@ body {
     overflow-x: hidden;
 }
 
-#hero-3d {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: #e8e2d8;
-}
 
-#portfolio-scene {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-}
 
 #scene-loading {
     position: absolute;
@@ -410,3 +443,3899 @@ body {
     font-size: 1rem;
     letter-spacing: 0.1rem;
 }
+
+
+
+
+
+
+/*=========================================
+     FRONT END 
+=========================================*/
+
+
+
+
+
+
+/* =========================================
+   SQUIGGLY CANVAS BORDERS
+========================================= */
+
+.hero-wave {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    height: clamp(60px, 7vw, 110px);
+
+    display: block;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+}
+
+
+/* TOP SQUIGGLE */
+
+.hero-wave--top {
+
+    top: 0;
+
+    fill: var(--hero-wave-top);
+
+}
+
+
+/* BOTTOM SQUIGGLE */
+
+.hero-wave--bottom {
+
+    bottom: 0;
+
+    fill: var(--hero-wave-bottom);
+
+}
+
+
+/* =========================================
+   CONTENT BACKGROUND
+========================================= */
+
+.portfolio-nav,
+#portfolio-content {
+
+    background: var(--hero-wave-bottom);
+
+}
+
+
+/* =========================================
+   CONTENT SPACING
+========================================= */
+
+#portfolio-content {
+
+    min-height: 65vh;
+
+    padding:
+        2.5rem clamp(1.25rem, 6vw, 7rem) 6rem;
+
+}
+
+
+/* =========================================
+   PORTFOLIO COLOR THEMES
+========================================= */
+
+
+/* =========================================
+   PROJECTS - BURNT ORANGE / RED
+========================================= */
+
+:root,
+:root[data-portfolio-theme="projects"] {
+
+    --portfolio-bg: #F1DBC4;
+
+    --portfolio-ink: #40251F;
+
+    --portfolio-accent: #AD4F2F;
+
+    --portfolio-secondary: #A23E36;
+
+    --portfolio-highlight: #D4A347;
+
+    --portfolio-accent-soft: #DB9676;
+
+    --portfolio-surface: #FFF1DE;
+
+}
+
+
+/* =========================================
+   SKILLS - GREEN / BROWN
+========================================= */
+
+:root[data-portfolio-theme="skills"] {
+
+    --portfolio-bg: #DDE5D5;
+
+    --portfolio-ink: #283729;
+
+    --portfolio-accent: #466C50;
+
+    --portfolio-secondary: #80604B;
+
+    --portfolio-highlight: #A9BD92;
+
+    --portfolio-accent-soft: #AAC5A2;
+
+    --portfolio-surface: #F3F1E7;
+
+}
+
+
+/* =========================================
+   EXPERIENCE - YELLOW / BLUE
+========================================= */
+
+:root[data-portfolio-theme="experience"] {
+
+    --portfolio-bg: #F5E6B7;
+
+    --portfolio-ink: #2F3741;
+
+    --portfolio-accent: #3D667D;
+
+    --portfolio-secondary: #BF8A2C;
+
+    --portfolio-highlight: #DEB84F;
+
+    --portfolio-accent-soft: #A7BCC9;
+
+    --portfolio-surface: #FFF7E4;
+
+}
+
+/* =========================================
+   DYNAMIC SECTION COLORS
+========================================= */
+
+#portfolio-content,
+.portfolio-nav {
+
+    background-color: var(--portfolio-bg);
+
+    color: var(--portfolio-ink);
+
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+
+}
+
+
+/* Bottom squiggly border */
+
+.hero-wave--bottom {
+
+    fill: var(--portfolio-bg);
+
+    transition: fill 0.6s ease;
+
+}
+
+
+/* Section headings */
+
+#portfolio-content h1 {
+
+    color: var(--portfolio-ink);
+
+    transition: color 0.6s ease;
+
+}
+
+
+/* =========================================
+   DYNAMIC SQUIGGLY BORDERS
+========================================= */
+
+/* Both squiggles follow the selected theme */
+
+.hero-wave--top,
+.hero-wave--bottom {
+
+    fill: var(--portfolio-bg);
+
+    transition: fill 0.6s ease;
+
+
+    .hero-wave--top {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   DYNAMIC NAVIGATION BACKGROUND
+========================================= */
+
+.portfolio-nav {
+
+    background-color: var(--portfolio-bg);
+
+    color: var(--portfolio-ink);
+
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+
+}
+
+
+/* =========================================
+   MATCH WEBSITE BACKGROUND
+========================================= */
+
+#portfolio-content {
+
+    background-color: var(--portfolio-bg);
+
+    color: var(--portfolio-ink);
+
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+
+}
+
+
+/* =========================================
+   PORTFOLIO NAVBAR
+========================================= */
+
+.portfolio-nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 4%;
+
+    background-color: var(--portfolio-bg);
+
+    color: var(--portfolio-ink);
+
+    z-index: 1000;
+
+    transition:
+        background-color 0.6s ease,
+        color 0.6s ease;
+
+}
+
+
+/* =========================================
+   WEBSITE NAME
+========================================= */
+
+.portfolio-brand {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+
+    color: var(--portfolio-ink);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.portfolio-brand:hover {
+
+    color: var(--portfolio-accent);
+
+}
+
+
+/* =========================================
+   NAVIGATION RECORD CONTAINER
+========================================= */
+
+.portfolio-nav-records {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+}
+
+/* =========================================
+   VINYL NAVIGATION BUTTONS
+========================================= */
+
+.record-nav-button {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.2rem;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--portfolio-ink);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   VINYL RECORD
+========================================= */
+
+.record-disc {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--record-color);
+
+    background:
+        repeating-radial-gradient(circle,
+            #191919 0px,
+            #191919 3px,
+            #303030 4px,
+            #191919 5px);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================
+   RECORD CENTER
+========================================= */
+
+.record-center {
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: var(--record-color);
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+/* SMALL CENTER HOLE */
+
+.record-center::after {
+
+    content: "";
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #191919;
+
+}
+
+
+/* =========================================
+   RECORD LABEL
+========================================= */
+
+.record-name {
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+}
+
+/* =========================================
+   INDIVIDUAL RECORD COLORS
+========================================= */
+
+/* PROJECTS - RUST RED */
+
+.record-nav-button[data-section="projects"] {
+
+    --record-color: #A23E36;
+
+}
+
+
+/* SKILLS - WARM TAUPE */
+
+.record-nav-button[data-section="skills"] {
+
+    --record-color: #9B8872;
+
+}
+
+
+/* EXPERIENCE - MUSTARD */
+
+.record-nav-button[data-section="experience"] {
+
+    --record-color: #D4A347;
+
+}
+
+/* =========================================
+   RECORD HOVER ANIMATION
+========================================= */
+
+.record-nav-button:hover .record-disc {
+
+    transform:
+        translateY(-4px) rotate(20deg);
+
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =========================================
+   ACTIVE RECORD
+========================================= */
+
+.record-nav-button.is-active .record-disc {
+
+    box-shadow:
+        0 0 0 3px var(--portfolio-bg),
+        0 0 0 5px var(--record-color);
+
+}
+
+
+/* =========================================
+   KEYBOARD FOCUS
+========================================= */
+
+.record-nav-button:focus-visible {
+
+    outline: 3px solid var(--portfolio-accent);
+
+    outline-offset: 5px;
+
+    border-radius: 8px;
+
+}
+
+/* =========================================
+   HIDE RECORDS WHILE VIEWING 3D SCENE
+========================================= */
+
+.portfolio-nav-records {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s ease;
+
+}
+
+
+/* =========================================
+   SHOW RECORDS AFTER SCROLLING
+========================================= */
+
+.portfolio-nav.has-passed-hero .portfolio-nav-records {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+}
+
+#portfolio-content {
+
+    min-height: calc(100vh + 7rem);
+    min-height: calc(100svh + 7rem);
+
+    scroll-margin-top: 90px;
+
+}
+
+.hero-about-button {
+
+    position: absolute;
+
+    right: 1.5rem;
+    bottom: 7rem;
+
+    z-index: 10;
+
+    padding: 0.6rem 1rem;
+
+    border: none;
+    border-radius: 30px;
+
+    background: var(--portfolio-bg);
+    color: var(--portfolio-ink);
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   NAVBAR SQUIGGLY EDGE
+========================================= */
+
+.portfolio-nav {
+
+    /* Match this to your navbar background */
+
+    --nav-bg: var(--portfolio-accent);
+
+    background: var(--nav-bg);
+
+    overflow: visible;
+
+}
+
+
+/* SVG POSITIONING */
+
+.nav-squiggle {
+
+    position: absolute;
+
+    top: calc(100% - 1px);
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+
+    display: block;
+
+    overflow: visible;
+
+    pointer-events: none;
+
+}
+
+
+/* FILLED SQUIGGLE */
+
+.nav-wave-fill {
+
+    fill: var(--nav-bg);
+
+}
+
+
+/* ACCENT OUTLINE */
+
+.nav-wave-outline {
+
+    fill: none;
+
+    stroke: var(--portfolio-highlight);
+
+    stroke-width: 5;
+
+    vector-effect: non-scaling-stroke;
+
+}
+
+
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.portfolio-section-heading {
+
+    margin-bottom: 3rem;
+
+    max-width: 800px;
+
+}
+
+
+/* SMALL TEXT ABOVE HEADING */
+
+.section-eyebrow {
+
+    display: block;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    color: var(--portfolio-accent);
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* MAIN HEADING */
+
+.portfolio-section-heading h1 {
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    color: var(--portfolio-ink);
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* COLORED PERIOD */
+
+.heading-period {
+
+    color: var(--portfolio-accent);
+
+}
+
+
+/* INTRODUCTION TEXT */
+
+.portfolio-section-heading p {
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+
+    color: var(--portfolio-ink);
+
+}
+
+/* =========================================
+   PROJECT CATEGORY GRID
+========================================= */
+
+.project-category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+    width: 100%;
+
+    margin-bottom: 3rem;
+
+}
+
+/* =========================================
+   CATEGORY CARD BASE
+========================================= */
+
+.project-category-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    min-height: 320px;
+
+    padding: 2rem;
+
+    border: none;
+
+    border-radius: 24px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    background-color: var(--card-bg);
+
+    color: var(--card-text);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* CARD NUMBER */
+
+.category-number {
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+/* LARGE CARD TITLE */
+
+.category-title {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(2.2rem, 3vw, 3.5rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+}
+
+
+/* ARROW */
+
+.category-arrow {
+
+    position: absolute;
+
+    right: 1.5rem;
+
+    bottom: 1rem;
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+
+}
+
+/* =========================================
+   INDIVIDUAL PROJECT CARD COLORS
+========================================= */
+
+
+/* GRAPHIC DESIGN - RUST RED */
+
+.card-graphic {
+
+    --card-bg: #A23E36;
+
+    --card-text: #FFF1DE;
+
+}
+
+
+/* WEB DESIGN - BURNT ORANGE */
+
+.card-3d {
+
+    --card-bg: #AD4F2F;
+
+    --card-text: #FFF1DE;
+
+}
+
+
+/* GAME DEVELOPMENT - MUSTARD YELLOW */
+
+.card-game {
+
+    --card-bg: #D4A347;
+
+    --card-text: #40251F;
+
+}
+
+/* =========================================
+   CARD HOVER EFFECTS
+========================================= */
+
+@media (hover: hover) {
+
+    .project-category-card:hover {
+
+        transform: translateY(-8px);
+
+        box-shadow:
+            8px 12px 0px rgba(64, 37, 31, 0.18);
+
+    }
+
+
+    .project-category-card:hover .category-arrow {
+
+        transform: translate(5px, -5px);
+
+    }
+
+}
+
+
+/* ACTIVE CARD */
+
+.project-category-card[aria-expanded="true"] {
+
+    outline: 4px solid var(--portfolio-ink);
+
+    outline-offset: 4px;
+
+}
+
+
+/* KEYBOARD FOCUS */
+
+.project-category-card:focus-visible {
+
+    outline: 4px solid var(--portfolio-ink);
+
+    outline-offset: 5px;
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-category-card,
+    .category-arrow {
+
+        transition: none;
+
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE PROJECT CARDS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .project-category-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-category-card {
+
+        min-height: 220px;
+
+    }
+
+
+    .category-title {
+
+        font-size: 3rem;
+
+    }
+
+}
+
+/* =========================================
+   EXPANDABLE PROJECT CONTENT
+========================================= */
+
+.project-category-content {
+
+    width: 100%;
+
+}
+
+
+.project-category-panel {
+
+    background-color: var(--portfolio-surface);
+
+    color: var(--portfolio-ink);
+
+    padding: clamp(1.5rem, 4vw, 3rem);
+
+    border-radius: 24px;
+
+    border: 3px solid var(--portfolio-accent-soft);
+
+    animation: projectPanelReveal 0.4s ease;
+
+}
+
+
+.project-category-panel h2 {
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    color: var(--portfolio-accent);
+
+}
+
+
+.project-category-panel h3 {
+
+    color: var(--portfolio-secondary);
+
+    margin-top: 2rem;
+
+}
+
+
+/* PANEL REVEAL ANIMATION */
+
+@keyframes projectPanelReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-category-panel {
+        animation: none;
+    }
+
+}
+
+/* =========================================
+   INDIVIDUAL PROJECT SHOWCASE
+========================================= */
+
+.project-showcase {
+
+    margin-top: 3rem;
+
+    padding-top: 3rem;
+
+    border-top:
+        4px solid var(--portfolio-accent-soft);
+
+}
+
+
+/* =========================================
+   PROJECT HEADER
+========================================= */
+
+.project-showcase-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+
+}
+
+
+/* SMALL TEXT ABOVE PROJECT TITLE */
+
+.project-kicker {
+
+    display: block;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: var(--portfolio-accent);
+
+    margin-bottom: 0.75rem;
+
+}
+
+
+/* PROJECT TITLE */
+
+.project-showcase h3 {
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    margin: 0 0 1.5rem;
+
+    color: var(--portfolio-ink);
+
+}
+
+
+/* DESCRIPTION */
+
+.project-description {
+
+    max-width: 650px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   SOFTWARE BADGES
+========================================= */
+
+.project-tools {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    padding: 0;
+
+    margin: 1.5rem 0 0;
+
+    list-style: none;
+
+}
+
+
+.project-tools li {
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 30px;
+
+    background: var(--portfolio-accent-soft);
+
+    color: var(--portfolio-ink);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================
+   PROJECT LINK
+========================================= */
+
+.project-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0.8rem 1.5rem;
+
+    border-radius: 50px;
+
+    background: var(--portfolio-accent);
+
+    color: var(--portfolio-surface);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+.project-link:hover {
+
+    transform: translateY(-3px);
+
+    background: var(--portfolio-secondary);
+
+    color: var(--portfolio-surface);
+
+}
+
+/* =========================================
+   PROJECT GALLERY HEADER
+========================================= */
+
+.project-gallery-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.project-gallery-header h4 {
+
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    color: var(--portfolio-ink);
+
+    margin: 0;
+
+}
+
+
+/* =========================================
+   GALLERY BUTTONS
+========================================= */
+
+.gallery-controls {
+
+    display: flex;
+
+    gap: 0.75rem;
+
+}
+
+
+.gallery-controls button {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--portfolio-ink);
+
+    background: transparent;
+
+    color: var(--portfolio-ink);
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.gallery-controls button:hover {
+
+    background: var(--portfolio-ink);
+
+    color: var(--portfolio-surface);
+
+}
+
+
+/* =========================================
+   HORIZONTAL GALLERY
+========================================= */
+
+.project-gallery {
+
+    display: flex;
+
+    gap: 1rem;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    overscroll-behavior-x: contain;
+
+    scroll-padding-inline: 0.25rem;
+
+    padding: 0.5rem 0.25rem 1.5rem;
+
+    scrollbar-color:
+        var(--portfolio-accent) var(--portfolio-surface);
+
+}
+
+
+/* =========================================
+   INDIVIDUAL GALLERY IMAGES
+========================================= */
+
+.project-gallery-item {
+
+    position: relative;
+
+    flex: 0 0 clamp(230px, 70%, 530px);
+
+    aspect-ratio: 16 / 10;
+
+    margin: 0;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border:
+        3px solid var(--portfolio-accent-soft);
+
+    scroll-snap-align: start;
+
+}
+
+
+/* =========================================
+   FULL BLEED IMAGES
+========================================= */
+
+.project-gallery-item img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+/* =========================================
+   IMAGE TEXT OVERLAY
+========================================= */
+
+.project-gallery-item figcaption {
+
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding:
+        3rem 1.25rem 1.25rem;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.03em;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(to top,
+            rgba(25, 15, 12, 0.85) 0%,
+            rgba(25, 15, 12, 0.4) 55%,
+            transparent 100%);
+
+    z-index: 2;
+
+}
+
+/* =========================================
+   GALLERY IMAGE HOVER
+========================================= */
+
+@media (hover: hover) {
+
+    .project-gallery-item:hover img {
+
+        transform: scale(1.06);
+
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-gallery-item img {
+
+        transition: none;
+
+    }
+
+}
+
+
+
+
+/* =========================================
+   PROJECT STORY
+========================================= */
+
+.project-story {
+
+    margin-top: 3rem;
+
+    max-width: 800px;
+
+}
+
+
+.project-story h4 {
+
+    font-size: 2rem;
+
+    color: var(--portfolio-secondary);
+
+}
+
+
+.project-story p,
+.project-story li {
+
+    line-height: 1.8;
+
+    margin-bottom: 0.75rem;
+
+}
+
+/* =========================================
+   PROJECT IMAGE VIEWER
+========================================= */
+
+.project-lightbox {
+
+    width: min(1100px, 95vw);
+
+    max-width: 95vw;
+    max-height: 92vh;
+
+    padding: 3rem 1.5rem 1.5rem;
+
+    border:
+        4px solid var(--portfolio-accent);
+
+    border-radius: 20px;
+
+    background: var(--portfolio-surface);
+
+    color: var(--portfolio-ink);
+
+    box-shadow:
+        12px 12px 0 rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================================
+   DARKENED BACKGROUND
+========================================= */
+
+.project-lightbox::backdrop {
+
+    background:
+        rgba(25, 18, 15, 0.85);
+
+    backdrop-filter: blur(6px);
+
+}
+
+/* =========================================
+   IMAGE VIEWER LAYOUT
+========================================= */
+
+.lightbox-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        48px minmax(0, 1fr) 48px;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+
+/* =========================================
+   LARGE IMAGE
+========================================= */
+
+.lightbox-figure {
+
+    min-width: 0;
+
+    margin: 0;
+
+    text-align: center;
+
+}
+
+
+.lightbox-figure img {
+
+    display: block;
+
+    width: 100%;
+
+    height: min(65vh, 650px);
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================
+   IMAGE CAPTION
+========================================= */
+
+.lightbox-figure figcaption {
+
+    margin-top: 1rem;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    color: var(--portfolio-ink);
+
+}
+
+
+/* IMAGE COUNTER */
+
+.lightbox-count {
+
+    margin: 1rem 0 0;
+
+    text-align: center;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+}
+
+/* =========================================
+   LIGHTBOX NAVIGATION BUTTONS
+========================================= */
+
+.lightbox-arrow {
+
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        3px solid var(--portfolio-ink);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--portfolio-ink);
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* HOVER EFFECT */
+
+.lightbox-arrow:not(:disabled):hover {
+
+    background: var(--portfolio-accent);
+
+    color: var(--portfolio-surface);
+
+    transform: scale(1.08);
+
+}
+
+
+.lightbox-arrow:disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 0.5rem;
+    right: 1rem;
+
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--portfolio-ink);
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   CLICKABLE GALLERY IMAGES
+========================================= */
+
+.gallery-image-button {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: zoom-in;
+
+}
+
+
+/* Allow clicks to pass through image captions */
+
+.project-gallery-item figcaption {
+
+    pointer-events: none;
+
+}
+
+
+/* VISIBLE KEYBOARD FOCUS */
+
+.gallery-image-button:focus-visible,
+.lightbox-arrow:focus-visible,
+.lightbox-close:focus-visible {
+
+    outline: 4px solid var(--portfolio-highlight);
+
+    outline-offset: -5px;
+
+}
+
+/* =========================================
+   MOBILE IMAGE VIEWER
+========================================= */
+
+@media (max-width: 600px) {
+
+    .project-lightbox {
+
+        padding: 3rem 0.75rem 1rem;
+
+    }
+
+
+    .lightbox-layout {
+
+        grid-template-columns:
+            36px minmax(0, 1fr) 36px;
+
+        gap: 0.25rem;
+
+    }
+
+
+    .lightbox-arrow {
+
+        width: 36px;
+        height: 44px;
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .lightbox-figure img {
+
+        height: min(50vh, 400px);
+
+    }
+
+
+    .lightbox-figure figcaption {
+
+        font-size: 0.85rem;
+
+    }
+
+}
+
+/* =========================================
+   GRAPHIC DESIGN GALLERY
+========================================= */
+
+/* Give graphic design cards a bolder outline */
+
+.project-gallery--design .project-gallery-item {
+
+    border: 4px solid var(--portfolio-accent);
+
+    background: #E8CEAF;
+
+}
+
+
+/* =========================================
+   GRAPHIC DESIGN IMAGES
+========================================= */
+
+.project-gallery--design .project-gallery-item img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: clamp(1rem, 3vw, 2.5rem);
+
+    background:
+        radial-gradient(circle at center,
+            #FFF3E5 0%,
+            #E8CEAF 100%);
+
+}
+
+
+/* =========================================
+   FEATURED GRAPHIC DESIGN IMAGE
+========================================= */
+
+.project-gallery--featured {
+
+    justify-content: center;
+
+}
+
+
+.project-gallery--featured .project-gallery-item {
+
+    flex: 0 0 min(100%, 700px);
+
+}
+
+/* =========================================
+   GRAPHIC DESIGN POLISH
+========================================= */
+
+/* Bolder gallery captions */
+
+.project-gallery--design .project-gallery-item figcaption {
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    padding:
+        3rem 1.5rem 1.5rem;
+
+}
+
+
+/* A little more breathing room */
+
+#project-panel-graphic .project-showcase {
+
+    margin-top: 4rem;
+
+    padding-top: 3rem;
+
+}
+
+
+/* Bigger divider between projects */
+
+#project-panel-graphic .project-showcase {
+
+    border-top:
+        4px solid var(--portfolio-secondary);
+
+}
+
+/* =========================================
+   DARK BACKGROUND LOGO CARDS
+========================================= */
+
+.project-gallery--design .project-gallery-item--dark {
+
+    background: #40251F;
+
+}
+
+
+/* Override the default cream image background */
+
+.project-gallery--design .project-gallery-item--dark img {
+
+    background: #40251F;
+
+    object-fit: contain;
+
+    padding: 2rem;
+
+}
+
+/* =========================================
+   PROJECT GAMEPLAY VIDEOS
+========================================= */
+
+.project-demo {
+
+    margin-top: 3rem;
+
+}
+
+
+.project-demo h4 {
+
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    color: var(--portfolio-ink);
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.project-demo video {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    aspect-ratio: 16 / 9;
+
+    border: 4px solid var(--portfolio-accent);
+
+    border-radius: 18px;
+
+    background: #191919;
+
+}
+
+/* =========================================
+   PROJECT ACCORDION
+========================================= */
+
+.project-accordion {
+
+    width: 100%;
+
+    margin-top: 1.25rem;
+
+    border: 3px solid var(--portfolio-ink);
+
+    border-radius: 18px;
+
+    background: var(--portfolio-surface);
+
+    color: var(--portfolio-ink);
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* OPEN DROPDOWN */
+
+.project-accordion[open] {
+
+    border-color: var(--portfolio-accent);
+
+    box-shadow:
+        7px 7px 0 rgba(64, 37, 31, 0.12);
+
+}
+
+/* =========================================
+   ACCORDION HEADING
+========================================= */
+
+.project-accordion-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    padding: 1.5rem 2rem;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+/* REMOVE DEFAULT DROPDOWN ARROW */
+
+.project-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-accordion-summary::marker {
+    content: "";
+}
+
+
+/* =========================================
+   PROJECT NUMBER
+========================================= */
+
+.project-accordion-number {
+
+    font-size: 0.9rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.1em;
+
+    color: var(--portfolio-accent);
+
+}
+
+
+/* =========================================
+   PROJECT TITLE
+========================================= */
+
+.project-accordion-title {
+
+    flex: 1;
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.02em;
+
+}
+
+
+/* =========================================
+   EXPAND ICON
+========================================= */
+
+.project-accordion-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 3px solid var(--portfolio-ink);
+
+    border-radius: 50%;
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+/* =========================================
+   ACCORDION HOVER
+========================================= */
+
+@media (hover: hover) {
+
+    .project-accordion-summary:hover {
+
+        background: var(--portfolio-accent-soft);
+
+    }
+
+}
+
+
+/* =========================================
+   OPEN ACCORDION STYLING
+========================================= */
+
+.project-accordion[open] .project-accordion-summary {
+
+    background: var(--portfolio-accent);
+
+    color: var(--portfolio-surface);
+
+}
+
+
+/* NUMBER TURNS LIGHT */
+
+.project-accordion[open] .project-accordion-number {
+
+    color: var(--portfolio-surface);
+
+}
+
+
+/* ROTATE PLUS INTO X */
+
+.project-accordion[open] .project-accordion-icon {
+
+    transform: rotate(45deg);
+
+    border-color: var(--portfolio-surface);
+
+}
+
+
+/* KEYBOARD FOCUS */
+
+.project-accordion-summary:focus-visible {
+
+    outline: 4px solid var(--portfolio-highlight);
+
+    outline-offset: -6px;
+
+}
+
+/* =========================================
+   CONTENT INSIDE DROPDOWNS
+========================================= */
+
+.project-accordion>.project-showcase {
+
+    margin: 0;
+
+    padding: clamp(1.5rem, 4vw, 3rem);
+
+    border-top:
+        3px solid var(--portfolio-accent-soft);
+
+}
+
+/* =========================================
+   MOBILE ACCORDION
+========================================= */
+
+@media (max-width: 600px) {
+
+    .project-accordion-summary {
+
+        gap: 0.75rem;
+
+        padding: 1rem;
+
+    }
+
+    .project-accordion-title {
+
+        font-size: 1.7rem;
+
+    }
+
+    .project-accordion-icon {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 1.25rem;
+
+    }
+
+}
+
+/* =========================================
+   3D MODELING GALLERIES
+========================================= */
+
+/* Environment image cards */
+
+.project-gallery--3d .project-gallery-item {
+
+    border: 4px solid var(--portfolio-accent);
+
+    aspect-ratio: 16 / 9;
+
+}
+
+
+/* Environment screenshots fill the frame */
+
+.project-gallery--3d .project-gallery-item img {
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   INDIVIDUAL 3D ASSET RENDERS
+========================================= */
+
+/* Keep the complete model visible */
+
+.project-gallery--3d .project-gallery-item--asset img {
+
+    object-fit: contain;
+
+    padding: 1rem;
+
+    background: #302824;
+
+}
+
+
+/* =========================================
+   BOLDER IMAGE CAPTIONS
+========================================= */
+
+.project-gallery--3d .project-gallery-item figcaption {
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+}
+
+/* =========================================
+   SMOOTH PROJECT ACCORDION ANIMATIONS
+========================================= */
+
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+
+    .project-accordion {
+
+        /* Allow animation between 0 and auto height */
+
+        interpolate-size: allow-keywords;
+
+    }
+
+
+    /* =====================================
+       COLLAPSED CONTENT
+    ===================================== */
+
+    .project-accordion::details-content {
+
+        block-size: 0;
+
+        opacity: 0;
+
+        overflow: hidden;
+
+        transition:
+            block-size 0.45s ease,
+            opacity 0.3s ease,
+            content-visibility 0.45s allow-discrete;
+
+    }
+
+
+    /* =====================================
+       EXPANDED CONTENT
+    ===================================== */
+
+    .project-accordion[open]::details-content {
+
+        block-size: auto;
+
+        opacity: 1;
+
+    }
+
+}
+
+/* =========================================
+   ACCORDION ICON INTERACTIONS
+========================================= */
+
+@media (hover: hover) {
+
+    .project-accordion:not([open]) .project-accordion-summary:hover .project-accordion-icon {
+
+        transform: rotate(90deg);
+
+    }
+
+}
+
+/* =========================================
+   ACCESSIBILITY - REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-accordion::details-content {
+
+        transition: none !important;
+
+    }
+
+    .project-accordion-icon {
+
+        transition: none !important;
+
+    }
+
+}
+
+/* =========================================
+   SKILLS COLLECTION
+========================================= */
+
+.skills-collection {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+
+    width: 100%;
+
+    margin-top: 3rem;
+
+}
+
+/* =========================================
+   SKILLS CARD BASE
+========================================= */
+
+.skills-card {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 440px;
+
+    padding: 2rem;
+
+    border: 3px solid var(--portfolio-ink);
+
+    border-radius: 20px;
+
+    background: var(--skill-bg);
+    color: var(--skill-text);
+
+    box-shadow:
+        7px 7px 0 var(--portfolio-ink);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================
+   CARD TOP ROW
+========================================= */
+
+.skills-card-top {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.skills-card-number {
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.skills-card h2 {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    color: inherit;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.skills-card-description {
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 2rem;
+
+}
+
+/* =========================================
+   SKILLS CARD COLORS
+========================================= */
+
+/* CREATIVE SOFTWARE */
+
+.skills-card--creative {
+
+    --skill-bg: #F3F1E7;
+
+    --skill-text: #283729;
+
+    --skill-sticker-bg: #DDE5D5;
+
+}
+
+
+/* WEB & PROGRAMMING */
+
+.skills-card--development {
+
+    --skill-bg: #466C50;
+
+    --skill-text: #FFF8E9;
+
+    --skill-sticker-bg: #5C8063;
+
+}
+
+
+/* GAME & INTERACTIVE */
+
+.skills-card--interactive {
+
+    --skill-bg: #80604B;
+
+    --skill-text: #FFF8E9;
+
+    --skill-sticker-bg: #987660;
+
+}
+
+/* =========================================
+   SKILL STICKERS
+========================================= */
+
+.skills-stickers {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+    gap: 0.65rem;
+
+    padding: 0;
+
+    margin: auto 0 0;
+
+    list-style: none;
+
+}
+
+
+/* INDIVIDUAL STICKER */
+
+.skills-stickers li {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0.5rem 0.9rem;
+
+    border: 2px solid currentColor;
+
+    border-radius: 50px;
+
+    background: var(--skill-sticker-bg);
+
+    color: var(--skill-text);
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+
+}
+
+/* =========================================
+   DECORATIVE VINYL RECORDS
+========================================= */
+
+.skills-vinyl {
+
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 2px solid currentColor;
+
+    background:
+        repeating-radial-gradient(circle,
+            #191919 0px,
+            #191919 3px,
+            #353535 4px,
+            #191919 5px);
+
+    display: grid;
+    place-items: center;
+
+    transform: rotate(-15deg);
+
+}
+
+
+/* RECORD CENTER LABEL */
+
+.skills-vinyl::after {
+
+    content: "";
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: var(--portfolio-highlight);
+
+    border: 3px solid #191919;
+
+}
+
+/* =========================================
+   SKILLS HOVER EFFECTS
+========================================= */
+
+@media (hover: hover) {
+
+    .skills-card:hover {
+
+        transform: translateY(-6px);
+
+        box-shadow:
+            10px 13px 0 var(--portfolio-ink);
+
+    }
+
+
+    .skills-card:hover .skills-vinyl {
+
+        transform: rotate(20deg);
+
+    }
+
+
+    .skills-stickers li:hover {
+
+        transform: rotate(-3deg) scale(1.05);
+
+    }
+
+}
+
+
+/* SMOOTH VINYL ANIMATION */
+
+.skills-vinyl {
+
+    transition: transform 0.4s ease;
+
+}
+
+/* =========================================
+   RESPONSIVE SKILLS SECTION
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .skills-collection {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+    .skills-card:last-child {
+
+        grid-column: 1 / -1;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .skills-collection {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .skills-card:last-child {
+
+        grid-column: auto;
+
+    }
+
+    .skills-card {
+
+        min-height: 350px;
+
+        padding: 1.5rem;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .skills-card,
+    .skills-vinyl,
+    .skills-stickers li {
+
+        transition: none;
+
+    }
+
+}
+
+/* =========================================
+   SKILL INFORMATION PANEL
+========================================= */
+
+.skill-detail {
+
+    margin-top: 1.75rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 3px dashed currentColor;
+
+    animation: skillReveal 0.3s ease;
+
+}
+
+/* Keep hidden panels hidden */
+
+.skill-detail[hidden] {
+    display: none;
+}
+
+
+/* =========================================
+   SMALL LABEL
+========================================= */
+
+.skill-detail-label {
+
+    display: block;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    margin-bottom: 0.5rem;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================================
+   SKILL TITLE
+========================================= */
+
+.skill-detail-title {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: inherit;
+
+    margin-bottom: 0.75rem;
+
+}
+
+
+/* =========================================
+   SKILL DESCRIPTION
+========================================= */
+
+.skill-detail-description {
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 1rem;
+
+}
+
+/* =========================================
+   SKILL PROJECT LINKS
+========================================= */
+
+.skill-detail-projects {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 1.25rem;
+
+}
+
+
+/* INDIVIDUAL PROJECT LINK */
+
+.skill-project-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0.6rem 0.9rem;
+
+    border: 2px solid currentColor;
+
+    border-radius: 30px;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+@media (hover: hover) {
+
+    .skill-project-link:hover {
+
+        background: rgba(128, 128, 128, 0.15);
+
+        transform: translateY(-3px);
+
+    }
+
+}
+
+
+/* =========================================
+   INFORMATION REVEAL
+========================================= */
+
+@keyframes skillReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================================
+   INTERACTIVE SKILL STICKERS
+========================================= */
+
+/* Remove extra padding when a sticker has a button */
+
+.skills-stickers li.skill-interactive {
+
+    padding: 0;
+
+}
+
+
+/* THE CLICKABLE BUTTON */
+
+.skill-sticker-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 0.5rem 0.9rem;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: inherit;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+}
+
+
+/* SELECTED STICKER */
+
+.skills-stickers li.skill-selected {
+
+    background: var(--skill-text);
+
+    color: var(--skill-bg);
+
+}
+
+
+/* KEYBOARD FOCUS */
+
+.skill-sticker-button:focus-visible,
+.skill-project-link:focus-visible {
+
+    outline: 3px solid currentColor;
+
+    outline-offset: 3px;
+
+}
+
+/* =========================================
+   SCROLL OFFSET FOR PROJECT LINKS
+========================================= */
+
+.project-accordion {
+
+    scroll-margin-top: 165px;
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-detail,
+    .skill-project-link {
+
+        animation: none;
+        transition: none;
+
+    }
+
+}
+
+/* =========================================
+   EXPERIENCE TIMELINE
+========================================= */
+
+.experience-timeline {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.5rem;
+
+    max-width: 1000px;
+
+    margin: 3rem auto;
+
+    padding: 0 0 0 4rem;
+
+    list-style: none;
+
+}
+
+
+/* =========================================
+   VERTICAL TIMELINE LINE
+========================================= */
+
+.experience-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 1.5rem;
+    bottom: 1.5rem;
+
+    left: 1.25rem;
+
+    width: 5px;
+
+    border-radius: 10px;
+
+    background: var(--portfolio-accent);
+
+}
+
+/* =========================================
+   TIMELINE ITEMS
+========================================= */
+
+.experience-item {
+
+    position: relative;
+
+}
+
+
+/* =========================================
+   CIRCULAR TIMELINE MARKERS
+========================================= */
+
+.experience-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 2rem;
+
+    left: -3.6rem;
+
+    width: 24px;
+    height: 24px;
+
+    border: 5px solid var(--portfolio-accent);
+
+    border-radius: 50%;
+
+    background: var(--portfolio-bg);
+
+    z-index: 2;
+
+}
+
+/* =========================================
+   EXPERIENCE CARD
+========================================= */
+
+.experience-card {
+
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+
+    border: 4px solid var(--portfolio-ink);
+
+    border-radius: 20px;
+
+    background: var(--portfolio-surface);
+
+    color: var(--portfolio-ink);
+
+    box-shadow:
+        8px 8px 0 var(--portfolio-accent);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================
+   CARD TOP ROW
+========================================= */
+
+.experience-card-top {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* DATE */
+
+.experience-date {
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: var(--portfolio-accent);
+
+}
+
+
+/* DECORATIVE NUMBER */
+
+.experience-number {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: var(--portfolio-secondary);
+
+}
+
+/* =========================================
+   EXPERIENCE TYPOGRAPHY
+========================================= */
+
+/* JOB TITLE */
+
+.experience-card h2 {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    color: var(--portfolio-ink);
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* ORGANIZATION */
+
+.experience-card h3 {
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+
+    color: var(--portfolio-accent);
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* DESCRIPTION */
+
+.experience-card p {
+
+    max-width: 750px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 1.5rem;
+
+}
+
+/* =========================================
+   EXPERIENCE SKILL TAGS
+========================================= */
+
+.experience-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+}
+
+
+/* INDIVIDUAL TAGS */
+
+.experience-tags span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 0.5rem 0.9rem;
+
+    border: 2px solid var(--portfolio-ink);
+
+    border-radius: 30px;
+
+    background: var(--portfolio-highlight);
+
+    color: var(--portfolio-ink);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+}
+
+/* =========================================
+   EXPERIENCE HOVER EFFECTS
+========================================= */
+
+@media (hover: hover) {
+
+    .experience-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow:
+            12px 13px 0 var(--portfolio-accent);
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .experience-card {
+
+        transition: none;
+
+    }
+
+}
+
+/* =========================================
+   EXPERIENCE RESOURCES
+========================================= */
+
+.experience-resources {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    margin-top: 5rem;
+
+    padding: clamp(1.5rem, 4vw, 3rem);
+
+    border: 4px solid var(--portfolio-ink);
+
+    border-radius: 24px;
+
+    background: var(--portfolio-accent-soft);
+
+    color: var(--portfolio-ink);
+
+}
+
+
+/* HEADING */
+
+.experience-resources h2 {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    text-transform: uppercase;
+
+    color: var(--portfolio-ink);
+
+    margin-bottom: 0.5rem;
+
+}
+
+
+/* BUTTON CONTAINER */
+
+.experience-resource-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+}
+
+
+/* RESOURCE BUTTONS */
+
+.experience-resource-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1.5rem;
+
+    border: 3px solid var(--portfolio-ink);
+
+    border-radius: 40px;
+
+    background: var(--portfolio-ink);
+
+    color: var(--portfolio-surface);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+}
+
+
+/* OUTLINED BUTTON */
+
+.experience-resource-button--outline {
+
+    background: transparent;
+
+    color: var(--portfolio-ink);
+
+}
+
+
+/* HOVER */
+
+.experience-resource-button:hover {
+
+    transform: translateY(-4px);
+
+    color: var(--portfolio-surface);
+
+}
+
+
+/* OUTLINE BUTTON HOVER */
+
+.experience-resource-button--outline:hover {
+
+    background: var(--portfolio-ink);
+
+    color: var(--portfolio-surface);
+
+}
+
+/* =========================================
+   RESPONSIVE EXPERIENCE TIMELINE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .experience-timeline {
+
+        padding-left: 2rem;
+
+        gap: 2rem;
+
+    }
+
+
+    .experience-timeline::before {
+
+        left: 0.5rem;
+
+        width: 4px;
+
+    }
+
+
+    .experience-item::before {
+
+        left: -2.15rem;
+
+        width: 20px;
+        height: 20px;
+
+        border-width: 4px;
+
+    }
+
+
+    .experience-card {
+
+        padding: 1.5rem;
+
+    }
+
+
+    .experience-card h2 {
+
+        font-size: 2.3rem;
+
+    }
+
+
+    .experience-resources {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .experience-resource-links {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+    .experience-resource-button {
+
+        width: 100%;
+
+    }
+
+}
+
+/* =========================================
+   STICKY FOOTER PAGE LAYOUT
+========================================= */
+
+.site-shell {
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* Main content fills available space */
+
+#portfolio-content {
+
+    flex: 1 0 auto;
+
+    width: 100%;
+
+}
+
+
+/* Footer stays below all content */
+
+.portfolio-footer {
+
+    margin-top: auto;
+
+    flex-shrink: 0;
+
+}
+
+/* =========================================
+   FOOTER COLORS
+========================================= */
+
+.portfolio-footer {
+
+    --footer-bg: var(--portfolio-ink);
+    --footer-text: var(--portfolio-surface);
+
+    background: var(--portfolio-bg);
+
+    color: var(--footer-text);
+
+}
+
+
+/* =========================================
+   SQUIGGLY FOOTER WAVE
+========================================= */
+
+.portfolio-footer-wave {
+
+    display: block;
+
+    width: 100%;
+
+    height: clamp(45px, 7vw, 85px);
+
+    margin-bottom: -1px;
+
+}
+
+
+/* WAVE COLOR */
+
+.footer-wave-fill {
+
+    fill: var(--footer-bg);
+
+}
+
+
+/* BOLD WAVE OUTLINE */
+
+.footer-wave-outline {
+
+    fill: none;
+
+    stroke: var(--portfolio-highlight);
+
+    stroke-width: 4;
+
+    vector-effect: non-scaling-stroke;
+
+}
+
+
+/* FOOTER BODY */
+
+.portfolio-footer-inner {
+
+    background: var(--footer-bg);
+
+    padding: 3rem 6% 1.5rem;
+
+}
+
+/* =========================================
+   MAIN FOOTER LAYOUT
+========================================= */
+
+.footer-main {
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 4rem;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-bottom: 4rem;
+
+}
+
+
+/* =========================================
+   FOOTER INTRO
+========================================= */
+
+.footer-intro {
+
+    max-width: 600px;
+
+}
+
+
+/* SMALL EYEBROW */
+
+.footer-eyebrow {
+
+    display: block;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 1rem;
+
+    color: var(--portfolio-highlight);
+
+}
+
+
+/* MAIN HEADING */
+
+.footer-intro h2 {
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    color: var(--footer-text);
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+/* SPECIAL HEADING WORD */
+
+.footer-intro h2 em {
+
+    font-style: normal;
+
+    color: var(--portfolio-highlight);
+
+}
+
+
+/* DESCRIPTION */
+
+.footer-intro p {
+
+    max-width: 430px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    color: var(--footer-text);
+
+    opacity: 0.85;
+
+    margin-bottom: 2rem;
+
+}
+
+/* =========================================
+   FOOTER CONTACT BUTTON
+========================================= */
+
+.footer-contact-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1.7rem;
+
+    border: 3px solid var(--footer-text);
+
+    border-radius: 50px;
+
+    background: var(--footer-text);
+
+    color: var(--footer-bg);
+
+    font-weight: 800;
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+/* HOVER */
+
+.footer-contact-button:hover {
+
+    transform: translateY(-4px);
+
+    background: transparent;
+
+    color: var(--footer-text);
+
+}
+
+/* =========================================
+   FOOTER SOCIAL LINKS
+========================================= */
+
+.footer-connect {
+
+    min-width: 220px;
+
+}
+
+
+.footer-socials {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+}
+
+
+.footer-socials a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+
+    border-bottom:
+        2px solid var(--portfolio-accent-soft);
+
+    font-family: "Saira Extra Condensed", sans-serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: var(--footer-text);
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+
+}
+
+
+/* HOVER */
+
+.footer-socials a:hover {
+
+    color: var(--portfolio-highlight);
+
+    padding-left: 0.5rem;
+
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-top: 1.5rem;
+
+    border-top:
+        3px solid var(--portfolio-accent-soft);
+
+    color: var(--footer-text);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    opacity: 0.8;
+
+}
+
+/* =========================================
+   RESPONSIVE FOOTER
+========================================= */
+
+@media (max-width: 750px) {
+
+    .portfolio-footer-inner {
+
+        padding: 2rem 1.5rem 1.5rem;
+
+    }
+
+
+    .footer-main {
+
+        flex-direction: column;
+
+        gap: 3rem;
+
+        padding-bottom: 3rem;
+
+    }
+
+
+    .footer-intro h2 {
+
+        font-size: clamp(3rem, 12vw, 4.5rem);
+
+    }
+
+
+    .footer-connect {
+
+        width: 100%;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0.5rem;
+
+    }
+
+}
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.footer-contact-button:focus-visible,
+.footer-socials a:focus-visible {
+
+    outline: 3px solid var(--portfolio-highlight);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .footer-contact-button,
+    .footer-socials a {
+
+        transition: none;
+
+    }
+
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+========================================= */
+
+/* Elements waiting to appear */
+
+.scroll-reveal {
+    opacity: 0;
+}
+
+
+/* Elements entering the viewport */
+
+.scroll-reveal.is-visible {
+
+    opacity: 1;
+
+    animation:
+        revealUp 0.7s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    animation-delay:
+        var(--reveal-delay, 0ms);
+
+}
+
+
+/* =========================================
+   REVEAL MOVEMENT
+========================================= */
+
+@keyframes revealUp {
+
+    from {
+        opacity: 0;
+        translate: 0 25px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+
+}
+
+/* =========================================
+   EXPERIENCE TIMELINE STAGGER
+========================================= */
+
+.experience-item:nth-child(3n + 1) {
+    --reveal-delay: 0ms;
+}
+
+.experience-item:nth-child(3n + 2) {
+    --reveal-delay: 120ms;
+}
+
+.experience-item:nth-child(3n) {
+    --reveal-delay: 240ms;
+}
+
+/* =========================================
+   ACCESSIBILITY - REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-reveal,
+    .scroll-reveal.is-visible {
+
+        opacity: 1;
+
+        translate: none;
+
+        animation: none;
+
+    }
+
+}
+
