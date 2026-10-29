@@ -15,23 +15,17 @@
 :root {
     --site-bg: #e8e2d8;
     --site-text: #2b211d;
-
     --site-accent: #bd5d38;
     --site-accent-soft: #d89a7b;
-
     --coin-color: #bd5d38;
 }
 
-
 /* Alternate side of the coin */
-
 :root[data-theme="alternate"] {
     --site-bg: #252933;
     --site-text: #f6eee8;
-
     --site-accent: #d5a73f;
     --site-accent-soft: #ead28b;
-
     --coin-color: #d5a73f;
 }
 
@@ -52,91 +46,56 @@ a:hover {
     color: var(--bs-link-hover-color);
 }
 
-
-
-
 /* =========================================
    PROFILE / LOGO COIN
 ========================================= */
 
 .profile-flip {
     position: relative;
-
     width: 10rem;
     height: 10rem;
-
     padding: 0;
-
     border: 0;
-
     background: transparent;
-
     perspective: 1400px;
-
     cursor: pointer;
 }
 
-
 .profile-flip-inner {
     position: relative;
-
     display: block;
-
     width: 100%;
     height: 100%;
-
     transform-style: preserve-3d;
-
-    transition:
-        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
-
+    transition: transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
 }
 
-
 .profile-flip:hover .profile-flip-inner {
-
-    transform:
-        rotateX(4deg) rotateY(-8deg) scale(1.02);
+    transform: rotateX(4deg) rotateY(-8deg) scale(1.02);
 }
-
 
 .profile-flip.is-flipped .profile-flip-inner {
-
-    transform:
-        rotateY(180deg);
+    transform: rotateY(180deg);
 }
-
 
 .profile-flip.is-flipped:hover .profile-flip-inner {
-
-    transform:
-        rotateY(180deg) rotateX(4deg) scale(1.02);
+    transform: rotateY(180deg) rotateX(4deg) scale(1.02);
 }
-
 
 .profile-flip-face {
     position: absolute;
     inset: 0;
-
     display: grid;
     place-items: center;
-
     width: 100%;
     height: 100%;
-
     border-radius: 50%;
-
     overflow: hidden;
-
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
-    border:
-        0.5rem solid rgba(255, 255, 255, 0.2);
-
-    background:
-        var(--coin-color);
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    background: var(--coin-color);
 }
 
 
@@ -539,67 +498,93 @@ body {
 ========================================= */
 
 :root,
+/* =========================================
+   PROJECTS — SUN-WASHED PEACH
+========================================= */
+
 :root[data-portfolio-theme="projects"] {
 
-    --portfolio-bg: #F1DBC4;
+    /* Background */
+    --portfolio-bg: #F6E8DA;
 
-    --portfolio-ink: #40251F;
+    /* Main text / outlines */
+    --portfolio-ink: #473B39;
 
-    --portfolio-accent: #AD4F2F;
+    /* Muted terracotta */
+    --portfolio-accent: #905A52;
 
-    --portfolio-secondary: #A23E36;
+    /* Dusty rose */
+    --portfolio-secondary: #B7867F;
 
-    --portfolio-highlight: #D4A347;
+    /* Soft golden sunlight */
+    --portfolio-highlight: #E2BC91;
 
-    --portfolio-accent-soft: #DB9676;
+    /* Pale blush */
+    --portfolio-accent-soft: #E7C8BF;
 
-    --portfolio-surface: #FFF1DE;
+    /* Warm ivory */
+    --portfolio-surface: #FFF8EF;
 
 }
 
 
 /* =========================================
-   SKILLS - GREEN / BROWN
+   SKILLS — SOFT SAGE & OATMEAL
 ========================================= */
 
 :root[data-portfolio-theme="skills"] {
 
-    --portfolio-bg: #DDE5D5;
+    /* Pale sage background */
+    --portfolio-bg: #747c6e;
 
-    --portfolio-ink: #283729;
+    /* Muted forest green text */
+    --portfolio-ink: #382820;
 
-    --portfolio-accent: #466C50;
+    /* Eucalyptus green */
+    --portfolio-accent: #d2ddc5;
 
-    --portfolio-secondary: #80604B;
+    /* Warm walnut brown */
+    --portfolio-secondary: #987E70;
 
-    --portfolio-highlight: #A9BD92;
+    /* Soft beige-gold */
+    --portfolio-highlight: #e7c694;
 
-    --portfolio-accent-soft: #AAC5A2;
+    /* Washed sage */
+    --portfolio-accent-soft: #CCD8C5;
 
-    --portfolio-surface: #F3F1E7;
+    /* Cream surface */
+    --portfolio-surface: #FCF8EF;
 
 }
 
-
 /* =========================================
-   EXPERIENCE - YELLOW / BLUE
+   EXPERIENCE — BUTTER & LAVENDER
 ========================================= */
 
 :root[data-portfolio-theme="experience"] {
 
-    --portfolio-bg: #F5E6B7;
+    /* Warm buttery yellow */
+    /*--portfolio-bg: #e7cba0;*/
 
-    --portfolio-ink: #2F3741;
+    --portfolio-bg: #b47d7d;
 
-    --portfolio-accent: #3D667D;
+    /* Deep muted plum */
+    --portfolio-ink: #fae4c3;
 
-    --portfolio-secondary: #BF8A2C;
+    /* Dusty lavender */
+    --portfolio-accent: #f1b25e;
 
-    --portfolio-highlight: #DEB84F;
+    /* Soft lilac */
+    --portfolio-secondary: #fde091;
 
-    --portfolio-accent-soft: #A7BCC9;
+    /* Golden butter */
+    --portfolio-highlight: #996363;
 
-    --portfolio-surface: #FFF7E4;
+    /* Pale lavender */
+    --portfolio-accent-soft: #e4ae4b;
+
+    /* Warm vanilla cream */
+    --portfolio-surface: #633333;
 
 }
 
@@ -1060,6 +1045,29 @@ body {
    NAVBAR SQUIGGLY EDGE
 ========================================= */
 
+/* =========================================
+   SUNRISE NAVIGATION COLOR
+========================================= */
+
+.portfolio-nav:not(.is-blended) {
+
+    --nav-bg: #ebc489;
+
+    color: #3F3334;
+
+}
+
+/* =========================================
+   SOFT SUNRISE NAVBAR OUTLINE
+========================================= */
+
+.portfolio-nav:not(.is-blended)
+.nav-wave-outline {
+
+    stroke: #F5DAB9;
+
+}
+
 .portfolio-nav {
 
     /* Match this to your navbar background */
@@ -1294,42 +1302,40 @@ body {
 }
 
 /* =========================================
-   INDIVIDUAL PROJECT CARD COLORS
+   SOFT PROJECT CATEGORY COLORS
 ========================================= */
 
-
-/* GRAPHIC DESIGN - RUST RED */
+/* GRAPHIC DESIGN — DUSTY PINK */
 
 .card-graphic {
 
-    --card-bg: #A23E36;
+    --card-bg: #E5C7C0;
 
-    --card-text: #FFF1DE;
+    --card-text: #473B39;
 
 }
 
 
-/* WEB DESIGN - BURNT ORANGE */
+/* 3D MODELING — WARM SAND */
 
 .card-3d {
 
-    --card-bg: #AD4F2F;
+    --card-bg: #D7CFB9;
 
-    --card-text: #FFF1DE;
+    --card-text: #473B39;
 
 }
 
 
-/* GAME DEVELOPMENT - MUSTARD YELLOW */
+/* GAME DEVELOPMENT — BUTTERY GOLD */
 
 .card-game {
 
-    --card-bg: #D4A347;
+    --card-bg: #E4CDA2;
 
-    --card-text: #40251F;
+    --card-text: #473B39;
 
 }
-
 /* =========================================
    CARD HOVER EFFECTS
 ========================================= */
@@ -2864,18 +2870,18 @@ body {
 }
 
 /* =========================================
-   SKILLS CARD COLORS
+   SOFT SKILLS CARD COLORS
 ========================================= */
 
 /* CREATIVE SOFTWARE */
 
 .skills-card--creative {
 
-    --skill-bg: #F3F1E7;
+    --skill-bg: #FFF7EA;
 
-    --skill-text: #283729;
+    --skill-text: #9b8469;
 
-    --skill-sticker-bg: #DDE5D5;
+    --skill-sticker-bg: #47372f;
 
 }
 
@@ -2884,11 +2890,11 @@ body {
 
 .skills-card--development {
 
-    --skill-bg: #466C50;
+    --skill-bg: #54644e;
 
-    --skill-text: #FFF8E9;
+    --skill-text: #f8f1e2;
 
-    --skill-sticker-bg: #5C8063;
+    --skill-sticker-bg: #8c9b71;
 
 }
 
@@ -2897,11 +2903,11 @@ body {
 
 .skills-card--interactive {
 
-    --skill-bg: #80604B;
+    --skill-bg: #e9cbb2;
 
-    --skill-text: #FFF8E9;
+    --skill-text: #5c413d;
 
-    --skill-sticker-bg: #987660;
+    --skill-sticker-bg: #EEE0D8;
 
 }
 
@@ -4668,5 +4674,211 @@ body {
         transition: none !important;
 
     }
+
+}
+
+/* Blended navbar brand */
+
+.portfolio-nav.is-blended .nav-brand {
+
+    font-size: clamp(1.8rem, 2.2vw, 2.3rem);
+
+}
+
+
+
+
+/* =========================================
+   REMOVE INDIVIDUAL SECTION BACKGROUNDS
+========================================= */
+
+#portfolio-content > [data-portfolio-section] {
+
+    background: transparent;
+
+}
+/* =========================================
+   SOFTER PROJECT CATEGORY CARDS
+========================================= */
+
+#projects .project-category-card {
+
+    border: 1px solid rgba(71, 59, 57, 0.18);
+
+    box-shadow:
+        0 8px 24px rgba(71, 59, 57, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+/* HOVER */
+
+@media (hover: hover) {
+
+    #projects .project-category-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow:
+            0 14px 30px rgba(71, 59, 57, 0.13);
+
+    }
+
+}
+
+
+/* ACTIVE CATEGORY */
+
+#projects .project-category-card[aria-expanded="true"] {
+
+    outline: 2px solid var(--portfolio-accent);
+
+    outline-offset: 3px;
+
+}
+
+/* =========================================
+   CLEANER PROJECT CATEGORY PANELS
+========================================= */
+
+#projects .project-category-panel {
+
+    border: none;
+
+    box-shadow: none;
+
+    background: transparent;
+
+}
+
+/* =========================================
+   SOFTER PROJECT ACCORDIONS
+========================================= */
+
+#projects .project-accordion {
+
+    border: 1px solid var(--portfolio-accent-soft);
+
+    border-radius: 18px;
+
+    background: var(--portfolio-surface);
+
+    box-shadow:
+        0 5px 18px rgba(71, 59, 57, 0.06);
+
+}
+
+
+/* OPEN ACCORDION */
+
+#projects .project-accordion[open] {
+
+    border: 1px solid var(--portfolio-secondary);
+
+    box-shadow:
+        0 9px 28px rgba(71, 59, 57, 0.10);
+
+}
+
+/* =========================================
+   REMOVE EXTRA PROJECT DIVIDERS
+========================================= */
+
+#projects .project-accordion > .project-showcase {
+
+    margin: 0;
+
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+
+    border: none;
+
+}
+
+/* =========================================
+   BORDERLESS PROJECT GALLERY IMAGES
+========================================= */
+
+#projects .project-gallery .project-gallery-item,
+#projects .project-gallery--design .project-gallery-item,
+#projects .project-gallery--3d .project-gallery-item {
+
+    border: none;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 22px rgba(71, 59, 57, 0.12);
+
+}
+
+/* =========================================
+   GALLERY SHADOW SPACING
+========================================= */
+
+#projects .project-gallery {
+
+    padding-top: 0.5rem;
+
+    padding-bottom: 1.5rem;
+
+}
+
+/* =========================================
+   SOFTER GALLERY CONTROLS
+========================================= */
+
+#projects .gallery-controls button {
+
+    border: 1px solid var(--portfolio-accent-soft);
+
+    background: var(--portfolio-surface);
+
+    color: var(--portfolio-ink);
+
+}
+
+
+/* HOVER */
+
+@media (hover: hover) {
+
+    #projects .gallery-controls button:hover {
+
+        background: var(--portfolio-accent-soft);
+
+        border-color: var(--portfolio-accent);
+
+    }
+
+}
+
+/* =========================================
+   MORE BREATHING ROOM BETWEEN PROJECTS
+========================================= */
+
+#projects .project-accordion {
+
+    margin-top: 1.75rem;
+
+}
+
+/* =========================================
+   TRANSPARENT PROJECT CONTAINERS
+========================================= */
+
+#projects .project-category-panel {
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
 
 }

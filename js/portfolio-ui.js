@@ -1068,7 +1068,7 @@ document.querySelectorAll(".skills-card").forEach((card) => {
                         "skill-project-link";
 
                     projectButton.textContent =
-                        `${project.title} ↗`;
+                        `${project.title} `;
 
 
                     projectButton.addEventListener(
