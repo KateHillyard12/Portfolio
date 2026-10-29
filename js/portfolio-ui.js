@@ -1270,3 +1270,104 @@ if (
     });
 
 }
+
+// ======================================================
+// NAVBAR / PAGE BLENDING
+// ======================================================
+
+// Find our navbar and 3D hero
+
+const blendNavbar =
+    document.querySelector(".portfolio-nav");
+
+const blendHero =
+    document.getElementById("hero-3d");
+
+
+// Prevent unnecessary updates
+
+let navBlendUpdateQueued = false;
+
+
+// ======================================================
+// UPDATE NAVBAR APPEARANCE
+// ======================================================
+
+function updateNavbarBlend() {
+
+    if (!blendNavbar || !blendHero) {
+        return;
+    }
+
+
+    // Find the bottom of the 3D scene
+
+    const heroBottom =
+        blendHero.getBoundingClientRect().bottom;
+
+
+    // Account for the navbar's height
+
+    const navHeight =
+        blendNavbar.offsetHeight;
+
+
+    // Has the hero moved behind the navbar?
+
+    const hasPassedHero =
+        heroBottom <= navHeight;
+
+
+    // Toggle blended appearance
+
+    blendNavbar.classList.toggle(
+        "is-blended",
+        hasPassedHero
+    );
+
+}
+
+
+// ======================================================
+// SCROLL EVENT
+// ======================================================
+
+function requestNavbarBlendUpdate() {
+
+    if (navBlendUpdateQueued) {
+        return;
+    }
+
+    navBlendUpdateQueued = true;
+
+    requestAnimationFrame(() => {
+
+        updateNavbarBlend();
+
+        navBlendUpdateQueued = false;
+
+    });
+
+}
+
+
+// Watch scrolling
+
+window.addEventListener(
+    "scroll",
+    requestNavbarBlendUpdate,
+    { passive: true }
+);
+
+
+// Watch resizing
+
+window.addEventListener(
+    "resize",
+    requestNavbarBlendUpdate
+);
+
+
+// Set the correct state when the page loads
+
+updateNavbarBlend();
