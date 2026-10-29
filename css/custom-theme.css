@@ -4878,3 +4878,203 @@ body {
     box-shadow: none;
 
 }
+
+/* =========================================
+   DISABLE ABOUT BUBBLE ON TOUCH DEVICES
+========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Hide the question mark cursor */
+    #characterCursor {
+        display: none !important;
+    }
+
+    /* Hide the About Me speech bubble */
+    #aboutBubble {
+        display: none !important;
+    }
+
+    /* Hide the About Me button */
+    #openAboutButton {
+        display: none !important;
+    }
+
+    /* Prevent custom cursor behavior */
+    #portfolio-scene {
+        cursor: auto !important;
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE NAVIGATION & CONTENT SPACING
+====================================================== */
+
+@media (max-width: 700px) and (pointer: coarse) {
+
+    /* =====================================
+       MOBILE NAVBAR
+    ===================================== */
+
+    .portfolio-nav {
+
+        height: 118px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 12px 12px 10px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =====================================
+       PORTFOLIO NAME
+    ===================================== */
+
+    .portfolio-brand {
+
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 1.35rem;
+
+        line-height: 1;
+
+        margin: 0;
+
+    }
+
+
+    /* =====================================
+       NAVIGATION BUTTON CONTAINER
+    ===================================== */
+
+    .portfolio-nav-records {
+
+        display: flex;
+
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 4px;
+
+    }
+
+
+    /* =====================================
+       NAVIGATION BUTTONS
+    ===================================== */
+
+    .portfolio-nav button.nav-section-button {
+
+        flex: 1 1 0;
+
+        min-width: 0;
+
+        min-height: 44px;
+
+        justify-content: center;
+
+        gap: 0.3rem;
+
+        padding: 0.4rem 0.15rem;
+
+    }
+
+
+    /* =====================================
+       NAVIGATION NUMBERS
+    ===================================== */
+
+    .portfolio-nav .nav-index {
+
+        width: 24px;
+        height: 24px;
+
+        font-size: 0.7rem;
+
+    }
+
+
+    /* =====================================
+       NAVIGATION LABELS
+    ===================================== */
+
+    .portfolio-nav .nav-button-label {
+
+        font-size: 0.8rem;
+
+        letter-spacing: 0.02em;
+
+    }
+
+
+    /* =====================================
+       MOBILE SQUIGGLY BORDER
+    ===================================== */
+
+    .portfolio-nav .nav-squiggle {
+
+        height: 35px;
+
+    }
+
+
+    /* =====================================
+       SPACE BETWEEN NAVBAR AND CONTENT
+    ===================================== */
+
+    #portfolio-content {
+
+        padding-top: calc(118px + 35px + 2rem);
+
+        scroll-margin-top: 185px;
+
+    }
+
+
+    /* =====================================
+       MOBILE SECTION HEADINGS
+    ===================================== */
+
+    #portfolio-content .portfolio-section-heading h1 {
+
+        font-size: clamp(2.75rem, 12vw, 4.5rem);
+
+        line-height: 1.05;
+
+    }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) and (pointer: coarse) {
+
+    /* Hide navigation numbers to save space */
+
+    .portfolio-nav .nav-index {
+
+        display: none;
+
+    }
+
+}

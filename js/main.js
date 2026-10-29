@@ -1245,8 +1245,7 @@ const hdrLoader =
 
 
 hdrLoader.load(
-
-    "/hdr/sunrise.hdr",
+    `${import.meta.env.BASE_URL}hdr/sunrise.hdr`,
 
     (hdrTexture) => {
 
@@ -1412,6 +1411,11 @@ window.addEventListener(
 
         const rect =
             canvas.getBoundingClientRect();
+
+        // Don't calculate pointer positions for a hidden canvas
+        if (rect.width === 0 || rect.height === 0) {
+            return;
+        }
 
 
         const x =
@@ -2996,12 +3000,14 @@ function updateAboutBubblePosition() {
 // ======================================================
 function toggleAboutBubble() {
 
-    if (!aboutBubble) {
+    // Disable About Me bubble on touch-only devices
+    if (touchOnlyDevice.matches || !aboutBubble) {
         return;
     }
 
     const isCurrentlyOpen =
         !aboutBubble.hidden;
+
 
 
     aboutBubble.hidden =
@@ -3086,6 +3092,13 @@ openAboutButton?.addEventListener("click", () => {
 
 });
 
+// ======================================================
+// TOUCH DEVICE DETECTION
+// ======================================================
+
+const touchOnlyDevice = window.matchMedia(
+    "(hover: none) and (pointer: coarse)"
+);
 
 // ======================================================
 //   RECORD CLICK
@@ -3452,7 +3465,8 @@ function animate() {
 
         if (
             characterHitbox &&
-            !recordAnimationPlaying
+            !recordAnimationPlaying &&
+            !touchOnlyDevice.matches
         ) {
 
             const characterIntersections =
