@@ -1311,11 +1311,11 @@ function updateNavbarBlend() {
     const navHeight =
         blendNavbar.offsetHeight;
 
-
-    // Has the hero moved behind the navbar?
+    const heroHidden =
+        getComputedStyle(blendHero).display === "none";
 
     const hasPassedHero =
-        heroBottom <= navHeight;
+        !heroHidden && heroBottom <= navHeight;
 
 
     // Toggle blended appearance
@@ -1371,3 +1371,93 @@ window.addEventListener(
 // Set the correct state when the page loads
 
 updateNavbarBlend();
+
+
+// ======================================================
+// MOBILE INTRO - TYPEWRITER EFFECT
+// ======================================================
+
+const mobileTypeName =
+    document.getElementById("mobileTypeName");
+
+const isMobile =
+    window.matchMedia("(max-width: 700px)");
+
+const reducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (
+    mobileTypeName &&
+    isMobile.matches &&
+    !reducedMotion.matches
+) {
+
+    const fullName = mobileTypeName.textContent.trim();
+
+    let typingStarted = false;
+
+    function startNameTyping() {
+
+        if (typingStarted) return;
+
+        typingStarted = true;
+
+        let characterIndex = 0;
+
+        mobileTypeName.textContent = "";
+
+        mobileTypeName.classList.add("is-typing");
+
+        function typeNextCharacter() {
+
+            characterIndex++;
+
+            mobileTypeName.textContent =
+                fullName.slice(0, characterIndex);
+
+            if (characterIndex < fullName.length) {
+
+                setTimeout(typeNextCharacter, 110);
+
+            } else {
+
+                // Remove cursor when typing finishes
+                mobileTypeName.classList.remove("is-typing");
+
+            }
+
+        }
+
+        // Small delay before typing begins
+        setTimeout(typeNextCharacter, 1500);
+
+    }
+
+    // Wait until the loading screen reveals the site
+
+    if (document.body.classList.contains("site-ready")) {
+
+        startNameTyping();
+
+    } else {
+
+        const observer = new MutationObserver(() => {
+
+            if (document.body.classList.contains("site-ready")) {
+
+                observer.disconnect();
+
+                startNameTyping();
+
+            }
+
+        });
+
+        observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ["class"]
+        });
+
+    }
+
+}

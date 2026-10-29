@@ -225,7 +225,7 @@ body.site-ready .site-shell {
 
 
 /* Hide the 3D experience on small touch devices */
-@media (max-width: 700px) and (pointer: coarse) {
+@media (max-width: 700px) {
 
     #hero-3d {
         display: none;
@@ -5035,17 +5035,6 @@ body {
     }
 
 
-    /* =====================================
-       SPACE BETWEEN NAVBAR AND CONTENT
-    ===================================== */
-
-    #portfolio-content {
-
-        padding-top: calc(118px + 35px + 2rem);
-
-        scroll-margin-top: 185px;
-
-    }
 
 
     /* =====================================
@@ -5074,6 +5063,359 @@ body {
     .portfolio-nav .nav-index {
 
         display: none;
+
+    }
+
+}
+
+/* ======================================================
+   MOBILE INTRODUCTION
+====================================================== */
+
+/* Hide the mobile intro on desktop */
+
+.mobile-intro {
+    display: none;
+}
+
+
+/* ======================================================
+   MOBILE STYLING
+====================================================== */
+
+@media (max-width: 700px) {
+
+    /* Remove the hidden 3D experience */
+
+    #hero-3d {
+        display: none !important;
+    }
+
+
+    /* Hide desktop-only character interactions */
+
+    #aboutBubble,
+    #characterCursor,
+    #openAboutButton {
+        display: none !important;
+    }
+
+
+    /* =====================================
+       MOBILE INTRO CONTAINER
+    ===================================== */
+
+    .mobile-intro {
+
+        display: block;
+
+        position: relative;
+
+        padding:
+            calc(118px + 35px + 2rem)
+            1.5rem
+            3rem;
+
+        background:
+
+            var(--portfolio-bg);
+
+        color: var(--portfolio-ink);
+
+    }
+
+
+    /* =====================================
+       INTRO CONTENT
+    ===================================== */
+
+    .mobile-intro-content {
+
+        max-width: 550px;
+
+        margin: 0 auto;
+
+    }
+
+
+    /* =====================================
+       SMALL EYEBROW
+    ===================================== */
+
+    .mobile-intro-eyebrow {
+
+        display: block;
+
+        font-size: 0.75rem;
+
+        font-weight: 800;
+
+        letter-spacing: 0.15em;
+
+        color: var(--portfolio-accent);
+
+        margin-bottom: 1rem;
+
+    }
+
+
+    /* =====================================
+       MAIN INTRO HEADING
+    ===================================== */
+
+    .mobile-intro h1 {
+
+        font-family:
+            "Saira Extra Condensed",
+            sans-serif;
+
+        font-size: clamp(3.5rem, 16vw, 5.5rem);
+
+        line-height: 1;
+
+        margin-bottom: 0.5rem;
+
+        color: var(--portfolio-ink);
+
+    }
+
+
+    /* =====================================
+       SUBTITLE
+    ===================================== */
+
+    .mobile-intro-subtitle {
+
+        font-size: 1rem;
+
+        font-weight: 800;
+
+        line-height: 1.5;
+
+        margin-bottom: 1.5rem;
+
+        color: var(--portfolio-accent);
+
+    }
+
+
+    /* =====================================
+       BODY TEXT
+    ===================================== */
+
+    .mobile-intro p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+
+        margin-bottom: 1rem;
+
+    }
+
+
+    /* =====================================
+       EXPLORE BUTTON
+    ===================================== */
+
+    .mobile-intro-button {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 0.8rem;
+
+        margin-top: 1rem;
+
+        padding: 0.85rem 1.4rem;
+
+        border-radius: 50px;
+
+        background: var(--portfolio-accent);
+
+        color: white;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.25s ease,
+            background 0.25s ease;
+
+    }
+
+
+    .mobile-intro-button:hover {
+
+        transform: translateY(-2px);
+
+        color: white;
+
+    }
+
+
+    /* =====================================
+       REMOVE DUPLICATE TOP SPACING
+    ===================================== */
+
+    #portfolio-content {
+
+        padding-top: 2rem;
+
+        scroll-margin-top: 175px;
+
+    }
+
+}
+
+/* ======================================================
+   MOBILE NAME TYPEWRITER ANIMATION
+====================================================== */
+
+@media (max-width: 700px) {
+
+    .mobile-type-name {
+        display: inline;
+    }
+
+    /* Blinking typing cursor */
+
+    .mobile-type-name.is-typing::after {
+        content: "";
+
+        display: inline-block;
+
+        width: 0.065em;
+        height: 0.85em;
+
+        margin-left: 3px;
+
+        background: var(--portfolio-accent);
+
+        vertical-align: -0.06em;
+
+        animation: typingCursor 0.7s step-end infinite;
+    }
+
+    /* Hide the period until typing finishes */
+
+    .mobile-type-name.is-typing + .heading-period {
+        visibility: hidden;
+    }
+
+}
+
+/* Cursor blinking */
+
+@keyframes typingCursor {
+
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* ======================================================
+   INTERACTIVE ROOM - MOBILE MESSAGE
+====================================================== */
+
+/* Desktop: show the button, hide the message */
+
+.room-desktop-link {
+    display: inline-flex;
+}
+
+.room-mobile-note {
+    display: none;
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+    /* Hide the desktop button */
+
+    .room-desktop-link {
+        display: none !important;
+    }
+
+
+    /* Show the mobile message */
+
+    .room-mobile-note {
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 0.9rem;
+
+        max-width: 360px;
+
+        padding: 1.2rem;
+
+        border-radius: 16px;
+
+        background: var(--portfolio-accent-soft);
+
+        color: var(--portfolio-ink);
+
+    }
+
+
+    /* Decorative icon */
+
+    .room-mobile-icon {
+
+        font-size: 1.5rem;
+
+        line-height: 1;
+
+        flex-shrink: 0;
+
+        color: var(--portfolio-ink);
+
+    }
+
+
+    /* Message heading */
+
+    .room-mobile-text strong {
+
+        display: block;
+
+        margin-bottom: 0.4rem;
+
+        font-size: 0.95rem;
+
+        font-weight: 800;
+
+    }
+
+
+    /* Message description */
+
+    .room-mobile-text p {
+
+        margin: 0;
+
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+
+        opacity: 0.85;
 
     }
 
