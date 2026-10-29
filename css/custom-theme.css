@@ -6,11 +6,7 @@
     min-height: 420px;
 }
 
-#3D {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+
 
 :root {
     --site-bg: #e8e2d8;
